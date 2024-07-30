@@ -1,0 +1,36 @@
+# Ignorar a pasta database
+
+
+Projeto1/Database
+Projeto2/Database
+Projeto1/Results
+Projeto2/Results
+
+# Ignorar diretórios de dependências
+node_modules/
+
+# Ignorar diretórios de build
+dist/
+build/
+
+# Ignorar arquivos de configuração de IDEs
+.idea/
+.vscode/
+
+# Ignorar arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos compilados do Python
+*.pyc
+__pycache__/
+
+# Ignorar ambientes virtuais do Python
+env/
+venv/
+
+# Ignorar imagens
+*.log
+*.png
+*.hdf5
+*.png
