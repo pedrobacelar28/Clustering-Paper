@@ -1,4 +1,6 @@
-
+SB = Algoritmos/Luisa/SB_Antes.ipynb
+ST = Algoritmos/Luisa/ST_Antes.ipynb
+AF = Algoritmos/Luisa/AF_Antes.ipynb
 
 It contain annotations about 6 different ECGs abnormalities:
 - 1st degree AV block (1dAVb);
