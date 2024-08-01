@@ -32,3 +32,4 @@ venv/
 # Ignorar imagens
 *.log
 *.hdf5
+*.png
