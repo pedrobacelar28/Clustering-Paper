@@ -22,6 +22,7 @@ build/
 Thumbs.db
 
 # Ignorar arquivos compilados do Python
+*.spec
 *.pyc
 __pycache__/
 
