@@ -1,0 +1,102 @@
+Resultado: SB
+
+  Tipo: N_clusterD
+    Contagem Borderline: {False: 69}
+    Contagem Doenca: {'Outra': 4, 'AF': 2, 'Nenhuma': 1}
+  Tipo: D_clusterN
+    Contagem Borderline: {False: 18}
+    Contagem Doenca: {'Outra': 2}
+  Tipo: N_clusterN
+    Contagem Borderline: {False: 79, True: 1}
+    Contagem Doenca: {'Outra': 10, 'Nenhuma': 6, 'ST': 1}
+
+--------------------------------------------------
+
+Resultado: ST
+
+  Tipo: N_clusterD
+    Contagem Borderline: {False: 24}
+    Contagem Doenca: {'Outra': 3, 'ST': 1, 'Nenhuma': 1}
+  Tipo: D_clusterN
+    Contagem Borderline: {False: 20}
+    Contagem Doenca: {'ST': 2, 'Outra': 1, 'Interferência': 1, 'Nenhuma': 1}
+  Tipo: N_clusterN
+    Contagem Borderline: {False: 68, True: 1}
+    Contagem Doenca: {'Outra': 7, 'Nenhuma': 5}
+  Tipo: D_clusterM
+    Contagem Borderline: {False: 20}
+    Contagem Doenca: {'ST': 1}
+  Tipo: N_clusterM
+    Contagem Borderline: {False: 56}
+    Contagem Doenca: {'Outra': 4, 'AF': 2, 'Nenhuma': 1}
+
+--------------------------------------------------
+
+Resultado: AF
+
+  Tipo: N_clusterD
+    Contagem Borderline: {False: 60}
+    Contagem Doenca: {'Outra': 4, 'AF': 2, 'Nenhuma': 1}
+  Tipo: D_clusterN
+    Contagem Borderline: {False: 20}
+    Contagem Doenca: {'AF': 3, 'Nenhuma': 1}
+  Tipo: N_clusterN
+    Contagem Borderline: {False: 88, True: 1}
+    Contagem Doenca: {'Outra': 10, 'Nenhuma': 6, 'ST': 1}
+  Tipo: D_clusterO
+    Contagem Borderline: {False: 20}
+    Contagem Doenca: {}
+
+--------------------------------------------------
+
+Resultado: dAVB
+
+  Tipo: D_clusterD
+    Contagem Borderline: {False: 12}
+    Contagem Doenca: {'1dAVB': 1}
+  Tipo: N_clusterD
+    Contagem Borderline: {False: 48, True: 1}
+    Contagem Doenca: {'Outra': 7, 'Nenhuma': 2, 'ST': 1}
+  Tipo: D_clusterN
+    Contagem Borderline: {False: 12}
+    Contagem Doenca: {'Outra': 2, '1dAVB': 1}
+  Tipo: N_clusterN
+    Contagem Borderline: {False: 30}
+    Contagem Doenca: {'AF': 2, 'Outra': 2}
+
+--------------------------------------------------
+
+Resultado: RBBB
+
+  Tipo: N_clusterD
+    Contagem Borderline: {False: 47}
+    Contagem Doenca: {'Outra': 5, 'Nenhuma': 3, 'AF': 1}
+  Tipo: D_clusterN
+    Contagem Borderline: {False: 25}
+    Contagem Doenca: {'RBBB': 1, 'Outra': 1}
+  Tipo: N_clusterN
+    Contagem Borderline: {False: 101, True: 1}
+    Contagem Doenca: {'Outra': 9, 'Nenhuma': 4, 'AF': 1, 'ST': 1}
+
+--------------------------------------------------
+
+Resultado: LBBB
+
+  Tipo: N_clusterD
+    Contagem Borderline: {False: 22, True: 1}
+    Contagem Doenca: {'Nenhuma': 3, 'Outra': 1}
+  Tipo: D_clusterN
+    Contagem Borderline: {False: 22}
+    Contagem Doenca: {'Outra': 3, 'LBBB': 3}
+  Tipo: N_clusterN
+    Contagem Borderline: {False: 122}
+    Contagem Doenca: {'Outra': 11, 'Nenhuma': 4, 'AF': 2, 'ST': 1}
+  Tipo: D_clusterO
+    Contagem Borderline: {False: 2}
+    Contagem Doenca: {'Outra': 1}
+  Tipo: N_clusterO
+    Contagem Borderline: {False: 4}
+    Contagem Doenca: {'Outra': 2}
+
+--------------------------------------------------
+
