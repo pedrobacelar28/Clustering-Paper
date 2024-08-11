@@ -1,13 +1,13 @@
 Resultado: SB
 
   Tipo: N_clusterD
-    Contagem Borderline: {False: 69}
+    Contagem Borderline: {False: 7}
     Contagem Doenca: {'Outra': 4, 'AF': 2, 'Nenhuma': 1}
   Tipo: D_clusterN
-    Contagem Borderline: {False: 18}
+    Contagem Borderline: {False: 2}
     Contagem Doenca: {'Outra': 2}
   Tipo: N_clusterN
-    Contagem Borderline: {False: 79, True: 1}
+    Contagem Borderline: {False: 15, True: 1}
     Contagem Doenca: {'Outra': 10, 'Nenhuma': 6, 'ST': 1}
 
 --------------------------------------------------
@@ -15,19 +15,19 @@ Resultado: SB
 Resultado: ST
 
   Tipo: N_clusterD
-    Contagem Borderline: {False: 24}
+    Contagem Borderline: {False: 5}
     Contagem Doenca: {'Outra': 3, 'ST': 1, 'Nenhuma': 1}
   Tipo: D_clusterN
-    Contagem Borderline: {False: 20}
+    Contagem Borderline: {False: 5}
     Contagem Doenca: {'ST': 2, 'Outra': 1, 'Interferência': 1, 'Nenhuma': 1}
   Tipo: N_clusterN
-    Contagem Borderline: {False: 68, True: 1}
+    Contagem Borderline: {False: 10, True: 1}
     Contagem Doenca: {'Outra': 7, 'Nenhuma': 5}
   Tipo: D_clusterM
-    Contagem Borderline: {False: 20}
+    Contagem Borderline: {False: 1}
     Contagem Doenca: {'ST': 1}
   Tipo: N_clusterM
-    Contagem Borderline: {False: 56}
+    Contagem Borderline: {False: 7}
     Contagem Doenca: {'Outra': 4, 'AF': 2, 'Nenhuma': 1}
 
 --------------------------------------------------
@@ -35,33 +35,33 @@ Resultado: ST
 Resultado: AF
 
   Tipo: N_clusterD
-    Contagem Borderline: {False: 60}
+    Contagem Borderline: {False: 7}
     Contagem Doenca: {'Outra': 4, 'AF': 2, 'Nenhuma': 1}
   Tipo: D_clusterN
-    Contagem Borderline: {False: 20}
+    Contagem Borderline: {False: 4}
     Contagem Doenca: {'AF': 3, 'Nenhuma': 1}
   Tipo: N_clusterN
-    Contagem Borderline: {False: 88, True: 1}
+    Contagem Borderline: {False: 15, True: 1}
     Contagem Doenca: {'Outra': 10, 'Nenhuma': 6, 'ST': 1}
   Tipo: D_clusterO
-    Contagem Borderline: {False: 20}
+    Contagem Borderline: {}
     Contagem Doenca: {}
 
 --------------------------------------------------
 
-Resultado: dAVB
+Resultado: 1dAVB
 
   Tipo: D_clusterD
-    Contagem Borderline: {False: 12}
+    Contagem Borderline: {False: 1}
     Contagem Doenca: {'1dAVB': 1}
   Tipo: N_clusterD
-    Contagem Borderline: {False: 48, True: 1}
+    Contagem Borderline: {False: 9, True: 1}
     Contagem Doenca: {'Outra': 7, 'Nenhuma': 2, 'ST': 1}
   Tipo: D_clusterN
-    Contagem Borderline: {False: 12}
+    Contagem Borderline: {False: 3}
     Contagem Doenca: {'Outra': 2, '1dAVB': 1}
   Tipo: N_clusterN
-    Contagem Borderline: {False: 30}
+    Contagem Borderline: {False: 4}
     Contagem Doenca: {'AF': 2, 'Outra': 2}
 
 --------------------------------------------------
@@ -69,13 +69,13 @@ Resultado: dAVB
 Resultado: RBBB
 
   Tipo: N_clusterD
-    Contagem Borderline: {False: 47}
+    Contagem Borderline: {False: 8}
     Contagem Doenca: {'Outra': 5, 'Nenhuma': 3, 'AF': 1}
   Tipo: D_clusterN
-    Contagem Borderline: {False: 25}
+    Contagem Borderline: {False: 2}
     Contagem Doenca: {'RBBB': 1, 'Outra': 1}
   Tipo: N_clusterN
-    Contagem Borderline: {False: 101, True: 1}
+    Contagem Borderline: {False: 14, True: 1}
     Contagem Doenca: {'Outra': 9, 'Nenhuma': 4, 'AF': 1, 'ST': 1}
 
 --------------------------------------------------
@@ -83,19 +83,19 @@ Resultado: RBBB
 Resultado: LBBB
 
   Tipo: N_clusterD
-    Contagem Borderline: {False: 22, True: 1}
+    Contagem Borderline: {False: 3, True: 1}
     Contagem Doenca: {'Nenhuma': 3, 'Outra': 1}
   Tipo: D_clusterN
-    Contagem Borderline: {False: 22}
+    Contagem Borderline: {False: 6}
     Contagem Doenca: {'Outra': 3, 'LBBB': 3}
   Tipo: N_clusterN
-    Contagem Borderline: {False: 122}
+    Contagem Borderline: {False: 17}
     Contagem Doenca: {'Outra': 11, 'Nenhuma': 4, 'AF': 2, 'ST': 1}
   Tipo: D_clusterO
-    Contagem Borderline: {False: 2}
+    Contagem Borderline: {False: 1}
     Contagem Doenca: {'Outra': 1}
   Tipo: N_clusterO
-    Contagem Borderline: {False: 4}
+    Contagem Borderline: {False: 2}
     Contagem Doenca: {'Outra': 2}
 
 --------------------------------------------------
