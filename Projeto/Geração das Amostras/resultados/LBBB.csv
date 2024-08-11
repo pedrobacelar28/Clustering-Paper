@@ -1,0 +1,174 @@
+exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
+350152,-1,False,D_clusterO,0.69003266,,False,False
+1338785,-1,False,D_clusterO,0.4437059,Outra,False,Isquemia de parede anterior
+1444078,-1,True,N_clusterO,0.6880815,Outra,False,"Isquemia de parede antero lateral, supra de V2 a V5"
+1415292,-1,True,N_clusterO,0.6713034,Outra,False,Sobrecarga VE e AE
+183999,-1,True,N_clusterO,0.5403433,,False,False
+1050254,-1,True,N_clusterO,0.4379093,,False,False
+1735139,0,True,N_clusterD,0.15682995,,False,False
+84439,0,True,N_clusterD,0.14908975,,False,False
+204565,0,True,N_clusterD,0.13769338,,False,False
+1798370,0,True,N_clusterD,0.13075832,,False,False
+236637,0,True,N_clusterD,0.1290429,,False,False
+212673,0,True,N_clusterD,0.12584314,,False,False
+1372960,0,True,N_clusterD,0.106594265,Outra,True,"Isquemia antero septal, supra de ST em V2, V3 e V4"
+136677,0,True,N_clusterD,0.08786662,,False,False
+161345,0,True,N_clusterD,0.07988938,,False,False
+1222975,0,True,N_clusterD,0.030186784,Nenhuma,False,False
+139887,0,True,N_clusterD,-0.037411224,,False,False
+1203222,0,True,N_clusterD,-0.091742225,Nenhuma,False,False
+767433,0,True,N_clusterD,-0.094371356,,False,False
+346776,0,True,N_clusterD,-0.11474059,,False,False
+250367,0,True,N_clusterD,-0.14078979,,False,False
+279614,0,True,N_clusterD,-0.16433649,,False,False
+277965,0,True,N_clusterD,-0.17655244,,False,False
+185119,0,True,N_clusterD,-0.26372033,,False,False
+836017,0,True,N_clusterD,-0.3051979,,False,False
+1203454,0,True,N_clusterD,-0.39001656,Nenhuma,False,False
+69378,0,True,N_clusterD,-0.49827948,,False,False
+690616,0,True,N_clusterD,-0.57125485,,False,False
+269344,0,True,N_clusterD,-0.5991123,,False,False
+3172865,1,False,D_clusterN,0.16906181,,False,False
+1491052,1,False,D_clusterN,0.11737523,Outra,False,Sobrecarga AE e VE
+1238188,1,False,D_clusterN,0.08948525,Outra,False,Sobrecarga de VE
+829769,1,False,D_clusterN,0.05265433,,False,False
+714705,1,False,D_clusterN,0.020506425,,False,False
+1631949,1,False,D_clusterN,-0.010025523,,False,False
+1061241,1,False,D_clusterN,-0.07775066,,False,False
+916917,1,False,D_clusterN,-0.1302202,,False,False
+1860143,1,False,D_clusterN,-0.18255526,,False,False
+1399834,1,False,D_clusterN,-0.23901033,Outra,False,"Isquemia, supra de ST de V1 a V4"
+3025466,1,False,D_clusterN,-0.28912625,,False,False
+476595,1,False,D_clusterN,-0.3259545,LBBB,False,False
+1556148,1,False,D_clusterN,-0.3494105,,False,False
+1499699,1,False,D_clusterN,-0.37469882,,False,False
+1082367,1,False,D_clusterN,-0.50607073,,False,False
+927554,1,False,D_clusterN,-0.5335572,,False,False
+1269774,1,False,D_clusterN,-0.54169315,LBBB,False,Presença de extrassistoles supraventriculares pareadas monomorficas
+1332819,1,False,D_clusterN,-0.54816234,LBBB,False,False
+2973866,1,False,D_clusterN,-0.55176497,,False,False
+1586907,1,False,D_clusterN,-0.5597848,,False,False
+1512163,1,False,D_clusterN,-0.57019114,,False,False
+66896,1,False,D_clusterN,-0.61759925,,False,False
+257722,1,True,N_clusterN,0.17066765,,False,False
+1132113,1,True,N_clusterN,0.14389342,,False,False
+2007170,1,True,N_clusterN,0.14240313,,False,False
+651272,1,True,N_clusterN,0.13835408,,False,False
+629570,1,True,N_clusterN,0.13197938,,False,False
+42054,1,True,N_clusterN,0.1319694,,False,False
+60084,1,True,N_clusterN,0.123945184,,False,False
+1259700,1,True,N_clusterN,0.11659402,Outra,False,Sobrecarga AE e VE
+1928570,1,True,N_clusterN,0.11644887,,False,False
+338057,1,True,N_clusterN,0.11275578,,False,False
+965626,1,True,N_clusterN,0.112144545,,False,False
+1964395,1,True,N_clusterN,0.10719532,,False,False
+215469,1,True,N_clusterN,0.10083361,,False,False
+748170,1,True,N_clusterN,0.08641067,,False,False
+233324,1,True,N_clusterN,0.083684735,,False,False
+484984,1,True,N_clusterN,0.081066005,,False,False
+1635920,1,True,N_clusterN,0.07819277,,False,False
+270359,1,True,N_clusterN,0.07321011,,False,False
+439867,1,True,N_clusterN,0.06638062,,False,False
+1621612,1,True,N_clusterN,0.062688865,,False,False
+748333,1,True,N_clusterN,0.052869596,,False,False
+907979,1,True,N_clusterN,0.05065284,,False,False
+104785,1,True,N_clusterN,0.040848088,,False,False
+1883,1,True,N_clusterN,0.035215404,Nenhuma,False,Possível interferência em aVF e V5
+385870,1,True,N_clusterN,0.030086825,,False,False
+1721943,1,True,N_clusterN,0.016205337,,False,False
+59396,1,True,N_clusterN,0.01471729,,False,False
+902165,1,True,N_clusterN,0.009057786,,False,False
+1776228,1,True,N_clusterN,-0.016560763,,False,False
+229965,1,True,N_clusterN,-0.021788329,,False,False
+1423711,1,True,N_clusterN,-0.040666435,Outra,False,Sobrecarga AE
+103188,1,True,N_clusterN,-0.04283858,,False,False
+1704451,1,True,N_clusterN,-0.047550317,,False,False
+117476,1,True,N_clusterN,-0.04802942,,False,False
+905103,1,True,N_clusterN,-0.06754901,,False,False
+84237,1,True,N_clusterN,-0.08219288,,False,False
+276380,1,True,N_clusterN,-0.10755605,,False,False
+231711,1,True,N_clusterN,-0.11087687,Outra,False,Arritmia sinusal
+1743775,1,True,N_clusterN,-0.13552913,,False,False
+1295238,1,True,N_clusterN,-0.15620439,Outra,False,sobrecarga VE e AE
+1526329,1,True,N_clusterN,-0.16997288,,False,False
+117460,1,True,N_clusterN,-0.18980823,,False,False
+1537000,1,True,N_clusterN,-0.19750458,,False,False
+1329316,1,True,N_clusterN,-0.19892652,Outra,False,Sobrecarga AE
+1671946,1,True,N_clusterN,-0.20300522,,False,False
+368755,1,True,N_clusterN,-0.2066696,,False,False
+512801,1,True,N_clusterN,-0.20791215,,False,False
+724631,1,True,N_clusterN,-0.20817243,,False,False
+741310,1,True,N_clusterN,-0.21003006,,False,False
+62906,1,True,N_clusterN,-0.21138833,,False,False
+902740,1,True,N_clusterN,-0.21259661,,False,False
+1804120,1,True,N_clusterN,-0.21621352,,False,False
+103481,1,True,N_clusterN,-0.21659547,,False,False
+1411804,1,True,N_clusterN,-0.218609,Outra,False,"Arritmia sinusal, sobrecarga AD"
+69073,1,True,N_clusterN,-0.22198215,,False,False
+500915,1,True,N_clusterN,-0.22235312,,False,False
+1836798,1,True,N_clusterN,-0.2227606,,False,False
+1121616,1,True,N_clusterN,-0.22523884,,False,False
+1437198,1,True,N_clusterN,-0.22545068,Outra,False,"Sobrecarga, VE, AE e AD"
+1249940,1,True,N_clusterN,-0.22588262,ST,False,False
+209602,1,True,N_clusterN,-0.2275805,,False,False
+1300851,1,True,N_clusterN,-0.2318414,Outra,False,arritmia sinusal
+988219,1,True,N_clusterN,-0.25652313,,False,False
+1490233,1,True,N_clusterN,-0.29770643,Nenhuma,False,False
+1545590,1,True,N_clusterN,-0.30376092,,False,False
+1592697,1,True,N_clusterN,-0.3488603,,False,False
+753988,1,True,N_clusterN,-0.36089605,,False,False
+1712446,1,True,N_clusterN,-0.3720963,,False,False
+15542,1,True,N_clusterN,-0.37560287,,False,False
+52425,1,True,N_clusterN,-0.40527388,,False,False
+609521,1,True,N_clusterN,-0.41228247,,False,False
+421486,1,True,N_clusterN,-0.41299888,,False,False
+806264,1,True,N_clusterN,-0.42272133,,False,False
+1057859,1,True,N_clusterN,-0.43148467,,False,False
+1733481,1,True,N_clusterN,-0.4527573,,False,False
+493505,1,True,N_clusterN,-0.45523486,,False,False
+1782249,1,True,N_clusterN,-0.46017432,,False,False
+1410295,1,True,N_clusterN,-0.47356984,Outra,False,Sobrecarga AD
+315213,1,True,N_clusterN,-0.4873161,,False,False
+1517407,1,True,N_clusterN,-0.4920196,,False,False
+611076,1,True,N_clusterN,-0.49361643,,False,False
+1188863,1,True,N_clusterN,-0.49576175,Outra,False,False
+1183535,1,True,N_clusterN,-0.50456554,AF,False,False
+134860,1,True,N_clusterN,-0.5072567,,False,False
+940581,1,True,N_clusterN,-0.5082279,,False,False
+801591,1,True,N_clusterN,-0.5083085,,False,False
+1631695,1,True,N_clusterN,-0.50961614,,False,False
+33661,1,True,N_clusterN,-0.5120431,,False,False
+1572771,1,True,N_clusterN,-0.5157843,,False,False
+1621481,1,True,N_clusterN,-0.51773274,,False,False
+1033785,1,True,N_clusterN,-0.5195542,,False,False
+1615431,1,True,N_clusterN,-0.5230827,,False,False
+1709495,1,True,N_clusterN,-0.5261527,,False,False
+688318,1,True,N_clusterN,-0.5283895,,False,False
+1536672,1,True,N_clusterN,-0.53287977,,False,False
+1848905,1,True,N_clusterN,-0.53528154,,False,False
+918264,1,True,N_clusterN,-0.53638184,,False,False
+610046,1,True,N_clusterN,-0.5371293,,False,False
+1789163,1,True,N_clusterN,-0.539162,,False,False
+1121716,1,True,N_clusterN,-0.5394682,,False,False
+130282,1,True,N_clusterN,-0.54033124,,False,False
+1610032,1,True,N_clusterN,-0.5412352,,False,False
+1794048,1,True,N_clusterN,-0.5416156,,False,False
+1148170,1,True,N_clusterN,-0.54249066,Nenhuma,False,False
+219348,1,True,N_clusterN,-0.54376847,,False,False
+150032,1,True,N_clusterN,-0.5441617,,False,False
+1533349,1,True,N_clusterN,-0.5447668,,False,False
+1052961,1,True,N_clusterN,-0.5451993,,False,False
+336003,1,True,N_clusterN,-0.54674095,,False,False
+1144689,1,True,N_clusterN,-0.55123955,AF,False,False
+575290,1,True,N_clusterN,-0.55166656,,False,False
+2303,1,True,N_clusterN,-0.55356956,,False,False
+1454271,1,True,N_clusterN,-0.5537166,Nenhuma,False,False
+1311446,1,True,N_clusterN,-0.5563503,Outra,False,Sobrecarga
+982543,1,True,N_clusterN,-0.5574144,,False,False
+340180,1,True,N_clusterN,-0.56132776,,False,False
+298791,1,True,N_clusterN,-0.56623256,,False,False
+812664,1,True,N_clusterN,-0.56684935,,False,False
+786260,1,True,N_clusterN,-0.5701834,,False,False
+1904289,1,True,N_clusterN,-0.57188773,,False,False
+1868972,1,True,N_clusterN,-0.5732383,,False,False
+61018,1,True,N_clusterN,-0.5914852,,False,False
