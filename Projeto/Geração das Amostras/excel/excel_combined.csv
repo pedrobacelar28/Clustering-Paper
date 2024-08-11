@@ -239,50 +239,50 @@ exam_id,doenca,borderline,comentario
 1776228,,,
 1777930,,,
 1782249,,,
-1789163,,,
-1794048,,,
-1798370,,,
-1804120,,,
-1831160,,,
-1836798,,,
-1842218,,,
-1848905,,,
-1856702,,,
-1860143,,,
-1862980,,,
-1868972,,,
-1873732,,,
-1891463,,,
-1900920,,,
-1904289,,,
-1904342,,,
-1926800,,,
-1927643,,,
-1928570,,,
-1933944,,,
-1960521,,,
-1963513,,,
-1964395,,,
-1985037,,,
-2007170,,,
-2500692,,,
-2513566,,,
-2518759,,,
-2519668,,,
-2520897,,,
-2521574,,,
-2534394,,,
-2655478,,,
-2659904,,,
-2682903,,,
-2684998,,,
-2729712,,,
-2745828,,,
-2752429,,,
-2760109,,,
-2761107,,,
-2763079,,,
-2765246,,,
+1789163,Outra,False,Sobrecarga AE e VE. Interferência 
+1794048,Outra,False,Sobrecarga VE e AE 
+1798370,Outra,False,Sobrecarga VE. Onda Q patológica em V1
+1804120,Nenhuma,False,
+1831160,AF,False,Com taquicardia ventricular em seguida
+1836798,ST,False,Sobrecarga VD e AD. Isquemka de parede antero septal com supra de ST em V2 e V3
+1842218,1dAVB,False,Sobrecarga VE e AE. Onda Q patológica em V1. Interferência 
+1848905,Outra,False,Extrassistole ventricular isolada monomorfica.
+1856702,1dAVB,False,"Sobrecarga VE,  AE e VD. Onda Q patológica em V1."
+1860143,Outra,False,Hemi bloqueio antero superior. Extrassistole ventricular isolada monomorfica 
+1862980,Outra,False,Sobrecarga VD. Onda Q patológica em V1 
+1868972,Outra,False,"Sobrecarga AD, AE, VE."
+1873732,ST,False,Sobrecarga VD e VE. Q patológica em V1 
+1891463,ST,False,Sobrecarga VD e VE. Q patológica em V1 
+1900920,Outra,False,Sobrecarga VE e AE 
+1904289,Outra,False,Extrassistole ventricular isolada monomorfica 
+1904342,1dAVB,False,Hemi bloqueio antero superior 
+1926800,RBBB,False,Mais hemi bloqueio de ramo antero superior 
+1927643,AF,False,Sobrecarga VE e VD 
+1928570,Nenhuma,False,
+1933944,RBBB,False,Extrassistoles ventriculares monomorficas bigeminadas
+1960521,RBBB,False,Sobrecarga AE e AD
+1963513,ST,False,Bloqueio de ramo direito e sobrecarga de VE
+1964395,Outra,False,Sobrecarga VE
+1985037,Nenhuma,False,
+2007170,Nenhuma,False,Interferência 
+2500692,RBBB,False,
+2513566,Interferência,False,Ausência de V1 e V3
+2518759,ST,False,
+2519668,RBBB,False,"Sobrecarga VE, VD, AE, AD."
+2520897,AF,False,
+2521574,AF,False,
+2534394,1dAVB,False,Sobrecarga VE e AE
+2655478,1dAVB,False,Sobrecarga VE e AE
+2659904,Outra,False,Extrassistoles supraventriculares monomorficas. Interferência 
+2682903,AF,False,
+2684998,RBBB,False,"Sobrecarga de VE,  AE,  AD "
+2729712,RBBB,False,Sobrecarga AE e VE 
+2745828,AF,False,
+2752429,ST,False,Arritmia sinusal
+2760109,ST,False,Mais FA
+2761107,AF,True,Interferência. Extrassistoles ventriculares bigeminadas monomorficas
+2763079,RBBB,False,Taquicardia sinusal
+2765246,AF,False,
 2786220,,,
 2790986,,,
 2795604,,,
