@@ -1,0 +1,13 @@
+Contagem de 'borderline':
+False: 57
+True: 1
+
+Contagem de 'doenca':
+Outra: 38
+Nenhuma: 13
+ST: 3
+SB: 2
+Interferência: 1
+1dAVB: 1
+AF: 1
+--------------------------------------------------

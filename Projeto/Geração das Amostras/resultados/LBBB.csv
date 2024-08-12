@@ -5,7 +5,7 @@ exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
 1415292,-1,True,N_clusterO,0.6713034,Outra,False,Sobrecarga VE e AE
 183999,-1,True,N_clusterO,0.5403433,,,
 1050254,-1,True,N_clusterO,0.4379093,,,
-1735139,0,True,N_clusterD,0.15682995,,,
+1735139,0,True,N_clusterD,0.15682995,Outra,False,Sobrecarga VE 
 84439,0,True,N_clusterD,0.14908975,,,
 204565,0,True,N_clusterD,0.13769338,,,
 1798370,0,True,N_clusterD,0.13075832,Outra,False,Sobrecarga VE. Onda Q patológica em V1
@@ -28,27 +28,27 @@ exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
 69378,0,True,N_clusterD,-0.49827948,,,
 690616,0,True,N_clusterD,-0.57125485,,,
 269344,0,True,N_clusterD,-0.5991123,,,
-3172865,1,False,D_clusterN,0.16906181,,,
+3172865,1,False,D_clusterN,0.16906181,Outra,False,Hemi bloqueio antero superior 
 1491052,1,False,D_clusterN,0.11737523,Outra,False,Sobrecarga AE e VE
 1238188,1,False,D_clusterN,0.08948525,Outra,False,Sobrecarga de VE
 829769,1,False,D_clusterN,0.05265433,,,
 714705,1,False,D_clusterN,0.020506425,,,
-1631949,1,False,D_clusterN,-0.010025523,,,
+1631949,1,False,D_clusterN,-0.010025523,Outra,False,"Isquemia de parede antero septal, supra em V1 a V3. Sobrecarga de VE com alargamento de QRS"
 1061241,1,False,D_clusterN,-0.07775066,,,
 916917,1,False,D_clusterN,-0.1302202,,,
 1860143,1,False,D_clusterN,-0.18255526,Outra,False,Hemi bloqueio antero superior. Extrassistole ventricular isolada monomorfica 
 1399834,1,False,D_clusterN,-0.23901033,Outra,False,"Isquemia, supra de ST de V1 a V4"
-3025466,1,False,D_clusterN,-0.28912625,,,
+3025466,1,False,D_clusterN,-0.28912625,Outra,False,Sobrecarga VE.  Onda Q patológica em V1 
 476595,1,False,D_clusterN,-0.3259545,LBBB,False,
-1556148,1,False,D_clusterN,-0.3494105,,,
-1499699,1,False,D_clusterN,-0.37469882,,,
+1556148,1,False,D_clusterN,-0.3494105,Outra,False,Sobrecarga VE e AE 
+1499699,1,False,D_clusterN,-0.37469882,LBBB,False,Presença de isquemia de parede antero septal com supra de ST de V1 a V3
 1082367,1,False,D_clusterN,-0.50607073,,,
 927554,1,False,D_clusterN,-0.5335572,,,
 1269774,1,False,D_clusterN,-0.54169315,LBBB,False,Presença de extrassistoles supraventriculares pareadas monomorficas
 1332819,1,False,D_clusterN,-0.54816234,LBBB,False,
-2973866,1,False,D_clusterN,-0.55176497,,,
-1586907,1,False,D_clusterN,-0.5597848,,,
-1512163,1,False,D_clusterN,-0.57019114,,,
+2973866,1,False,D_clusterN,-0.55176497,Outra,False,"Extrassistoles ventriculares monomorficas bigeminadas. Sobrecarga VE, AE e VD "
+1586907,1,False,D_clusterN,-0.5597848,Outra,False,"Isquemia de parede anterior e inferior, supra de ST em V1 a V4, aVF e D3, infra de ST em V6, aVL e D1"
+1512163,1,False,D_clusterN,-0.57019114,RBBB,False,"Presença de isquemia de parede antero septal, supra de V1 e V1, sobrecarga AD e VD"
 66896,1,False,D_clusterN,-0.61759925,,,
 257722,1,True,N_clusterN,0.17066765,,,
 1132113,1,True,N_clusterN,0.14389342,,,
@@ -66,35 +66,35 @@ exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
 748170,1,True,N_clusterN,0.08641067,,,
 233324,1,True,N_clusterN,0.083684735,,,
 484984,1,True,N_clusterN,0.081066005,,,
-1635920,1,True,N_clusterN,0.07819277,,,
+1635920,1,True,N_clusterN,0.07819277,Outra,False,Sonrecarga biatrial
 270359,1,True,N_clusterN,0.07321011,,,
 439867,1,True,N_clusterN,0.06638062,,,
-1621612,1,True,N_clusterN,0.062688865,,,
+1621612,1,True,N_clusterN,0.062688865,Outra,False,"Isquemia de parede antero septal, supra de ST de V2 e V3."
 748333,1,True,N_clusterN,0.052869596,,,
 907979,1,True,N_clusterN,0.05065284,,,
 104785,1,True,N_clusterN,0.040848088,,,
 1883,1,True,N_clusterN,0.035215404,Nenhuma,,Possível interferência em aVF e V5
 385870,1,True,N_clusterN,0.030086825,,,
-1721943,1,True,N_clusterN,0.016205337,,,
+1721943,1,True,N_clusterN,0.016205337,Outra,False,Sobrecarga VE e AE 
 59396,1,True,N_clusterN,0.01471729,,,
 902165,1,True,N_clusterN,0.009057786,,,
-1776228,1,True,N_clusterN,-0.016560763,,,
+1776228,1,True,N_clusterN,-0.016560763,Outra,False,Sobrecarga de VE 
 229965,1,True,N_clusterN,-0.021788329,,,
 1423711,1,True,N_clusterN,-0.040666435,Outra,False,Sobrecarga AE
 103188,1,True,N_clusterN,-0.04283858,,,
-1704451,1,True,N_clusterN,-0.047550317,,,
+1704451,1,True,N_clusterN,-0.047550317,Outra,False,Sobrecarga VE
 117476,1,True,N_clusterN,-0.04802942,,,
 905103,1,True,N_clusterN,-0.06754901,,,
 84237,1,True,N_clusterN,-0.08219288,,,
 276380,1,True,N_clusterN,-0.10755605,,,
 231711,1,True,N_clusterN,-0.11087687,Outra,False,Arritmia sinusal
-1743775,1,True,N_clusterN,-0.13552913,,,
+1743775,1,True,N_clusterN,-0.13552913,Outra,False,Sobrecarga biatrial e de VE. Q patológica em V1
 1295238,1,True,N_clusterN,-0.15620439,Outra,False,sobrecarga VE e AE
-1526329,1,True,N_clusterN,-0.16997288,,,
+1526329,1,True,N_clusterN,-0.16997288,Outra,False,Sobrecarga VE 
 117460,1,True,N_clusterN,-0.18980823,,,
-1537000,1,True,N_clusterN,-0.19750458,,,
+1537000,1,True,N_clusterN,-0.19750458,Outra,False,Sobrecarga VE
 1329316,1,True,N_clusterN,-0.19892652,Outra,False,Sobrecarga AE
-1671946,1,True,N_clusterN,-0.20300522,,,
+1671946,1,True,N_clusterN,-0.20300522,Outra,False,Sobrecarga de VE e AE 
 368755,1,True,N_clusterN,-0.2066696,,,
 512801,1,True,N_clusterN,-0.20791215,,,
 724631,1,True,N_clusterN,-0.20817243,,,
@@ -114,52 +114,52 @@ exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
 1300851,1,True,N_clusterN,-0.2318414,Outra,False,arritmia sinusal
 988219,1,True,N_clusterN,-0.25652313,,,
 1490233,1,True,N_clusterN,-0.29770643,Nenhuma,False,
-1545590,1,True,N_clusterN,-0.30376092,,,
-1592697,1,True,N_clusterN,-0.3488603,,,
+1545590,1,True,N_clusterN,-0.30376092,1dAVB,False,Presença de extrassistole interpolada
+1592697,1,True,N_clusterN,-0.3488603,Outra,False,Sobrecarga VE
 753988,1,True,N_clusterN,-0.36089605,,,
-1712446,1,True,N_clusterN,-0.3720963,,,
+1712446,1,True,N_clusterN,-0.3720963,Outra,False,"Arritmia sinusal, Q patológica em V1 e V2, sobrecarga de VE "
 15542,1,True,N_clusterN,-0.37560287,,,
 52425,1,True,N_clusterN,-0.40527388,,,
 609521,1,True,N_clusterN,-0.41228247,,,
 421486,1,True,N_clusterN,-0.41299888,,,
 806264,1,True,N_clusterN,-0.42272133,,,
 1057859,1,True,N_clusterN,-0.43148467,,,
-1733481,1,True,N_clusterN,-0.4527573,,,
+1733481,1,True,N_clusterN,-0.4527573,Outra,False,Sobrecarga biatrial e de VE 
 493505,1,True,N_clusterN,-0.45523486,,,
-1782249,1,True,N_clusterN,-0.46017432,,,
+1782249,1,True,N_clusterN,-0.46017432,Outra,False,Sobrecarga VE 
 1410295,1,True,N_clusterN,-0.47356984,Outra,False,Sobrecarga AD
 315213,1,True,N_clusterN,-0.4873161,,,
-1517407,1,True,N_clusterN,-0.4920196,,,
+1517407,1,True,N_clusterN,-0.4920196,Outra,False, Sobrecarga VE
 611076,1,True,N_clusterN,-0.49361643,,,
 1188863,1,True,N_clusterN,-0.49576175,Outra,False,
 1183535,1,True,N_clusterN,-0.50456554,AF,False,
 134860,1,True,N_clusterN,-0.5072567,,,
 940581,1,True,N_clusterN,-0.5082279,,,
 801591,1,True,N_clusterN,-0.5083085,,,
-1631695,1,True,N_clusterN,-0.50961614,,,
+1631695,1,True,N_clusterN,-0.50961614,Nenhuma,False,Interferência 
 33661,1,True,N_clusterN,-0.5120431,,,
-1572771,1,True,N_clusterN,-0.5157843,,,
-1621481,1,True,N_clusterN,-0.51773274,,,
+1572771,1,True,N_clusterN,-0.5157843,SB,False,Presença de extrassistole supraventricular monomorfica isolada
+1621481,1,True,N_clusterN,-0.51773274,ST,False,Presença de sobrecarga de VE 
 1033785,1,True,N_clusterN,-0.5195542,,,
-1615431,1,True,N_clusterN,-0.5230827,,,
-1709495,1,True,N_clusterN,-0.5261527,,,
+1615431,1,True,N_clusterN,-0.5230827,Outra,False,"Extrassistole interpolada isolada, com interferência "
+1709495,1,True,N_clusterN,-0.5261527,Nenhuma,False,Interferência 
 688318,1,True,N_clusterN,-0.5283895,,,
-1536672,1,True,N_clusterN,-0.53287977,,,
+1536672,1,True,N_clusterN,-0.53287977,Nenhuma,False,Interferência 
 1848905,1,True,N_clusterN,-0.53528154,Outra,False,Extrassistole ventricular isolada monomorfica.
 918264,1,True,N_clusterN,-0.53638184,,,
 610046,1,True,N_clusterN,-0.5371293,,,
 1789163,1,True,N_clusterN,-0.539162,Outra,False,Sobrecarga AE e VE. Interferência 
 1121716,1,True,N_clusterN,-0.5394682,,,
 130282,1,True,N_clusterN,-0.54033124,,,
-1610032,1,True,N_clusterN,-0.5412352,,,
+1610032,1,True,N_clusterN,-0.5412352,SB,False,
 1794048,1,True,N_clusterN,-0.5416156,Outra,False,Sobrecarga VE e AE 
 1148170,1,True,N_clusterN,-0.54249066,Nenhuma,False,
 219348,1,True,N_clusterN,-0.54376847,,,
 150032,1,True,N_clusterN,-0.5441617,,,
-1533349,1,True,N_clusterN,-0.5447668,,,
+1533349,1,True,N_clusterN,-0.5447668,Outra,False,"Arritimia sinusal, interferência "
 1052961,1,True,N_clusterN,-0.5451993,,,
 336003,1,True,N_clusterN,-0.54674095,,,
-1144689,1,True,N_clusterN,-0.55123955,AF,False,
+1144689,1,True,N_clusterN,-0.55123955,Interferência,False,
 575290,1,True,N_clusterN,-0.55166656,,,
 2303,1,True,N_clusterN,-0.55356956,,,
 1454271,1,True,N_clusterN,-0.5537166,Nenhuma,False,

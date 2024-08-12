@@ -1,0 +1,150 @@
+exam_id,normal_ecg,doenca,borderline,comentario
+1592697,True,Outra,False,Sobrecarga VE
+385870,True,,,
+1704451,True,Outra,False,Sobrecarga VE
+150032,True,,,
+1311446,True,Outra,False,Sobrecarga
+1868972,True,Outra,False,"Sobrecarga AD, AE, VE."
+233324,True,,,
+117460,True,,,
+1121716,True,,,
+2007170,True,Nenhuma,False,Interferência 
+161345,True,,,
+1904289,True,Outra,False,Extrassistole ventricular isolada monomorfica 
+215469,True,,,
+270359,True,,,
+1533349,True,Outra,False,"Arritimia sinusal, interferência "
+812664,True,,,
+1144689,True,Interferência,False,
+368755,True,,,
+42054,True,,,
+61018,True,,,
+1804120,True,Nenhuma,False,
+1536672,True,Nenhuma,False,Interferência 
+1423711,True,Outra,False,Sobrecarga AE
+104785,True,,,
+1621612,True,Outra,False,"Isquemia de parede antero septal, supra de ST de V2 e V3."
+298791,True,,,
+60084,True,,,
+1631695,True,Nenhuma,False,Interferência 
+229965,True,,,
+340180,True,,,
+902165,True,,,
+1537000,True,Outra,False,Sobrecarga VE
+905103,True,,,
+786260,True,,,
+52425,True,,,
+748170,True,,,
+753988,True,,,
+801591,True,,,
+651272,True,,,
+1928570,True,Nenhuma,False,
+1132113,True,,,
+1545590,True,1dAVB,False,Presença de extrassistole interpolada
+1148170,True,Nenhuma,False,
+1848905,True,Outra,False,Extrassistole ventricular isolada monomorfica.
+1295238,True,Outra,False,sobrecarga VE e AE
+1635920,True,Outra,False,Sonrecarga biatrial
+84237,True,,,
+1794048,True,Outra,False,Sobrecarga VE e AE 
+907979,True,,,
+1183535,True,AF,False,
+130282,True,,,
+688318,True,,,
+611076,True,,,
+1782249,True,Outra,False,Sobrecarga VE 
+1709495,True,Nenhuma,False,Interferência 
+1610032,True,SB,False,
+1052961,True,,,
+1517407,True,Outra,False, Sobrecarga VE
+1033785,True,,,
+575290,True,,,
+1712446,True,Outra,False,"Arritmia sinusal, Q patológica em V1 e V2, sobrecarga de VE "
+940581,True,,,
+1188863,True,Outra,False,
+610046,True,,,
+1057859,True,,,
+1572771,True,SB,False,Presença de extrassistole supraventricular monomorfica isolada
+15542,True,,,
+493505,True,,,
+1733481,True,Outra,False,Sobrecarga biatrial e de VE 
+1490233,True,Nenhuma,False,
+609521,True,,,
+1789163,True,Outra,False,Sobrecarga AE e VE. Interferência 
+1964395,True,Outra,False,Sobrecarga VE
+439867,True,,,
+806264,True,,,
+219348,True,,,
+139887,True,,,
+1203222,True,Nenhuma,False,
+1454271,True,Nenhuma,False,
+250367,True,,,
+84439,True,,,
+2303,True,,,
+103188,True,,,
+629570,True,,,
+1222975,True,Nenhuma,False,
+748333,True,,,
+1776228,True,Outra,False,Sobrecarga de VE 
+257722,True,,,
+1735139,True,Outra,False,Sobrecarga VE 
+231711,True,Outra,False,Arritmia sinusal
+1372960,True,Outra,True,"Isquemia antero septal, supra de ST em V2, V3 e V4"
+315213,True,,,
+1050254,True,,,
+1798370,True,Outra,False,Sobrecarga VE. Onda Q patológica em V1
+212673,True,,,
+1329316,True,Outra,False,Sobrecarga AE
+236637,True,,,
+59396,True,,,
+1883,True,Nenhuma,,Possível interferência em aVF e V5
+965626,True,,,
+276380,True,,,
+1721943,True,Outra,False,Sobrecarga VE e AE 
+1743775,True,Outra,False,Sobrecarga biatrial e de VE. Q patológica em V1
+1259700,True,Outra,False,Sobrecarga AE e VE
+204565,True,,,
+117476,True,,,
+338057,True,,,
+69378,True,,,
+136677,True,,,
+988219,True,,,
+918264,True,,,
+1415292,True,Outra,False,Sobrecarga VE e AE
+33661,True,,,
+836017,True,,,
+421486,True,,,
+690616,True,,,
+767433,True,,,
+484984,True,,,
+500915,True,,,
+346776,True,,,
+1444078,True,Outra,False,"Isquemia de parede antero lateral, supra de V2 a V5"
+183999,True,,,
+134860,True,,,
+1300851,True,Outra,False,arritmia sinusal
+209602,True,,,
+1121616,True,,,
+69073,True,,,
+1411804,True,Outra,False,"Arritmia sinusal, sobrecarga AD"
+1526329,True,Outra,False,Sobrecarga VE 
+1410295,True,Outra,False,Sobrecarga AD
+103481,True,,,
+336003,True,,,
+277965,True,,,
+982543,True,,,
+1203454,True,Nenhuma,False,
+185119,True,,,
+1671946,True,Outra,False,Sobrecarga de VE e AE 
+724631,True,,,
+741310,True,,,
+1621481,True,ST,False,Presença de sobrecarga de VE 
+279614,True,,,
+1615431,True,Outra,False,"Extrassistole interpolada isolada, com interferência "
+62906,True,,,
+512801,True,,,
+902740,True,,,
+1437198,True,Outra,False,"Sobrecarga, VE, AE e AD"
+1836798,True,ST,False,Sobrecarga VD e AD. Isquemka de parede antero septal com supra de ST em V2 e V3
+269344,True,,,
+1249940,True,ST,False,
