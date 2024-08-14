@@ -1,112 +1,112 @@
 exam_id,doenca,borderline,comentario
-1883,Nenhuma,,Possível interferência em aVF e V5
-2303,,,
-15542,,,
-18560,,,
-33661,,,
-41605,,,
-42054,,,
-52425,,,
-54398,,,
-56897,,,
-59396,,,
-60084,,,
-61018,,,
-62906,,,
-66896,,,
+1883,Nenhuma,False,Possível interferência em aVF e V5
+2303,Nenhuma,True,Possível interferência em D3. Boderline para bradicardia sinusal.
+15542,SB,False,"Sobrecarga ventricular esquerda, associada a bradicardia sinusal"
+18560,RBBB,False,BRD com alteração secundária da repolarização. Preenche critérios para sobrecarga ventricular esquerda.
+33661,Outra,False,Sobrecarga ventricular esquerda.
+41605,AF,False,
+42054,Nenhuma,False,"Possível extrassístole ou interferência, visualizada no início das derivações."
+52425,Nenhuma,False,Extrassístole ventricular
+54398,AF,False,Morfologia de BRD em precordias.
+56897,RBBB,False,arritmia sinusal
+59396,Outra,False,Presença de extrassístole ventricular
+60084,Outra,False,Presença de extrassístole ventricular
+61018,Outra,False,arritmia sinusal
+62906,Nenhuma,True,Boderline para taquicardia sinsusal
+66896,LBBB,False,Interferência 
 69073,,,
 69255,,,
-69378,,,
-84237,,,
+69378,Nenhuma,True,"Boderline para BRD, QRS próximo de 120 ms"
+84237,Nenhuma,False,
 84439,,,
 87470,,,
 88358,,,
-103188,,,
+103188,Nenhuma,False,
 103481,,,
-104785,,,
-117460,,,
-117476,,,
-130282,,,
-134860,,,
-136677,,,
-139887,,,
-144629,Outra,False,Taqj
-150032,,,
-161345,,,
-177690,,,
-183999,,,
-185119,,,
-204565,,,
+104785,Nenhuma,False,
+117460,Outra,False,Sobrecarga atrial direita
+117476,Nenhuma,False,
+130282,SB,False,
+134860,Outra,False,Lesão com supradesnivelamento de ST em parede septal.
+136677,Outra,False,IAM antigo em parede septal. Lesão em atividade em parede antero-septal.
+139887,Interferência,False,Possível IAM antigo.
+144629,Outra,False,
+150032,Outra,False,Extrassistole ventricular trigeminada
+161345,Outra,False,Isquemia miocárdica em paredes inferior e lateral. Presença de duas extrassístole supraventriculares.
+177690,Outra,False,Flutter atrial
+183999,Outra,False,Taquicardia atrial multifocal
+185119,Nenhuma,False,
+204565,Outra,False,Lesão com supradesnivelamento de ST em parede septal. Necrose em parede antero-septal.
 205491,AF,False,
-209602,,,
-212673,,,
-213924,,,
-215469,,,
-219348,,,
-229965,,,
+209602,Nenhuma,False,
+212673,Nenhuma,False,
+213924,AF,False,
+215469,Outra,False,Arritmia sinusal
+219348,Interferência,False,
+229965,Nenhuma,False,
 231711,Outra,False,Arritmia sinusal
-233324,,,
-236637,,,
-238471,,,
-250367,,,
-255536,,,
-257722,,,
-269344,,,
-270359,,,
-270378,,,
-276380,,,
-276901,,,
-277965,,,
-279614,,,
-298791,,,
-315213,,,
-317271,,,
-321228,,,
-336003,,,
-338057,,,
-340180,,,
-346776,,,
-350152,,,
+233324,Interferência,False,
+236637,Outra,False,Lesão com supra de ST em parede antero-septal
+238471,Outra,False,Lesão com supra de ST em parede antero-septal e presença de extrassístole ventricular
+250367,Outra,False,Arritmia sinusal
+255536,Outra,Não ,Taquicardia atrial multifocal
+257722,Interferência,False,Não possível ver P em D2
+269344,Nenhuma,False,
+270359,Outra,False,Possível alteração de repolarização ou interferência
+270378,SB,False,Possível interferência
+276380,Outra,True,"Arritmia sinusal, limítrofe com bradicardia sinusal e normalidade"
+276901,1dAVB,True,"BAV de 1° grau, limítrofe com interferência"
+277965,Outra,False,Isquemia de parede antero-septal
+279614,Outra,False,"Necrose de parede septal, com lesão em atividade em parede antero-septal"
+298791,Outra,False,Arritmia sinusal
+315213,Nenhuma,False,
+317271,Interferência,True,Possivel isquemia em parede lateral
+321228,Interferência,False,
+336003,Outra,False,Taquicardia atrial multifocal
+338057,Interferência,True,Possível arritmia sinusal ou normalidade
+340180,Nenhuma,False,Presença de extrassístole ventricular
+346776,Outra,False,Lesão em parede antero-septal. Presença de sobrecarga atrial direita
+350152,Outra,True,Lesão em parede septal. Limítrofe para BRD
 354285,,,
-367932,,,
-368755,,,
-385667,,,
-385870,,,
-421486,,,
-439867,,,
+367932,ST,False,Presença de extrassístole ventricular
+368755,Nenhuma,False,
+385667,Interferência,Não ,Possível BRD. Sem visualização de V1
+385870,Nenhuma,False,
+421486,Nenhuma,False,
+439867,Nenhuma,False,
 476595,LBBB,False,
-483034,,,
-484984,,,
+483034,Interferência,False,
+484984,Nenhuma,True,Limitrofe para BAV 1°
 485287,Interferência,False,
-489846,,,
-493505,,,
-500915,,,
-512801,,,
-520158,,,
-526752,,,
-533975,,,
-535632,,,
-575290,,,
-609521,,,
-610046,,,
-611076,,,
-629566,,,
-629570,,,
-647101,,,
-651272,,,
-663808,,,
-688318,,,
-690616,,,
-695323,,,
-705191,,,
-714705,,,
-715952,,,
-723340,,,
-724631,,,
-737139,,,
-741310,,,
-741415,,,
-745309,,,
+489846,Outra,False,Arritmia sinusal
+493505,SB,False,
+500915,Interferência,False,"Possível normalidade, não possível avaliar D1, D3 e aVL"
+512801,Nenhuma,False,
+520158,RBBB,False,
+526752,ST,False,
+533975,SB,False,
+535632,AF,False,
+575290,SB,False,
+609521,Interferência,False,"Não possível avaliar D2, aVF, aVL e D1"
+610046,Outra,False,Arritmia sinusal
+611076,SB,False,
+629566,Interferência,False,"Não possível avaliar D1, D3, aVL e V1"
+629570,Nenhuma,True,Supradesnivelamento de ST limítrofe em V1 e V2
+647101,Nenhuma,False,
+651272,Interferência,False,"Possível normalidade, mas não pode ser confirmar por não poder avaliar D1, D2 e aVF"
+663808,1dAVB,False,BAV 1° 
+688318,SB,False,
+690616,SB,True,"Possível BRE, por S espessado em V1, mas QRS < 120 ms"
+695323,AF,False,
+705191,SB,False,
+714705,Outra,False,Lesão com supradesnivelamento de ST em parede antero-septal
+715952,SB,False,
+723340,1dAVB,False,"BAV 1° (iPR > 200 ms) + possível sobrecarga ventricular esquerda ( padrão de strain em v6, mas interferência)"
+724631,Nenhuma,False,
+737139,SB,True,Supradesnivelamento de ST limítrofe em V2 e V3
+741310,Outra,False,Lesão com supra de ST em parede antero-septal (v1 -v3)
+741415,1dAVB,True,"BAV 1°, boderline devido a interferência"
+745309,Outra,False,
 748170,,,
 748333,,,
 752052,,,
