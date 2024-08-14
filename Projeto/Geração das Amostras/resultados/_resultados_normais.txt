@@ -1,13 +1,13 @@
 Contagem de 'borderline':
-False: 112
-True: 9
+False: 134
+True: 10
 
 Contagem de 'doenca':
-Outra: 61
-Nenhuma: 37
-Interferência: 9
-SB: 9
-ST: 3
+Outra: 64
+Nenhuma: 52
+InterferÃªncia: 13
+SB: 10
+ST: 4
 1dAVB: 1
 AF: 1
 --------------------------------------------------

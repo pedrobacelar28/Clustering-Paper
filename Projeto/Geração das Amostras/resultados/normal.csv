@@ -7,14 +7,14 @@ exam_id,normal_ecg,doenca,borderline,comentario
 1868972,True,Outra,False,"Sobrecarga AD, AE, VE."
 233324,True,Interferência,False,
 117460,True,Outra,False,Sobrecarga atrial direita
-1121716,True,,,
+1121716,True,ST,False,
 2007170,True,Nenhuma,False,Interferência 
 161345,True,Outra,False,Isquemia miocárdica em paredes inferior e lateral. Presença de duas extrassístole supraventriculares.
 1904289,True,Outra,False,Extrassistole ventricular isolada monomorfica 
 215469,True,Outra,False,Arritmia sinusal
 270359,True,Outra,False,Possível alteração de repolarização ou interferência
 1533349,True,Outra,False,"Arritimia sinusal, interferência "
-812664,True,,,
+812664,True,Outra,False,Arritmia sinusal com extrassístole ventricular
 1144689,True,Interferência,False,
 368755,True,Nenhuma,False,
 42054,True,Nenhuma,False,"Possível extrassístole ou interferência, visualizada no início das derivações."
@@ -29,17 +29,17 @@ exam_id,normal_ecg,doenca,borderline,comentario
 1631695,True,Nenhuma,False,Interferência 
 229965,True,Nenhuma,False,
 340180,True,Nenhuma,False,Presença de extrassístole ventricular
-902165,True,,,
+902165,True,Nenhuma,False,
 1537000,True,Outra,False,Sobrecarga VE
-905103,True,,,
-786260,True,,,
+905103,True,Nenhuma,False,
+786260,True,Interferência,False,Não foi possível avaliar D1 e aVL
 52425,True,Nenhuma,False,Extrassístole ventricular
-748170,True,,,
-753988,True,,,
-801591,True,,,
+748170,True,Nenhuma,False,
+753988,True,Outra,False,Arritmia sinusal
+801591,True,Nenhuma,False,Presença de extrassístole ventricular
 651272,True,Interferência,False,"Possível normalidade, mas não pode ser confirmar por não poder avaliar D1, D2 e aVF"
 1928570,True,Nenhuma,False,
-1132113,True,,,
+1132113,True,Nenhuma,False,
 1545590,True,1dAVB,False,Presença de extrassistole interpolada
 1148170,True,Nenhuma,False,
 1848905,True,Outra,False,Extrassistole ventricular isolada monomorfica.
@@ -47,7 +47,7 @@ exam_id,normal_ecg,doenca,borderline,comentario
 1635920,True,Outra,False,Sonrecarga biatrial
 84237,True,Nenhuma,False,
 1794048,True,Outra,False,Sobrecarga VE e AE 
-907979,True,,,
+907979,True,Nenhuma,False,
 1183535,True,AF,False,
 130282,True,SB,False,
 688318,True,SB,False,
@@ -55,15 +55,15 @@ exam_id,normal_ecg,doenca,borderline,comentario
 1782249,True,Outra,False,Sobrecarga VE 
 1709495,True,Nenhuma,False,Interferência 
 1610032,True,SB,False,
-1052961,True,,,
+1052961,True,Outra,True,"Arritmia sinusal, borderline devido a interferência"
 1517407,True,Outra,False, Sobrecarga VE
-1033785,True,,,
+1033785,True,SB,False,
 575290,True,SB,False,
 1712446,True,Outra,False,"Arritmia sinusal, Q patológica em V1 e V2, sobrecarga de VE "
 940581,True,,,
 1188863,True,Outra,False,
 610046,True,Outra,False,Arritmia sinusal
-1057859,True,,,
+1057859,True,Interferência,False,"Não possível avaliar d1, d2, d3 e avl"
 1572771,True,SB,False,Presença de extrassistole supraventricular monomorfica isolada
 15542,True,SB,False,"Sobrecarga ventricular esquerda, associada a bradicardia sinusal"
 493505,True,SB,False,
@@ -73,7 +73,7 @@ exam_id,normal_ecg,doenca,borderline,comentario
 1789163,True,Outra,False,Sobrecarga AE e VE. Interferência 
 1964395,True,Outra,False,Sobrecarga VE
 439867,True,Nenhuma,False,
-806264,True,,,
+806264,True,Interferência,False,"Não possível avaliar D1, D3 e aVF"
 219348,True,Interferência,False,
 139887,True,Interferência,False,Possível IAM antigo.
 1203222,True,Nenhuma,False,
@@ -84,21 +84,21 @@ exam_id,normal_ecg,doenca,borderline,comentario
 103188,True,Nenhuma,False,
 629570,True,Nenhuma,True,Supradesnivelamento de ST limítrofe em V1 e V2
 1222975,True,Nenhuma,False,
-748333,True,,,
+748333,True,Nenhuma,False,
 1776228,True,Outra,False,Sobrecarga de VE 
 257722,True,Interferência,False,Não possível ver P em D2
 1735139,True,Outra,False,Sobrecarga VE 
 231711,True,Outra,False,Arritmia sinusal
 1372960,True,Outra,True,"Isquemia antero septal, supra de ST em V2, V3 e V4"
 315213,True,Nenhuma,False,
-1050254,True,,,
+1050254,True,Nenhuma,False,
 1798370,True,Outra,False,Sobrecarga VE. Onda Q patológica em V1
 212673,True,Nenhuma,False,
 1329316,True,Outra,False,Sobrecarga AE
 236637,True,Outra,False,Lesão com supra de ST em parede antero-septal
 59396,True,Outra,False,Presença de extrassístole ventricular
 1883,True,Nenhuma,False,Possível interferência em aVF e V5
-965626,True,,,
+965626,True,Nenhuma,False,
 276380,True,Outra,True,"Arritmia sinusal, limítrofe com bradicardia sinusal e normalidade"
 1721943,True,Outra,False,Sobrecarga VE e AE 
 1743775,True,Outra,False,Sobrecarga biatrial e de VE. Q patológica em V1
@@ -108,14 +108,14 @@ exam_id,normal_ecg,doenca,borderline,comentario
 338057,True,Interferência,True,Possível arritmia sinusal ou normalidade
 69378,True,Nenhuma,True,"Boderline para BRD, QRS próximo de 120 ms"
 136677,True,Outra,False,IAM antigo em parede septal. Lesão em atividade em parede antero-septal.
-988219,True,,,
-918264,True,,,
+988219,True,Nenhuma,,
+918264,True,Nenhuma,False,
 1415292,True,Outra,False,Sobrecarga VE e AE
 33661,True,Outra,False,Sobrecarga ventricular esquerda.
-836017,True,,,
+836017,True,Interferência,False,"Não possível avaliar D1 e aVL, presenta de supra de ST em V2 e V3."
 421486,True,Nenhuma,False,
 690616,True,SB,True,"Possível BRE, por S espessado em V1, mas QRS < 120 ms"
-767433,True,,,
+767433,True,Nenhuma,False,
 484984,True,Nenhuma,True,Limitrofe para BAV 1°
 500915,True,Interferência,False,"Possível normalidade, não possível avaliar D1, D3 e aVL"
 346776,True,Outra,False,Lesão em parede antero-septal. Presença de sobrecarga atrial direita
@@ -124,7 +124,7 @@ exam_id,normal_ecg,doenca,borderline,comentario
 134860,True,Outra,False,Lesão com supradesnivelamento de ST em parede septal.
 1300851,True,Outra,False,arritmia sinusal
 209602,True,Nenhuma,False,
-1121616,True,,,
+1121616,True,Nenhuma,False,
 69073,True,,,
 1411804,True,Outra,False,"Arritmia sinusal, sobrecarga AD"
 1526329,True,Outra,False,Sobrecarga VE 
@@ -132,7 +132,7 @@ exam_id,normal_ecg,doenca,borderline,comentario
 103481,True,,,
 336003,True,Outra,False,Taquicardia atrial multifocal
 277965,True,Outra,False,Isquemia de parede antero-septal
-982543,True,,,
+982543,True,Nenhuma,False,
 1203454,True,Nenhuma,False,
 185119,True,Nenhuma,False,
 1671946,True,Outra,False,Sobrecarga de VE e AE 
@@ -143,7 +143,7 @@ exam_id,normal_ecg,doenca,borderline,comentario
 1615431,True,Outra,False,"Extrassistole interpolada isolada, com interferência "
 62906,True,Nenhuma,True,Boderline para taquicardia sinsusal
 512801,True,Nenhuma,False,
-902740,True,,,
+902740,True,Nenhuma,False,
 1437198,True,Outra,False,"Sobrecarga, VE, AE e AD"
 1836798,True,ST,False,Sobrecarga VD e AD. Isquemka de parede antero septal com supra de ST em V2 e V3
 269344,True,Nenhuma,False,

@@ -105,60 +105,60 @@ exam_id,doenca,borderline,comentario
 724631,Nenhuma,False,
 737139,SB,True,Supradesnivelamento de ST limítrofe em V2 e V3
 741310,Outra,False,Lesão com supra de ST em parede antero-septal (v1 -v3)
-741415,1dAVB,True,"BAV 1°, boderline devido a interferência"
-745309,Outra,False,
-748170,,,
-748333,,,
-752052,,,
-753050,,,
-753988,,,
-767433,,,
-770722,,,
-786260,,,
-787459,,,
-789242,,,
-795882,,,
-801591,,,
-805832,,,
-806264,,,
-812664,,,
-826380,,,
-829769,,,
-836017,,,
-854142,,,
-871919,,,
-902165,,,
-902635,,,
-902740,,,
-905103,,,
-907979,,,
-916917,,,
-918264,,,
-927554,,,
+741415,1dAVB,True,"BAV 1°, borderline devido a interferência"
+745309,Outra,False,Taquicardia supraventricular por reentrada nodal
+748170,Nenhuma,False,
+748333,Nenhuma,False,
+752052,1dAVB,False,BAV 1°
+753050,1dAVB,False,BAV 1°
+753988,Outra,False,Arritmia sinusal
+767433,Nenhuma,False,
+770722,1dAVB,True,BAV 1° Borderline por iPR = 220 ms
+786260,Interferência,False,Não foi possível avaliar D1 e aVL
+787459,Interferência,False,"Não possível avaliar V3, V4, V5 e V6"
+789242,Outra,False,Taquicardia supraventricular por reentrada em via acessória
+795882,AF,False,
+801591,Nenhuma,False,Presença de extrassístole ventricular
+805832,Nenhuma,False,
+806264,Interferência,False,"Não possível avaliar D1, D3 e aVF"
+812664,Outra,False,Arritmia sinusal com extrassístole ventricular
+826380,SB,False,
+829769,LBBB,True,"QRS = 120 ms. Associado ao BRE, há lesão com supra de ST de V1-V3 (parede antero-septal)"
+836017,Interferência,False,"Não possível avaliar D1 e aVL, presenta de supra de ST em V2 e V3."
+854142,Outra,False,Áres de IAM antigo em V1.
+871919,ST,False,
+902165,Nenhuma,False,
+902635,Outra,False,Taquicardia supraventricular
+902740,Nenhuma,False,
+905103,Nenhuma,False,
+907979,Nenhuma,False,
+916917,Nenhuma,True,Borderline para bradicardia sinusal. Presença de extrassístole juncional
+918264,Nenhuma,False,
+927554,LBBB,True,"QRS = 120 ms. Além disso, apresnta possível IAM de tronco de coronária esquerda (Supra de aVR e V1 e infra difuso)"
 940581,,,
-944008,,,
-952878,,,
-957365,,,
-964759,,,
-965626,,,
-971298,,,
-982543,,,
-988219,,,
-997023,,,
-1017917,,,
-1018396,,,
-1033785,,,
-1050254,,,
-1052961,,,
-1057859,,,
-1061241,,,
-1082367,,,
-1107960,,,
-1121616,,,
-1121716,,,
-1131543,,,
-1132113,,,
-1136131,,,
+944008,Outra,False,Taquicardia por reentrada nodal
+952878,SB,False,Presença de extrassístole juncional.
+957365,SB,False,
+964759,Nenhuma,False,
+965626,Nenhuma,False,
+971298,Interferência,False,"Não possível avaliar V3, V4, V5 e V6"
+982543,Nenhuma,False,
+988219,Nenhuma,,
+997023,LBBB,True,Associação possível com arritmia sinusal e extrassístole atrial
+1017917,ST,False,
+1018396,RBBB,False,Presença de alteração secundária da repolarização
+1033785,SB,False,
+1050254,Nenhuma,False,
+1052961,Outra,True,"Arritmia sinusal, borderline devido a interferência"
+1057859,Interferência,False,"Não possível avaliar d1, d2, d3 e avl"
+1061241,Nenhuma,False,Presença de extrassístoles juncionais 
+1082367,Outra,False,Arritmia sinusal
+1107960,RBBB,True,Valor do QRS muito próximo de 120 ms
+1121616,Nenhuma,False,
+1121716,ST,False,
+1131543,ST,False,Presença de extrassístole ventricular
+1132113,Nenhuma,False,
+1136131,AF,False,
 1144689,Interferência,False,
 1148170,Nenhuma,False,
 1167343,Nenhuma,False,
