@@ -1,58 +1,59 @@
 Resultado: SB
 
-Doentes
+
+Doentes no cluster Normal
 
     Doenca:
-      SB: 7 (43.75%)
-      Outra: 6 (37.5%)
-      RBBB: 1 (6.25%)
-      Interferência: 1 (6.25%)
-      Nenhuma: 1 (6.25%)
+      Outra: 6 (50.0%)
+      SB: 5 (41.67%)
+      Nenhuma: 1 (8.33%)
 
     Borderline:
-      False: 13 (81.25%)
-      True: 3 (18.75%)
-
+      False: 11 (91.67%)
+      True: 1 (8.33%)
+acuracia = numero de ecgs que foram pro cluster NORMAL e realmente tao fudidos / numero de ecgs que foram pro cluster NORMAL
+OUTRA = numero de ecgs que foram pro cluster DOENTE e nao tao fudidos / numero de ecgs que foram pro cluster DOENTE
 --------------------------------------------------
 
 Resultado: ST
 
-Doentes
+
+Doentes no cluster Normal
 
     Doenca:
-      ST: 18 (47.37%)
-      Outra: 10 (26.32%)
-      Interferência: 6 (15.79%)
-      Nenhuma: 2 (5.26%)
-      AF: 1 (2.63%)
-      RBBB: 1 (2.63%)
+      ST: 16 (47.06%)
+      Outra: 8 (23.53%)
+      Interferï¿½ncia: 6 (17.65%)
+      Nenhuma: 2 (5.88%)
+      AF: 1 (2.94%)
+      RBBB: 1 (2.94%)
 
     Borderline:
-      False: 37 (97.37%)
-      Não : 1 (2.63%)
+      False: 33 (97.06%)
+      Nï¿½o : 1 (2.94%)
 
 --------------------------------------------------
 
 Resultado: AF
 
-Doentes
+
+Doentes no cluster Normal
 
     Doenca:
-      AF: 34 (85.0%)
-      ST: 4 (10.0%)
-      Nenhuma: 1 (2.5%)
-      Interferência: 1 (2.5%)
+      AF: 15 (88.24%)
+      Nenhuma: 1 (5.88%)
+      Interferï¿½ncia: 1 (5.88%)
 
     Borderline:
-      False: 38 (95.0%)
-      True: 1 (2.5%)
-      Não : 1 (2.5%)
+      False: 16 (94.12%)
+      Nï¿½o : 1 (5.88%)
 
 --------------------------------------------------
 
 Resultado: RBBB
 
-Doentes
+
+Doentes no cluster Normal
 
     Doenca:
       RBBB: 15 (60.0%)
@@ -60,7 +61,7 @@ Doentes
       LBBB: 3 (12.0%)
       SB: 2 (8.0%)
       AF: 1 (4.0%)
-      Interferência: 1 (4.0%)
+      Interferï¿½ncia: 1 (4.0%)
 
     Borderline:
       False: 22 (88.0%)
@@ -70,17 +71,18 @@ Doentes
 
 Resultado: LBBB
 
-Doentes
+
+Doentes no cluster Normal
 
     Doenca:
-      Outra: 14 (58.33%)
-      LBBB: 7 (29.17%)
-      Nenhuma: 2 (8.33%)
-      RBBB: 1 (4.17%)
+      Outra: 12 (57.14%)
+      LBBB: 6 (28.57%)
+      Nenhuma: 2 (9.52%)
+      RBBB: 1 (4.76%)
 
     Borderline:
-      False: 20 (83.33%)
-      True: 4 (16.67%)
+      False: 18 (85.71%)
+      True: 3 (14.29%)
 
 --------------------------------------------------
 
