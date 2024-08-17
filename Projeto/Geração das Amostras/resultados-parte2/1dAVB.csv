@@ -1,0 +1,74 @@
+exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
+896159,0,True,N_clusterD,0.566698,Outra,False,Sobrecarga VE 
+1730052,0,True,N_clusterD,0.5650997,,,
+62281,0,True,N_clusterD,0.558869,Outra,False,Sobrecarga VD e AD
+588769,0,True,N_clusterD,0.5573098,Outra,False,"Sobrecarga AE, VE e VD "
+876025,0,True,N_clusterD,0.55690354,Outra,False,Sobrecarga VE 
+630798,0,True,N_clusterD,0.55679494,Outra,False,Sobrecarga AE e AD
+1321216,0,True,N_clusterD,0.5567407,Nenhuma,False,
+698060,0,True,N_clusterD,0.55670655,Outra,False,Sobrecarga VE 
+607639,0,True,N_clusterD,0.5566494,Nenhuma,False,
+678545,0,True,N_clusterD,0.55659586,Outra,False,"Sobrecarga AE,  AD e VD "
+346919,0,True,N_clusterD,0.5561515,Outra,False,"Sobrecarga AE e VE, supra de ST de V1 a V3 (isquemia de parede antero septal?)"
+76774,0,True,N_clusterD,0.55479914,Outra,False,Hemi bloqueio antero superior 
+87958,0,True,N_clusterD,0.554491,Outra,False,Sobrecarga VE
+638365,0,True,N_clusterD,0.5543781,Outra,False,"Sobrecarga AE,  VE,  AD e VD"
+523634,0,True,N_clusterD,0.5542964,Outra,False,"Sobrecarga VE, VD, AE e AD"
+1669887,0,True,N_clusterD,0.5541441,Nenhuma,False,
+629219,0,True,N_clusterD,0.55393726,Outra,False,Sobrecarga VE 
+1108220,0,True,N_clusterD,0.55393386,Outra,False,Sobrecarga VE 
+853084,0,True,N_clusterD,0.5539094,Outra,False,Sobrecarga VE e AE 
+351176,0,True,N_clusterD,0.5538769,Nenhuma,False,
+58190,0,True,N_clusterD,0.55379146,Outra,False,Sobrecarga VE 
+876373,0,True,N_clusterD,0.5536791,Nenhuma,False,
+981927,0,True,N_clusterD,0.55358696,Nenhuma,False,
+1290376,0,True,N_clusterD,0.5535837,Nenhuma,False,
+1720327,0,True,N_clusterD,0.5535294,,,
+159985,0,True,N_clusterD,0.5534628,Outra,False,"Extrassistole supraventricular monomorfica isolada, sobrecarga de VE associados "
+440541,0,True,N_clusterD,0.55333656,Nenhuma,False,
+1195600,0,True,N_clusterD,0.55332327,Outra,False,Sobrecarga ventricular esquerda
+403607,0,True,N_clusterD,0.5532764,Outra,False,"Sobrecarga AD, AE e VE"
+1694826,0,True,N_clusterD,0.55307275,Nenhuma,False,
+222222,0,True,N_clusterD,0.55266696,Nenhuma,False,
+91895,0,True,N_clusterD,0.55262923,Outra,False,"Sobrecarga AE, AD e VE"
+1069917,0,True,N_clusterD,0.55246645,Outra,False,Arritmia sinusal 
+447717,0,True,N_clusterD,0.55222595,Outra,False,Sobrecarga VE 
+1856673,0,True,N_clusterD,0.55216396,,,
+1866847,0,True,N_clusterD,0.5521575,,,
+576753,0,True,N_clusterD,0.5521344,Nenhuma,False,
+1138174,0,True,N_clusterD,0.55212206,Outra,False,Sobrecarga VE 
+1326518,0,True,N_clusterD,0.55209863,Outra,True,Arritmia sinusal com discreta irregularidade
+1139824,0,True,N_clusterD,0.5520141,Outra,False,Arritmia sinusal 
+1289183,0,True,N_clusterD,0.5518603,Outra,False,Sobrecarga ventricular esquerda
+1412810,0,True,N_clusterD,0.5517989,Nenhuma,False,
+779072,0,True,N_clusterD,0.55178195,Outra,False,Sobrecarga AE e VE 
+1499916,0,True,N_clusterD,0.55176395,Nenhuma,False,
+1492957,0,True,N_clusterD,0.5516638,Nenhuma,False,
+34833,0,True,N_clusterD,0.5513235,Outra,False,Sobrecarga VE 
+1456398,0,True,N_clusterD,0.55100685,Nenhuma,False,
+260506,0,True,N_clusterD,0.55085784,Outra,False,Sobrecarga VE 
+1440528,0,True,N_clusterD,0.5508043,Nenhuma,False,
+74211,0,True,N_clusterD,0.5505613,Outra,False,Sobrecarga VE 
+607110,0,True,N_clusterD,0.5500219,Outra,False,Sobrecarga VE 
+835739,0,True,N_clusterD,0.5498834,Outra,False,Sobrecarga VE e AE 
+1019896,0,True,N_clusterD,0.54982084,Outra,False,Sobrecarga VE e AE 
+1073609,0,True,N_clusterD,0.5497235,Outra,False,Arritmia sinusal e sobrecarga VE 
+797150,0,True,N_clusterD,0.5496019,Outra,False,Sobrecarga VE e AE 
+361061,0,True,N_clusterD,0.5495555,Outra,False,Sobrecarga AE e VE
+1535178,0,True,N_clusterD,0.54947215,Nenhuma,False,
+1176197,0,True,N_clusterD,0.54919165,Outra,False,Sobrecarga ventricular esquerda
+1533678,0,True,N_clusterD,0.54906464,Nenhuma,False,
+1075284,0,True,N_clusterD,0.54903984,Nenhuma,False,
+532375,0,True,N_clusterD,0.54902166,Outra,False,Sobrecarga VE
+1537211,0,True,N_clusterD,0.54899454,Outra,False,Sobrecarga ventricular esquerda
+37414,0,True,N_clusterD,0.54740655,Nenhuma,False,
+1776514,0,True,N_clusterD,0.54730564,,,
+46877,0,True,N_clusterD,0.5471033,Nenhuma,False,
+719019,0,True,N_clusterD,0.5470225,Outra,False,Sobrecarga VE e AE
+171266,0,True,N_clusterD,0.5469914,Outra,False,Sobrecarga de VE associado 
+1787555,0,True,N_clusterD,0.5469478,,,
+1362290,0,True,N_clusterD,0.5469053,Outra,False,Sobrecarga ventricular esquerda
+507229,0,True,N_clusterD,0.5469006,Outra,False,Sobrecarga VE e AE 
+724483,0,True,N_clusterD,0.54689795,Outra,False,Sobrecarga VD 
+749134,0,True,N_clusterD,0.54251146,Outra,False,Sobrecarga AD e VE
+1549048,0,True,N_clusterD,0.5423934,Nenhuma,False,

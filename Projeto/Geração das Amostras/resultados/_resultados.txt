@@ -1,231 +1,58 @@
 Resultado: SB
 
-
-Doentes no cluster Normal
+Doentes
 
     Doenca:
       SB: 7 (43.75%)
       Outra: 6 (37.5%)
-      Nenhuma: 1 (6.25%)
       RBBB: 1 (6.25%)
-      Interferência: 1 (6.25%)
+      Interfer�ncia: 1 (6.25%)
+      Nenhuma: 1 (6.25%)
 
     Borderline:
       False: 13 (81.25%)
       True: 3 (18.75%)
 
-Normais no cluster Doente
-
-    Doenca:
-      Outra: 30 (44.12%)
-      Nenhuma: 21 (30.88%)
-      SB: 9 (13.24%)
-      Interferência: 5 (7.35%)
-      ST: 1 (1.47%)
-      1dAVB: 1 (1.47%)
-      AF: 1 (1.47%)
-
-    Borderline:
-      False: 67 (98.53%)
-      True: 1 (1.47%)
-
-Normais no cluster Normal
-
-    Doenca:
-      Outra: 34 (44.16%)
-      Nenhuma: 31 (40.26%)
-      Interferência: 8 (10.39%)
-      ST: 3 (3.9%)
-      SB: 1 (1.3%)
-
-    Borderline:
-      False: 67 (88.16%)
-      True: 9 (11.84%)
-
 --------------------------------------------------
 
 Resultado: ST
 
-
-Doentes no cluster Normal
-
-    Doenca:
-      ST: 10 (52.63%)
-      Outra: 6 (31.58%)
-      Nenhuma: 2 (10.53%)
-      Interferência: 1 (5.26%)
-
-    Borderline:
-      False: 19 (100.0%)
-
-Doentes no cluster Misto
+Doentes
 
     Doenca:
-      ST: 8 (42.11%)
-      Interferência: 5 (26.32%)
-      Outra: 4 (21.05%)
-      AF: 1 (5.26%)
-      RBBB: 1 (5.26%)
+      ST: 18 (47.37%)
+      Outra: 10 (26.32%)
+      Interfer�ncia: 6 (15.79%)
+      Nenhuma: 2 (5.26%)
+      AF: 1 (2.63%)
+      RBBB: 1 (2.63%)
 
     Borderline:
-      False: 18 (94.74%)
-      N�o : 1 (5.26%)
-
-Normais no cluster Doente
-
-    Doenca:
-      Nenhuma: 9 (40.91%)
-      Outra: 8 (36.36%)
-      ST: 3 (13.64%)
-      Interferência: 2 (9.09%)
-
-    Borderline:
-      False: 21 (95.45%)
-      True: 1 (4.55%)
-
-Normais no cluster Normal
-
-    Doenca:
-      Outra: 32 (47.76%)
-      Nenhuma: 22 (32.84%)
-      Interferência: 7 (10.45%)
-      SB: 6 (8.96%)
-
-    Borderline:
-      False: 58 (87.88%)
-      True: 8 (12.12%)
-
-Normais no cluster Misto
-
-    Doenca:
-      Outra: 24 (42.86%)
-      Nenhuma: 21 (37.5%)
-      Interferência: 4 (7.14%)
-      SB: 4 (7.14%)
-      AF: 1 (1.79%)
-      ST: 1 (1.79%)
-      1dAVB: 1 (1.79%)
-
-    Borderline:
-      False: 55 (98.21%)
-      True: 1 (1.79%)
+      False: 37 (97.37%)
+      N�o : 1 (2.63%)
 
 --------------------------------------------------
 
 Resultado: AF
 
-
-Doentes no cluster Normal
-
-    Doenca:
-      AF: 18 (90.0%)
-      Nenhuma: 1 (5.0%)
-      Interferência: 1 (5.0%)
-
-    Borderline:
-      False: 19 (95.0%)
-      N�o : 1 (5.0%)
-
-Doentes no cluster Outlier
+Doentes
 
     Doenca:
-      AF: 16 (80.0%)
-      ST: 4 (20.0%)
+      AF: 34 (85.0%)
+      ST: 4 (10.0%)
+      Nenhuma: 1 (2.5%)
+      Interfer�ncia: 1 (2.5%)
 
     Borderline:
-      False: 19 (95.0%)
-      True: 1 (5.0%)
-
-Normais no cluster Doente
-
-    Doenca:
-      Outra: 28 (46.67%)
-      Nenhuma: 22 (36.67%)
-      Interferência: 4 (6.67%)
-      SB: 3 (5.0%)
-      ST: 1 (1.67%)
-      1dAVB: 1 (1.67%)
-      AF: 1 (1.67%)
-
-    Borderline:
-      False: 58 (96.67%)
-      True: 2 (3.33%)
-
-Normais no cluster Normal
-
-    Doenca:
-      Outra: 36 (42.35%)
-      Nenhuma: 30 (35.29%)
-      Interferência: 9 (10.59%)
-      SB: 7 (8.24%)
-      ST: 3 (3.53%)
-
-    Borderline:
-      False: 76 (90.48%)
-      True: 8 (9.52%)
-
---------------------------------------------------
-
-Resultado: 1dAVB
-
-
-Doentes no cluster Doente
-
-    Doenca:
-      1dAVB: 9 (69.23%)
-      Nenhuma: 2 (15.38%)
-      SB: 1 (7.69%)
-      Outra: 1 (7.69%)
-
-    Borderline:
-      False: 11 (84.62%)
-      True: 2 (15.38%)
-
-Doentes no cluster Normal
-
-    Doenca:
-      1dAVB: 7 (63.64%)
-      Outra: 3 (27.27%)
-      RBBB: 1 (9.09%)
-
-    Borderline:
-      False: 10 (90.91%)
-      True: 1 (9.09%)
-
-Normais no cluster Doente
-
-    Doenca:
-      Outra: 40 (43.01%)
-      Nenhuma: 34 (36.56%)
-      Interferência: 9 (9.68%)
-      SB: 7 (7.53%)
-      ST: 3 (3.23%)
-
-    Borderline:
-      False: 83 (90.22%)
-      True: 9 (9.78%)
-
-Normais no cluster Normal
-
-    Doenca:
-      Outra: 24 (46.15%)
-      Nenhuma: 18 (34.62%)
-      Interferência: 4 (7.69%)
-      SB: 3 (5.77%)
-      AF: 1 (1.92%)
-      ST: 1 (1.92%)
-      1dAVB: 1 (1.92%)
-
-    Borderline:
-      False: 51 (98.08%)
-      True: 1 (1.92%)
+      False: 38 (95.0%)
+      True: 1 (2.5%)
+      N�o : 1 (2.5%)
 
 --------------------------------------------------
 
 Resultado: RBBB
 
-
-Doentes no cluster Normal
+Doentes
 
     Doenca:
       RBBB: 15 (60.0%)
@@ -233,101 +60,27 @@ Doentes no cluster Normal
       LBBB: 3 (12.0%)
       SB: 2 (8.0%)
       AF: 1 (4.0%)
-      Interferência: 1 (4.0%)
+      Interfer�ncia: 1 (4.0%)
 
     Borderline:
       False: 22 (88.0%)
       True: 3 (12.0%)
 
-Normais no cluster Doente
-
-    Doenca:
-      Outra: 20 (43.48%)
-      Nenhuma: 16 (34.78%)
-      Interferência: 5 (10.87%)
-      SB: 4 (8.7%)
-      ST: 1 (2.17%)
-
-    Borderline:
-      False: 44 (95.65%)
-      True: 2 (4.35%)
-
-Normais no cluster Normal
-
-    Doenca:
-      Outra: 44 (44.44%)
-      Nenhuma: 36 (36.36%)
-      Interferência: 8 (8.08%)
-      SB: 6 (6.06%)
-      ST: 3 (3.03%)
-      1dAVB: 1 (1.01%)
-      AF: 1 (1.01%)
-
-    Borderline:
-      False: 90 (91.84%)
-      True: 8 (8.16%)
-
 --------------------------------------------------
 
 Resultado: LBBB
 
-
-Doentes no cluster Normal
-
-    Doenca:
-      Outra: 12 (54.55%)
-      LBBB: 7 (31.82%)
-      Nenhuma: 2 (9.09%)
-      RBBB: 1 (4.55%)
-
-    Borderline:
-      False: 19 (86.36%)
-      True: 3 (13.64%)
-
-Doentes no cluster Outlier
+Doentes
 
     Doenca:
-      Outra: 2 (100.0%)
+      Outra: 14 (58.33%)
+      LBBB: 7 (29.17%)
+      Nenhuma: 2 (8.33%)
+      RBBB: 1 (4.17%)
 
     Borderline:
-      True: 1 (50.0%)
-      False: 1 (50.0%)
-
-Normais no cluster Doente
-
-    Doenca:
-      Outra: 11 (50.0%)
-      Nenhuma: 8 (36.36%)
-      Interferência: 2 (9.09%)
-      SB: 1 (4.55%)
-
-    Borderline:
-      False: 19 (86.36%)
-      True: 3 (13.64%)
-
-Normais no cluster Normal
-
-    Doenca:
-      Outra: 50 (42.02%)
-      Nenhuma: 43 (36.13%)
-      Interferência: 11 (9.24%)
-      SB: 9 (7.56%)
-      ST: 4 (3.36%)
-      1dAVB: 1 (0.84%)
-      AF: 1 (0.84%)
-
-    Borderline:
-      False: 111 (94.07%)
-      True: 7 (5.93%)
-
-Normais no cluster Outlier
-
-    Doenca:
-      Outra: 3 (75.0%)
-      Nenhuma: 1 (25.0%)
-
-    Borderline:
-      False: 4 (100.0%)
+      False: 20 (83.33%)
+      True: 4 (16.67%)
 
 --------------------------------------------------
 
