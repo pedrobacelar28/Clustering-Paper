@@ -11,8 +11,7 @@ Doentes no cluster Normal
     Borderline:
       False: 11 (91.67%)
       True: 1 (8.33%)
-acuracia = numero de ecgs que foram pro cluster NORMAL e realmente tao fudidos / numero de ecgs que foram pro cluster NORMAL
-OUTRA = numero de ecgs que foram pro cluster DOENTE e nao tao fudidos / numero de ecgs que foram pro cluster DOENTE
+
 --------------------------------------------------
 
 Resultado: ST
@@ -23,14 +22,14 @@ Doentes no cluster Normal
     Doenca:
       ST: 16 (47.06%)
       Outra: 8 (23.53%)
-      Interferï¿½ncia: 6 (17.65%)
+      Interferência: 6 (17.65%)
       Nenhuma: 2 (5.88%)
       AF: 1 (2.94%)
       RBBB: 1 (2.94%)
 
     Borderline:
       False: 33 (97.06%)
-      Nï¿½o : 1 (2.94%)
+      Não : 1 (2.94%)
 
 --------------------------------------------------
 
@@ -42,11 +41,21 @@ Doentes no cluster Normal
     Doenca:
       AF: 15 (88.24%)
       Nenhuma: 1 (5.88%)
-      Interferï¿½ncia: 1 (5.88%)
+      Interferência: 1 (5.88%)
 
     Borderline:
       False: 16 (94.12%)
-      Nï¿½o : 1 (5.88%)
+      Não : 1 (5.88%)
+
+Doentes no cluster Outlier
+
+    Doenca:
+      AF: 14 (77.78%)
+      ST: 4 (22.22%)
+
+    Borderline:
+      False: 17 (94.44%)
+      True: 1 (5.56%)
 
 --------------------------------------------------
 
@@ -61,7 +70,7 @@ Doentes no cluster Normal
       LBBB: 3 (12.0%)
       SB: 2 (8.0%)
       AF: 1 (4.0%)
-      Interferï¿½ncia: 1 (4.0%)
+      Interferência: 1 (4.0%)
 
     Borderline:
       False: 22 (88.0%)
