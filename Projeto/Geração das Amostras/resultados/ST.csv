@@ -1,180 +1,40 @@
 exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
-3086494,0,False,D_clusterD,0.22680075,Outra,False,Onda Q patológica em V1  e aVR
-238471,0,False,D_clusterD,0.18316051,Outra,False,Lesão com supra de ST em parede antero-septal e presença de extrassístole ventricular
-2790986,0,False,D_clusterD,0.06409181,ST,False,Arritmia sinusal 
-69255,0,False,D_clusterD,0.054980997,,,
-1266486,0,False,D_clusterD,0.043305654,ST,False,
-1410295,0,True,N_clusterD,0.25623447,Outra,False,Sobrecarga AD
-609521,0,True,N_clusterD,0.25187433,Interferência,False,"Não possível avaliar D2, aVF, aVL e D1"
-269344,0,True,N_clusterD,0.2447315,Nenhuma,False,
-902740,0,True,N_clusterD,0.22140501,Nenhuma,False,
-103481,0,True,N_clusterD,0.21434191,,,
-1836798,0,True,N_clusterD,0.20119853,ST,False,Sobrecarga VD e AD. Isquemka de parede antero septal com supra de ST em V2 e V3
-1437198,0,True,N_clusterD,0.18786801,Outra,False,"Sobrecarga, VE, AE e AD"
-1249940,0,True,N_clusterD,0.18199632,ST,False,
-183999,0,True,N_clusterD,0.17225122,Outra,False,Taquicardia atrial multifocal
-1203454,0,True,N_clusterD,0.16373464,Nenhuma,False,
-1615431,0,True,N_clusterD,0.14563303,Outra,False,"Extrassistole interpolada isolada, com interferência "
-62906,0,True,N_clusterD,0.13666148,Nenhuma,True,Boderline para taquicardia sinsusal
-1121616,0,True,N_clusterD,0.1333148,Nenhuma,False,
-1300851,0,True,N_clusterD,0.12104687,Outra,False,arritmia sinusal
-1621481,0,True,N_clusterD,0.11608228,ST,False,Presença de sobrecarga de VE 
-134860,0,True,N_clusterD,0.11300227,Outra,False,Lesão com supradesnivelamento de ST em parede septal.
-209602,0,True,N_clusterD,0.11244752,Nenhuma,False,
-745309,1,False,D_clusterN,0.16953985,Outra,False,Taquicardia supraventricular por reentrada nodal
-1017917,1,False,D_clusterN,0.16869488,ST,False,
-2752429,1,False,D_clusterN,0.14061442,ST,False,Arritmia sinusal
-1167343,1,False,D_clusterN,0.13184227,Nenhuma,False,
-255536,1,False,D_clusterN,0.12503448,Outra,Não ,Taquicardia atrial multifocal
-1378239,1,False,D_clusterN,0.12378715,ST,False,Presença de extrassistole isolada monomorfica
-971298,1,False,D_clusterN,0.12336285,Interferência,False,"Não possível avaliar V3, V4, V5 e V6"
-4254987,1,False,D_clusterN,0.123141676,AF,False,
-367932,1,False,D_clusterN,0.12284791,ST,False,Presença de extrassístole ventricular
-629566,1,False,D_clusterN,0.12260082,Interferência,False,"Não possível avaliar D1, D3, aVL e V1"
-3017385,1,False,D_clusterN,0.12239107,ST,False,Sobrecarga VD e AD
-1576237,1,False,D_clusterN,0.12202626,Outra,False,Taquicardia ventricular
-2659904,1,False,D_clusterN,0.121965244,Outra,False,Extrassistoles supraventriculares monomorficas. Interferência 
-483034,1,False,D_clusterN,0.12189365,Interferência,False,
-4213031,1,False,D_clusterN,0.1217371,ST,False,Sobrecarga VE e AE 
-787459,1,False,D_clusterN,0.12145953,Interferência,False,"Não possível avaliar V3, V4, V5 e V6"
-2763079,1,False,D_clusterN,0.121248044,RBBB,False,Taquicardia sinusal
-1760039,1,False,D_clusterN,0.121099345,ST,False,"Sobrecarga de VD. Isquemia de parede antero septal, supra de ST em V1 a V4. Interferência."
-1131543,1,False,D_clusterN,0.1202109,ST,False,Presença de extrassístole ventricular
-321228,1,False,D_clusterN,0.12015897,Interferência,False,
-1255202,1,False,D_clusterN,0.12005771,ST,False,
-526752,1,False,D_clusterN,0.11960113,ST,False,
-485287,1,False,D_clusterN,0.119270995,Interferência,False,
-944008,1,False,D_clusterN,0.11892608,Outra,False,Taquicardia por reentrada nodal
-4408321,1,False,D_clusterN,0.118241414,ST,False,Extrassistole ventricular isolada 
-902635,1,False,D_clusterN,0.11710172,Outra,False,Taquicardia supraventricular
-805832,1,False,D_clusterN,0.11052641,Nenhuma,False,
-871919,1,False,D_clusterN,0.11017706,ST,False,
-88358,1,False,D_clusterN,0.109557174,,,
-1963513,1,False,D_clusterN,0.10867726,ST,False,Bloqueio de ramo direito e sobrecarga de VE
-1891463,1,False,D_clusterN,0.10514825,ST,False,Sobrecarga VD e VE. Q patológica em V1 
-1873732,1,False,D_clusterN,0.10383626,ST,False,Sobrecarga VD e VE. Q patológica em V1 
-144629,1,False,D_clusterN,0.07841802,Outra,False,
-789242,1,False,D_clusterN,0.07684884,Outra,False,Taquicardia supraventricular por reentrada em via acessória
-1627203,1,False,D_clusterN,0.039631333,ST,False,Presença de sobrecarga VE
-1789163,1,True,N_clusterN,0.16926125,Outra,False,Sobrecarga AE e VE. Interferência 
-1964395,1,True,N_clusterN,0.16619478,Outra,False,Sobrecarga VE
-84439,1,True,N_clusterN,0.16304861,,,
-1188863,1,True,N_clusterN,0.15690033,Outra,False,
-1733481,1,True,N_clusterN,0.15665138,Outra,False,Sobrecarga biatrial e de VE 
-690616,1,True,N_clusterN,0.1565884,SB,True,"Possível BRE, por S espessado em V1, mas QRS < 120 ms"
-493505,1,True,N_clusterN,0.15585965,SB,False,
-1454271,1,True,N_clusterN,0.15484384,Nenhuma,False,
-1572771,1,True,N_clusterN,0.15452585,SB,False,Presença de extrassistole supraventricular monomorfica isolada
-1057859,1,True,N_clusterN,0.1525212,Interferência,False,"Não possível avaliar d1, d2, d3 e avl"
-15542,1,True,N_clusterN,0.15230875,SB,False,"Sobrecarga ventricular esquerda, associada a bradicardia sinusal"
-1203222,1,True,N_clusterN,0.15156254,Nenhuma,False,
-204565,1,True,N_clusterN,0.14687358,Outra,False,Lesão com supradesnivelamento de ST em parede septal. Necrose em parede antero-septal.
-1490233,1,True,N_clusterN,0.14437401,Nenhuma,False,
-748333,1,True,N_clusterN,0.14276877,Nenhuma,False,
-139887,1,True,N_clusterN,0.14010052,Interferência,False,Possível IAM antigo.
-421486,1,True,N_clusterN,0.13903224,Nenhuma,False,
-1033785,1,True,N_clusterN,0.1382385,SB,False,
-988219,1,True,N_clusterN,0.13462119,Nenhuma,,
-806264,1,True,N_clusterN,0.13402936,Interferência,False,"Não possível avaliar D1, D3 e aVF"
-1610032,1,True,N_clusterN,0.13394544,SB,False,
-575290,1,True,N_clusterN,0.13278607,SB,False,
-219348,1,True,N_clusterN,0.13257039,Interferência,False,
-1372960,1,True,N_clusterN,0.1298398,Outra,True,"Isquemia antero septal, supra de ST em V2, V3 e V4"
-1635920,1,True,N_clusterN,0.12934625,Outra,False,Sonrecarga biatrial
-250367,1,True,N_clusterN,0.12895478,Outra,False,Arritmia sinusal
-918264,1,True,N_clusterN,0.12805922,Nenhuma,False,
-257722,1,True,N_clusterN,0.12783831,Interferência,False,Não possível ver P em D2
-1183535,1,True,N_clusterN,0.12769032,AF,False,
-276380,1,True,N_clusterN,0.12722106,Outra,True,"Arritmia sinusal, limítrofe com bradicardia sinusal e normalidade"
-1222975,1,True,N_clusterN,0.12707591,Nenhuma,False,
-1517407,1,True,N_clusterN,0.12613861,Outra,False, Sobrecarga VE
-611076,1,True,N_clusterN,0.12595862,SB,False,
-1782249,1,True,N_clusterN,0.12572089,Outra,False,Sobrecarga VE 
-1868972,1,True,N_clusterN,0.12551326,Outra,False,"Sobrecarga AD, AE, VE."
-2303,1,True,N_clusterN,0.12518683,Nenhuma,True,Possível interferência em D3. Boderline para bradicardia sinusal.
-1121716,1,True,N_clusterN,0.12470854,ST,False,
-812664,1,True,N_clusterN,0.12425102,Outra,False,Arritmia sinusal com extrassístole ventricular
-161345,1,True,N_clusterN,0.12424622,Outra,False,Isquemia miocárdica em paredes inferior e lateral. Presença de duas extrassístole supraventriculares.
-1904289,1,True,N_clusterN,0.12423255,Outra,False,Extrassistole ventricular isolada monomorfica 
-60084,1,True,N_clusterN,0.12378972,Outra,False,Presença de extrassístole ventricular
-1259700,1,True,N_clusterN,0.12374879,Outra,False,Sobrecarga AE e VE
-215469,1,True,N_clusterN,0.12340691,Outra,False,Arritmia sinusal
-651272,1,True,N_clusterN,0.12315813,Interferência,False,"Possível normalidade, mas não pode ser confirmar por não poder avaliar D1, D2 e aVF"
-229965,1,True,N_clusterN,0.12314029,Nenhuma,False,
-117460,1,True,N_clusterN,0.12291175,Outra,False,Sobrecarga atrial direita
-52425,1,True,N_clusterN,0.122669935,Nenhuma,False,Extrassístole ventricular
-1052961,1,True,N_clusterN,0.12234627,Outra,True,"Arritmia sinusal, borderline devido a interferência"
-610046,1,True,N_clusterN,0.12227917,Outra,False,Arritmia sinusal
-688318,1,True,N_clusterN,0.12225058,SB,False,
-270359,1,True,N_clusterN,0.12222693,Outra,False,Possível alteração de repolarização ou interferência
-150032,1,True,N_clusterN,0.12211508,Outra,False,Extrassistole ventricular trigeminada
-1533349,1,True,N_clusterN,0.12205083,Outra,False,"Arritimia sinusal, interferência "
-1144689,1,True,N_clusterN,0.12203622,Interferência,False,
-801591,1,True,N_clusterN,0.12201516,Nenhuma,False,Presença de extrassístole ventricular
-1148170,1,True,N_clusterN,0.12195602,Nenhuma,False,
-385870,1,True,N_clusterN,0.121828824,Nenhuma,False,
-905103,1,True,N_clusterN,0.12175879,Nenhuma,False,
-212673,1,True,N_clusterN,0.12136064,Nenhuma,False,
-1311446,1,True,N_clusterN,0.12109857,Outra,False,Sobrecarga
-340180,1,True,N_clusterN,0.1210132,Nenhuma,False,Presença de extrassístole ventricular
-1526329,1,True,N_clusterN,0.12090638,Outra,False,Sobrecarga VE 
-1709495,1,True,N_clusterN,0.120857626,Nenhuma,False,Interferência 
-231711,1,True,N_clusterN,0.12069365,Outra,False,Arritmia sinusal
-59396,1,True,N_clusterN,0.12051359,Outra,False,Presença de extrassístole ventricular
-61018,1,True,N_clusterN,0.12048947,Outra,False,arritmia sinusal
-233324,1,True,N_clusterN,0.12047843,Interferência,False,
-42054,1,True,N_clusterN,0.12036721,Nenhuma,False,"Possível extrassístole ou interferência, visualizada no início das derivações."
-130282,1,True,N_clusterN,0.12020777,SB,False,
-1537000,1,True,N_clusterN,0.120194234,Outra,False,Sobrecarga VE
-753988,1,True,N_clusterN,0.12004222,Outra,False,Arritmia sinusal
-1804120,1,True,N_clusterN,0.120009825,Nenhuma,False,
-336003,1,True,N_clusterN,0.119957104,Outra,False,Taquicardia atrial multifocal
-1132113,1,True,N_clusterN,0.11970248,Nenhuma,False,
-786260,1,True,N_clusterN,0.119700894,Interferência,False,Não foi possível avaliar D1 e aVL
-2007170,1,True,N_clusterN,0.119617835,Nenhuma,False,Interferência 
-104785,1,True,N_clusterN,0.11947672,Nenhuma,False,
-1621612,1,True,N_clusterN,0.11891657,Outra,False,"Isquemia de parede antero septal, supra de ST de V2 e V3."
-902165,1,True,N_clusterN,0.118754715,Nenhuma,False,
-1536672,1,True,N_clusterN,0.11842556,Nenhuma,False,Interferência 
-1704451,1,True,N_clusterN,0.1183764,Outra,False,Sobrecarga VE
-748170,1,True,N_clusterN,0.11827843,Nenhuma,False,
-1545590,1,True,N_clusterN,0.11810389,1dAVB,False,Presença de extrassistole interpolada
-368755,1,True,N_clusterN,0.11797782,Nenhuma,False,
-298791,1,True,N_clusterN,0.11788188,Outra,False,Arritmia sinusal
-965626,1,True,N_clusterN,0.11514521,Nenhuma,False,
-1423711,1,True,N_clusterN,0.1105843,Outra,False,Sobrecarga AE
-69073,1,True,N_clusterN,0.110254206,,,
-439867,1,True,N_clusterN,0.11020043,Nenhuma,False,
-1411804,1,True,N_clusterN,0.11002406,Outra,False,"Arritmia sinusal, sobrecarga AD"
-236637,1,True,N_clusterN,0.10964473,Outra,False,Lesão com supra de ST em parede antero-septal
-1794048,1,True,N_clusterN,0.1080704,Outra,False,Sobrecarga VE e AE 
-907979,1,True,N_clusterN,0.10781597,Nenhuma,False,
-136677,1,True,N_clusterN,0.10775354,Outra,False,IAM antigo em parede septal. Lesão em atividade em parede antero-septal.
-84237,1,True,N_clusterN,0.107543804,Nenhuma,False,
-1295238,1,True,N_clusterN,0.10632148,Outra,False,sobrecarga VE e AE
-103188,1,True,N_clusterN,0.10509476,Nenhuma,False,
-1671946,1,True,N_clusterN,0.10385109,Outra,False,Sobrecarga de VE e AE 
-724631,1,True,N_clusterN,0.10372254,Nenhuma,False,
-500915,1,True,N_clusterN,0.10330231,Interferência,False,"Possível normalidade, não possível avaliar D1, D3 e aVL"
-1743775,1,True,N_clusterN,0.102468066,Outra,False,Sobrecarga biatrial e de VE. Q patológica em V1
-741310,1,True,N_clusterN,0.10019433,Outra,False,Lesão com supra de ST em parede antero-septal (v1 -v3)
-1444078,1,True,N_clusterN,0.09753427,Outra,False,"Isquemia de parede antero lateral, supra de V2 a V5"
-1735139,1,True,N_clusterN,0.0973259,Outra,False,Sobrecarga VE 
-338057,1,True,N_clusterN,0.096523516,Interferência,True,Possível arritmia sinusal ou normalidade
-1329316,1,True,N_clusterN,0.09427344,Outra,False,Sobrecarga AE
-1721943,1,True,N_clusterN,0.0929853,Outra,False,Sobrecarga VE e AE 
-836017,1,True,N_clusterN,0.092325896,Interferência,False,"Não possível avaliar D1 e aVL, presenta de supra de ST em V2 e V3."
-315213,1,True,N_clusterN,0.09227081,Nenhuma,False,
-1776228,1,True,N_clusterN,0.09122579,Outra,False,Sobrecarga de VE 
-629570,1,True,N_clusterN,0.08806764,Nenhuma,True,Supradesnivelamento de ST limítrofe em V1 e V2
-1415292,1,True,N_clusterN,0.08730175,Outra,False,Sobrecarga VE e AE
-1883,1,True,N_clusterN,0.08323727,Nenhuma,False,Possível interferência em aVF e V5
-277965,1,True,N_clusterN,0.0832186,Outra,False,Isquemia de parede antero-septal
-69378,1,True,N_clusterN,0.08166229,Nenhuma,True,"Boderline para BRD, QRS próximo de 120 ms"
-346776,1,True,N_clusterN,0.08031766,Outra,False,Lesão em parede antero-septal. Presença de sobrecarga atrial direita
-982543,1,True,N_clusterN,0.068176724,Nenhuma,False,
-117476,1,True,N_clusterN,0.068034545,Nenhuma,False,
-33661,1,True,N_clusterN,0.058175232,Outra,False,Sobrecarga ventricular esquerda.
-484984,1,True,N_clusterN,0.056262497,Nenhuma,True,Limitrofe para BAV 1°
-185119,1,True,N_clusterN,0.049313825,Nenhuma,False,
-279614,1,True,N_clusterN,0.043786857,Outra,False,"Necrose de parede septal, com lesão em atividade em parede antero-septal"
+2752429,1,False,D_clusterN,0.11153055,ST,False,Arritmia sinusal
+2790986,1,False,D_clusterN,0.10327786,ST,False,Arritmia sinusal 
+144629,1,False,D_clusterN,0.09450077,Outra,False,
+789242,1,False,D_clusterN,0.08560793,Outra,False,Taquicardia supraventricular por reentrada em via acessória
+1266486,1,False,D_clusterN,0.080910206,ST,False,
+526752,1,False,D_clusterN,0.07427639,ST,False,
+1017917,1,False,D_clusterN,0.07266414,ST,False,
+745309,1,False,D_clusterN,0.0694601,Outra,False,Taquicardia supraventricular por reentrada nodal
+1576237,1,False,D_clusterN,0.06916095,Outra,False,Taquicardia ventricular
+1255202,1,False,D_clusterN,0.06680184,ST,False,
+805832,1,False,D_clusterN,0.060849648,Nenhuma,False,
+1167343,1,False,D_clusterN,0.058691032,Nenhuma,False,
+1891463,1,False,D_clusterN,0.058047377,ST,False,Sobrecarga VD e VE. Q patológica em V1 
+1627203,1,False,D_clusterN,0.053056,ST,False,Presença de sobrecarga VE
+1131543,1,False,D_clusterN,0.046041284,ST,False,Presença de extrassístole ventricular
+3017385,1,False,D_clusterN,0.044542186,ST,False,Sobrecarga VD e AD
+69255,1,False,D_clusterN,0.043790318,,,
+4254987,1,False,D_clusterN,0.043258503,AF,False,
+1378239,1,False,D_clusterN,0.042820733,ST,False,Presença de extrassistole isolada monomorfica
+4408321,1,False,D_clusterN,0.042812623,ST,False,Extrassistole ventricular isolada 
+367932,1,False,D_clusterN,0.042731985,ST,False,Presença de extrassístole ventricular
+629566,1,False,D_clusterN,0.042672906,Interferência,False,"Não possível avaliar D1, D3, aVL e V1"
+1760039,1,False,D_clusterN,0.042634666,ST,False,"Sobrecarga de VD. Isquemia de parede antero septal, supra de ST em V1 a V4. Interferência."
+483034,1,False,D_clusterN,0.042500634,Interferência,False,
+971298,1,False,D_clusterN,0.04132019,Interferência,False,"Não possível avaliar V3, V4, V5 e V6"
+321228,1,False,D_clusterN,0.041227173,Interferência,False,
+944008,1,False,D_clusterN,0.040920414,Outra,False,Taquicardia por reentrada nodal
+4213031,1,False,D_clusterN,0.040650275,ST,False,Sobrecarga VE e AE 
+2659904,1,False,D_clusterN,0.040058427,Outra,False,Extrassistoles supraventriculares monomorficas. Interferência 
+2763079,1,False,D_clusterN,0.040000338,RBBB,False,Taquicardia sinusal
+787459,1,False,D_clusterN,0.039606724,Interferência,False,"Não possível avaliar V3, V4, V5 e V6"
+1873732,1,False,D_clusterN,0.03904868,ST,False,Sobrecarga VD e VE. Q patológica em V1 
+255536,1,False,D_clusterN,0.03717902,Outra,Não ,Taquicardia atrial multifocal
+3086494,1,False,D_clusterN,0.029576184,Outra,False,Onda Q patológica em V1  e aVR
+871919,1,False,D_clusterN,0.024996156,ST,False,
+485287,1,False,D_clusterN,-0.041788727,Interferência,False,
+902635,1,False,D_clusterN,-0.042801637,Outra,False,Taquicardia supraventricular
+88358,1,False,D_clusterN,-0.04772457,,,
+1963513,1,False,D_clusterN,-0.050628662,ST,False,Bloqueio de ramo direito e sobrecarga de VE

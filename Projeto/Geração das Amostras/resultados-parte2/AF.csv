@@ -2,30 +2,30 @@ exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
 1205341,0,False,D_clusterD,0.6639567,Interferência,False,Não possível avaliar o ECG
 1332970,0,False,D_clusterD,0.6454447,AF,False,
 747477,0,False,D_clusterD,0.6383476,RBBB,False,"FA, interferência "
-3182236,0,False,D_clusterD,0.63276565,,,
+3182236,0,False,D_clusterD,0.63276565,AF,False,
 841128,0,False,D_clusterD,0.6277787,Interferência,False,Em todas as derivações 
 1171976,0,False,D_clusterD,0.6235797,AF,False,
-3190926,0,False,D_clusterD,0.6200215,,,
+3190926,0,False,D_clusterD,0.6200215,AF,False,
 102143,0,False,D_clusterD,0.61620784,AF,False,
-2962837,0,False,D_clusterD,0.61175454,,,
-2824070,0,False,D_clusterD,0.6070292,,,
-2916565,0,False,D_clusterD,0.60296637,,,
+2962837,0,False,D_clusterD,0.61175454,AF,False,
+2824070,0,False,D_clusterD,0.6070292,AF,False,
+2916565,0,False,D_clusterD,0.60296637,AF,False,
 1310475,0,False,D_clusterD,0.5997059,AF,True,Limítrofe por interferência em V1
 1198960,0,False,D_clusterD,0.59546083,AF,False,
 1106768,0,False,D_clusterD,0.59153795,Outra,False,"Arritmia sinusal, extrassistole ventricular polimorfica"
 1020497,0,False,D_clusterD,0.5878425,AF,False,
 1279011,0,False,D_clusterD,0.5841206,AF,False,
 277124,0,False,D_clusterD,0.5801749,AF,False,Extrassistole ventricular isolada monomorfica 
-2843330,0,False,D_clusterD,0.57603955,,,
+2843330,0,False,D_clusterD,0.57603955,AF,False,
 1358824,0,False,D_clusterD,0.5721627,AF,False,
 1386801,0,False,D_clusterD,0.5684482,AF,False,
 1579453,0,False,D_clusterD,0.56487894,AF,False,
 113426,0,False,D_clusterD,0.5612569,AF,False,Flutter atrial. Extrassistole ventricular isolada monomorfica associada 
-3794806,0,False,D_clusterD,0.5572637,,,
-1740173,0,False,D_clusterD,0.5529711,,,
+3794806,0,False,D_clusterD,0.5572637,AF,False,
+1740173,0,False,D_clusterD,0.5529711,AF,False,
 1173632,0,False,D_clusterD,0.5486788,AF,False,
-3215212,0,False,D_clusterD,0.54476994,,,
-3057183,0,False,D_clusterD,0.540361,,,
+3215212,0,False,D_clusterD,0.54476994,AF,False,
+3057183,0,False,D_clusterD,0.540361,AF,False,
 10592,0,False,D_clusterD,0.5356086,RBBB,False,
 1414269,0,False,D_clusterD,0.5305559,AF,False,
 732510,0,False,D_clusterD,0.52657247,AF,False,BRD
@@ -34,16 +34,16 @@ exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
 697646,0,False,D_clusterD,0.5112838,AF,False,
 1458074,0,False,D_clusterD,0.5045818,AF,False,Presença de extrassístole supraventricular
 1143981,0,False,D_clusterD,0.4958099,AF,False,Flutter atrial 
-3022559,0,False,D_clusterD,0.4861703,,,
-2995993,0,False,D_clusterD,0.47756603,,,
-1839701,0,False,D_clusterD,0.4661358,,,
+3022559,0,False,D_clusterD,0.4861703,AF,False,
+2995993,0,False,D_clusterD,0.47756603,AF,False,Interferência impediu a visualização de V1.
+1839701,0,False,D_clusterD,0.4661358,AF,False,
 1421254,0,False,D_clusterD,0.45253608,AF,False,
 888855,0,False,D_clusterD,0.43947318,AF,False,
-1901214,0,False,D_clusterD,0.42126942,,,
+1901214,0,False,D_clusterD,0.42126942,AF,False,
 988165,0,False,D_clusterD,0.39708954,AF,False,Flutter atrial 
 1462182,0,False,D_clusterD,0.36109024,AF,False,
 1258117,0,False,D_clusterD,0.26333082,AF,False,Possivelmente associado a BAV avançado devido a baixa frequência
-2941901,0,False,D_clusterD,-0.08581631,,,
+2941901,0,False,D_clusterD,-0.08581631,AF,False,
 523634,1,True,N_clusterN,0.3752946,Outra,False,"Sobrecarga VE, VD, AE e AD"
 749134,1,True,N_clusterN,0.36288673,Outra,False,Sobrecarga AD e VE
 1549048,1,True,N_clusterN,0.36175916,Nenhuma,False,
@@ -54,7 +54,7 @@ exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
 1075284,1,True,N_clusterN,0.35679632,Nenhuma,False,
 540188,1,True,N_clusterN,0.3564109,Outra,False,Sobrecarga VE e VD 
 1374890,1,True,N_clusterN,0.3563566,Interferência,False,Não visualizado D3
-1787555,1,True,N_clusterN,0.35631692,,,
+1787555,1,True,N_clusterN,0.35631692,Nenhuma,False,
 1362290,1,True,N_clusterN,0.35595366,Outra,False,Sobrecarga ventricular esquerda
 507229,1,True,N_clusterN,0.3556119,Outra,False,Sobrecarga VE e AE 
 532375,1,True,N_clusterN,0.35498148,Outra,False,Sobrecarga VE
@@ -64,7 +64,7 @@ exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
 1572880,1,True,N_clusterN,0.3539581,Outra,False,
 37414,1,True,N_clusterN,0.35383663,Nenhuma,False,
 607639,1,True,N_clusterN,0.3534132,Nenhuma,False,
-1776514,1,True,N_clusterN,0.35299382,,,
+1776514,1,True,N_clusterN,0.35299382,Nenhuma,False,
 1535178,1,True,N_clusterN,0.35260597,Nenhuma,False,
 797150,1,True,N_clusterN,0.35171595,Outra,False,Sobrecarga VE e AE 
 615029,1,True,N_clusterN,0.3517055,Nenhuma,False,
@@ -74,11 +74,11 @@ exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
 981927,1,True,N_clusterN,0.3512181,Nenhuma,False,
 1073609,1,True,N_clusterN,0.35087356,Outra,False,Arritmia sinusal e sobrecarga VE 
 607110,1,True,N_clusterN,0.35084006,Outra,False,Sobrecarga VE 
-1866847,1,True,N_clusterN,0.35032782,,,
+1866847,1,True,N_clusterN,0.35032782,Nenhuma,True,Interferência limítrofe para aVF
 87958,1,True,N_clusterN,0.34985113,Outra,False,Sobrecarga VE
 222222,1,True,N_clusterN,0.34971118,Nenhuma,False,
 1492957,1,True,N_clusterN,0.34950653,Nenhuma,False,
-1856673,1,True,N_clusterN,0.34917367,,,
+1856673,1,True,N_clusterN,0.34917367,Nenhuma,False,
 351176,1,True,N_clusterN,0.34786975,Nenhuma,False,
 1139824,1,True,N_clusterN,0.3456722,Outra,False,Arritmia sinusal 
 835739,1,True,N_clusterN,0.34307718,Outra,False,Sobrecarga VE e AE 
@@ -121,6 +121,6 @@ exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
 1655350,1,True,N_clusterN,0.3371908,Nenhuma,False,
 1022656,1,True,N_clusterN,0.33707556,Nenhuma,False,
 630798,1,True,N_clusterN,0.33514917,Outra,False,Sobrecarga AE e AD
-1720327,1,True,N_clusterN,0.33451173,,,
+1720327,1,True,N_clusterN,0.33451173,Nenhuma,False,
 62281,1,True,N_clusterN,0.33408666,Outra,False,Sobrecarga VD e AD
-1730052,1,True,N_clusterN,0.33360055,,,
+1730052,1,True,N_clusterN,0.33360055,Nenhuma,False,

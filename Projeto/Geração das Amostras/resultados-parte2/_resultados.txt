@@ -4,13 +4,13 @@ Resultado: SB
 Doentes no cluster Doente
 
     Doenca:
-      SB: 24 (72.73%)
-      Outra: 8 (24.24%)
-      Interferência: 1 (3.03%)
+      SB: 36 (80.0%)
+      Outra: 8 (17.78%)
+      Interferência: 1 (2.22%)
 
     Borderline:
-      False: 31 (93.94%)
-      True: 2 (6.06%)
+      False: 42 (93.33%)
+      True: 3 (6.67%)
 
 --------------------------------------------------
 
@@ -20,14 +20,13 @@ Resultado: ST
 Doentes no cluster Doente
 
     Doenca:
-      ST: 24 (85.71%)
-      Nenhuma: 2 (7.14%)
-      Outra: 1 (3.57%)
-      Interferência: 1 (3.57%)
+      ST: 39 (90.7%)
+      Outra: 2 (4.65%)
+      Nenhuma: 2 (4.65%)
 
     Borderline:
-      False: 26 (92.86%)
-      True: 2 (7.14%)
+      False: 34 (79.07%)
+      True: 9 (20.93%)
 
 --------------------------------------------------
 
@@ -37,15 +36,15 @@ Resultado: AF
 Doentes no cluster Doente
 
     Doenca:
-      AF: 24 (80.0%)
-      Interferência: 2 (6.67%)
-      RBBB: 2 (6.67%)
-      Outra: 1 (3.33%)
-      ST: 1 (3.33%)
+      AF: 39 (86.67%)
+      Interferência: 2 (4.44%)
+      RBBB: 2 (4.44%)
+      Outra: 1 (2.22%)
+      ST: 1 (2.22%)
 
     Borderline:
-      False: 29 (96.67%)
-      True: 1 (3.33%)
+      False: 44 (97.78%)
+      True: 1 (2.22%)
 
 --------------------------------------------------
 
@@ -60,13 +59,13 @@ Resultado: RBBB
 Doentes no cluster Doente
 
     Doenca:
-      RBBB: 24 (85.71%)
-      AF: 2 (7.14%)
-      Outra: 2 (7.14%)
+      RBBB: 41 (91.11%)
+      Outra: 2 (4.44%)
+      AF: 2 (4.44%)
 
     Borderline:
-      False: 27 (96.43%)
-      True: 1 (3.57%)
+      False: 41 (91.11%)
+      True: 4 (8.89%)
 
 --------------------------------------------------
 
@@ -76,16 +75,16 @@ Resultado: LBBB
 Doentes no cluster Doente
 
     Doenca:
-      LBBB: 27 (77.14%)
-      Outra: 4 (11.43%)
-      Interferência: 1 (2.86%)
-      RBBB: 1 (2.86%)
-      1dAVB: 1 (2.86%)
-      Nenhuma: 1 (2.86%)
+      LBBB: 35 (79.55%)
+      Outra: 4 (9.09%)
+      Nenhuma: 2 (4.55%)
+      1dAVB: 1 (2.27%)
+      RBBB: 1 (2.27%)
+      Interferência: 1 (2.27%)
 
     Borderline:
-      False: 28 (80.0%)
-      True: 7 (20.0%)
+      False: 36 (81.82%)
+      True: 8 (18.18%)
 
 --------------------------------------------------
 

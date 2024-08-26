@@ -1,9 +1,9 @@
 Contagem de 'borderline':
-False: 73
-True: 1
+False: 78
+True: 2
 
 Contagem de 'doenca':
 Outra: 48
-Nenhuma: 25
+Nenhuma: 31
 Interferência: 1
 --------------------------------------------------
