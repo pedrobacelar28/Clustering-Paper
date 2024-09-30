@@ -1,0 +1,14 @@
+exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
+1862980,1,False,D_clusterN,0.24824929,Outra,False,Sobrecarga VD. Onda Q patológica em V1 
+1667136,1,False,D_clusterN,0.24668956,Outra,False,"Sobrecarga de AE, onda q patologica em V1"
+87470,1,False,D_clusterN,0.24592979,,,
+964759,1,False,D_clusterN,0.24475203,Nenhuma,False,
+1292975,1,False,D_clusterN,0.23781618,Outra,False,sobrecarga VE e AE
+1365848,1,False,D_clusterN,0.2319025,Outra,False,Sobrecarga AE
+3129118,1,False,D_clusterN,0.2278986,SB,False,Sobrecarga VE e AE 
+1643428,1,False,D_clusterN,0.21504055,SB,False,Presença de sobrecarga de AE e VE
+737139,1,False,D_clusterN,0.2144056,SB,True,Supradesnivelamento de ST limítrofe em V2 e V3
+533975,1,False,D_clusterN,0.2037209,SB,False,
+826380,1,False,D_clusterN,0.18069682,SB,False,
+489846,1,False,D_clusterN,0.16431311,Outra,False,Arritmia sinusal
+1900920,1,False,D_clusterN,0.1388858,Outra,False,Sobrecarga VE e AE 

@@ -1,0 +1,85 @@
+Resultado: SB
+
+
+Doentes no cluster Doente
+
+    Doenca:
+      SB: 36 (80.0%)
+      Outra: 8 (17.78%)
+      Interferência: 1 (2.22%)
+
+    Borderline:
+      False: 42 (93.33%)
+      True: 3 (6.67%)
+
+--------------------------------------------------
+
+Resultado: ST
+
+
+Doentes no cluster Doente
+
+    Doenca:
+      ST: 39 (90.7%)
+      Outra: 2 (4.65%)
+      Nenhuma: 2 (4.65%)
+
+    Borderline:
+      False: 34 (79.07%)
+      True: 9 (20.93%)
+
+--------------------------------------------------
+
+Resultado: AF
+
+
+Doentes no cluster Doente
+
+    Doenca:
+      AF: 39 (86.67%)
+      Interferência: 2 (4.44%)
+      RBBB: 2 (4.44%)
+      ST: 1 (2.22%)
+      Outra: 1 (2.22%)
+
+    Borderline:
+      False: 44 (97.78%)
+      True: 1 (2.22%)
+
+--------------------------------------------------
+
+Resultado: RBBB
+
+
+Doentes no cluster Doente
+
+    Doenca:
+      RBBB: 41 (91.11%)
+      AF: 2 (4.44%)
+      Outra: 2 (4.44%)
+
+    Borderline:
+      False: 41 (91.11%)
+      True: 4 (8.89%)
+
+--------------------------------------------------
+
+Resultado: LBBB
+
+
+Doentes no cluster Doente
+
+    Doenca:
+      LBBB: 35 (79.55%)
+      Outra: 4 (9.09%)
+      Nenhuma: 2 (4.55%)
+      1dAVB: 1 (2.27%)
+      RBBB: 1 (2.27%)
+      Interferência: 1 (2.27%)
+
+    Borderline:
+      False: 36 (81.82%)
+      True: 8 (18.18%)
+
+--------------------------------------------------
+

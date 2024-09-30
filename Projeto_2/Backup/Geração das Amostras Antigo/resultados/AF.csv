@@ -1,0 +1,18 @@
+exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
+213924,1,False,D_clusterN,0.38028884,AF,False,
+1927643,1,False,D_clusterN,0.34599918,AF,False,Sobrecarga VE e VD 
+54398,1,False,D_clusterN,0.34191906,AF,False,Morfologia de BRD em precordias.
+695323,1,False,D_clusterN,0.3396281,AF,False,
+1777930,1,False,D_clusterN,0.33013418,AF,False,
+1831160,1,False,D_clusterN,0.322548,AF,False,Com taquicardia ventricular em seguida
+1462378,1,False,D_clusterN,0.3213402,AF,False,
+1197066,1,False,D_clusterN,0.2888537,Nenhuma,False,
+385667,1,False,D_clusterN,0.2790315,Interferência,Não ,Possível BRD. Sem visualização de V1
+535632,1,False,D_clusterN,0.23914489,AF,False,
+2745828,1,False,D_clusterN,0.21694525,AF,False,
+1715226,1,False,D_clusterN,0.19091341,AF,False,
+41605,1,False,D_clusterN,0.13837676,AF,False,
+3403340,1,False,D_clusterN,0.057251308,AF,False,
+205491,1,False,D_clusterN,0.044108965,AF,False,
+795882,1,False,D_clusterN,-0.080191486,AF,False,
+2829833,1,False,D_clusterN,-0.28449655,AF,False,

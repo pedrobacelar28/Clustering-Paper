@@ -1,0 +1,40 @@
+exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
+2752429,1,False,D_clusterN,0.11153055,ST,False,Arritmia sinusal
+2790986,1,False,D_clusterN,0.10327786,ST,False,Arritmia sinusal 
+144629,1,False,D_clusterN,0.09450077,Outra,False,
+789242,1,False,D_clusterN,0.08560793,Outra,False,Taquicardia supraventricular por reentrada em via acessória
+1266486,1,False,D_clusterN,0.080910206,ST,False,
+526752,1,False,D_clusterN,0.07427639,ST,False,
+1017917,1,False,D_clusterN,0.07266414,ST,False,
+745309,1,False,D_clusterN,0.0694601,Outra,False,Taquicardia supraventricular por reentrada nodal
+1576237,1,False,D_clusterN,0.06916095,Outra,False,Taquicardia ventricular
+1255202,1,False,D_clusterN,0.06680184,ST,False,
+805832,1,False,D_clusterN,0.060849648,Nenhuma,False,
+1167343,1,False,D_clusterN,0.058691032,Nenhuma,False,
+1891463,1,False,D_clusterN,0.058047377,ST,False,Sobrecarga VD e VE. Q patológica em V1 
+1627203,1,False,D_clusterN,0.053056,ST,False,Presença de sobrecarga VE
+1131543,1,False,D_clusterN,0.046041284,ST,False,Presença de extrassístole ventricular
+3017385,1,False,D_clusterN,0.044542186,ST,False,Sobrecarga VD e AD
+69255,1,False,D_clusterN,0.043790318,,,
+4254987,1,False,D_clusterN,0.043258503,AF,False,
+1378239,1,False,D_clusterN,0.042820733,ST,False,Presença de extrassistole isolada monomorfica
+4408321,1,False,D_clusterN,0.042812623,ST,False,Extrassistole ventricular isolada 
+367932,1,False,D_clusterN,0.042731985,ST,False,Presença de extrassístole ventricular
+629566,1,False,D_clusterN,0.042672906,Interferência,False,"Não possível avaliar D1, D3, aVL e V1"
+1760039,1,False,D_clusterN,0.042634666,ST,False,"Sobrecarga de VD. Isquemia de parede antero septal, supra de ST em V1 a V4. Interferência."
+483034,1,False,D_clusterN,0.042500634,Interferência,False,
+971298,1,False,D_clusterN,0.04132019,Interferência,False,"Não possível avaliar V3, V4, V5 e V6"
+321228,1,False,D_clusterN,0.041227173,Interferência,False,
+944008,1,False,D_clusterN,0.040920414,Outra,False,Taquicardia por reentrada nodal
+4213031,1,False,D_clusterN,0.040650275,ST,False,Sobrecarga VE e AE 
+2659904,1,False,D_clusterN,0.040058427,Outra,False,Extrassistoles supraventriculares monomorficas. Interferência 
+2763079,1,False,D_clusterN,0.040000338,RBBB,False,Taquicardia sinusal
+787459,1,False,D_clusterN,0.039606724,Interferência,False,"Não possível avaliar V3, V4, V5 e V6"
+1873732,1,False,D_clusterN,0.03904868,ST,False,Sobrecarga VD e VE. Q patológica em V1 
+255536,1,False,D_clusterN,0.03717902,Outra,Não ,Taquicardia atrial multifocal
+3086494,1,False,D_clusterN,0.029576184,Outra,False,Onda Q patológica em V1  e aVR
+871919,1,False,D_clusterN,0.024996156,ST,False,
+485287,1,False,D_clusterN,-0.041788727,Interferência,False,
+902635,1,False,D_clusterN,-0.042801637,Outra,False,Taquicardia supraventricular
+88358,1,False,D_clusterN,-0.04772457,,,
+1963513,1,False,D_clusterN,-0.050628662,ST,False,Bloqueio de ramo direito e sobrecarga de VE

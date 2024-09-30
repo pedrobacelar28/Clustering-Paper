@@ -1,0 +1,23 @@
+exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
+1107960,1,False,D_clusterN,0.2699825,RBBB,True,Valor do QRS muito próximo de 120 ms
+1926800,1,False,D_clusterN,0.26810193,RBBB,False,Mais hemi bloqueio de ramo antero superior 
+56897,1,False,D_clusterN,0.2605402,RBBB,False,arritmia sinusal
+1960521,1,False,D_clusterN,0.26013404,RBBB,False,Sobrecarga AE e AD
+18560,1,False,D_clusterN,0.25407133,RBBB,False,BRD com alteração secundária da repolarização. Preenche critérios para sobrecarga ventricular esquerda.
+2519668,1,False,D_clusterN,0.25331658,RBBB,False,"Sobrecarga VE, VD, AE, AD."
+854142,1,False,D_clusterN,0.25270164,Outra,False,Áres de IAM antigo em V1.
+2684998,1,False,D_clusterN,0.24346997,RBBB,False,"Sobrecarga de VE,  AE,  AD "
+2976376,1,False,D_clusterN,0.2428623,RBBB,False,Sobrecarga VE
+177690,1,False,D_clusterN,0.24280661,Outra,False,Flutter atrial
+3185095,1,False,D_clusterN,0.23722553,RBBB,False,Sobrecarga VE
+520158,1,False,D_clusterN,0.23554371,RBBB,False,
+1205125,1,False,D_clusterN,0.22666861,RBBB,False,
+2729712,1,False,D_clusterN,0.2265718,RBBB,False,Sobrecarga AE e VE 
+2761107,1,False,D_clusterN,0.20498547,AF,True,Interferência. Extrassistoles ventriculares bigeminadas monomorficas
+997023,1,False,D_clusterN,0.20228128,LBBB,True,Associação possível com arritmia sinusal e extrassístole atrial
+1240769,1,False,D_clusterN,0.20031224,Outra,False,"Sobrecarga de VE, VD, AE, AD"
+2786220,1,False,D_clusterN,0.17488302,RBBB,False,Sobrecarga VE
+2513566,1,False,D_clusterN,0.14944166,Interferência,False,Ausência de V1 e V3
+957365,1,False,D_clusterN,0.13584614,SB,False,
+705191,1,False,D_clusterN,0.13113388,SB,False,
+2892639,1,False,D_clusterN,0.11163771,LBBB,False,
