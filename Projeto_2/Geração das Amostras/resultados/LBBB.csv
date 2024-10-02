@@ -1,0 +1,23 @@
+exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
+1491052,1,False,D_clusterN,0.19324563,Outra,False,Sobrecarga AE e VE
+3172865,1,False,D_clusterN,0.18932772,Outra,False,Hemi bloqueio antero superior 
+1238188,1,False,D_clusterN,0.1496836,Outra,False,Sobrecarga de VE
+829769,1,False,D_clusterN,0.12504598,LBBB,True,"QRS = 120 ms. Associado ao BRE, há lesão com supra de ST de V1-V3 (parede antero-septal)"
+1631949,1,False,D_clusterN,0.04308407,Outra,False,"Isquemia de parede antero septal, supra em V1 a V3. Sobrecarga de VE com alargamento de QRS"
+916917,1,False,D_clusterN,0.034350436,Nenhuma,True,Borderline para bradicardia sinusal. Presença de extrassístole juncional
+714705,1,False,D_clusterN,0.011211742,Outra,False,Lesão com supradesnivelamento de ST em parede antero-septal
+1061241,1,False,D_clusterN,-0.02341737,Nenhuma,False,Presença de extrassístoles juncionais 
+1399834,1,False,D_clusterN,-0.08483731,Outra,False,"Isquemia, supra de ST de V1 a V4"
+476595,1,False,D_clusterN,-0.116309755,LBBB,False,
+1860143,1,False,D_clusterN,-0.13137998,Outra,False,Hemi bloqueio antero superior. Extrassistole ventricular isolada monomorfica 
+1556148,1,False,D_clusterN,-0.13304919,Outra,False,Sobrecarga VE e AE 
+1512163,1,False,D_clusterN,-0.17012987,RBBB,False,"Presença de isquemia de parede antero septal, supra de V1 e V1, sobrecarga AD e VD"
+3025466,1,False,D_clusterN,-0.1938808,Outra,False,Sobrecarga VE.  Onda Q patológica em V1 
+350152,1,False,D_clusterN,-0.2094362,Outra,True,Lesão em parede septal. Limítrofe para BRD
+2973866,1,False,D_clusterN,-0.21842259,Outra,False,"Extrassistoles ventriculares monomorficas bigeminadas. Sobrecarga VE, AE e VD "
+66896,1,False,D_clusterN,-0.22016418,LBBB,False,Interferência 
+1269774,1,False,D_clusterN,-0.23643233,LBBB,False,Presença de extrassistoles supraventriculares pareadas monomorficas
+1082367,1,False,D_clusterN,-0.24601734,Outra,False,Arritmia sinusal
+1332819,1,False,D_clusterN,-0.25032434,LBBB,False,
+927554,1,False,D_clusterN,-0.2544187,LBBB,True,"QRS = 120 ms. Além disso, apresnta possível IAM de tronco de coronária esquerda (Supra de aVR e V1 e infra difuso)"
+1586907,1,False,D_clusterN,-0.26570153,Outra,False,"Isquemia de parede anterior e inferior, supra de ST em V1 a V4, aVF e D3, infra de ST em V6, aVL e D1"

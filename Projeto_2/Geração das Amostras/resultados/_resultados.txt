@@ -1,0 +1,82 @@
+Resultado: SB
+
+Doentes
+
+    Doenca:
+      Outra: 6 (50.0%)
+      SB: 5 (41.67%)
+      Nenhuma: 1 (8.33%)
+
+    Borderline:
+      False: 11 (91.67%)
+      True: 1 (8.33%)
+
+--------------------------------------------------
+
+Resultado: ST
+
+Doentes
+
+    Doenca:
+      ST: 18 (48.65%)
+      Outra: 9 (24.32%)
+      Interferência: 6 (16.22%)
+      Nenhuma: 2 (5.41%)
+      AF: 1 (2.7%)
+      RBBB: 1 (2.7%)
+
+    Borderline:
+      False: 36 (97.3%)
+      Não : 1 (2.7%)
+
+--------------------------------------------------
+
+Resultado: AF
+
+Doentes
+
+    Doenca:
+      AF: 15 (88.24%)
+      Nenhuma: 1 (5.88%)
+      Interferência: 1 (5.88%)
+
+    Borderline:
+      False: 16 (94.12%)
+      Não : 1 (5.88%)
+
+--------------------------------------------------
+
+Resultado: RBBB
+
+Doentes
+
+    Doenca:
+      RBBB: 13 (59.09%)
+      Outra: 3 (13.64%)
+      LBBB: 2 (9.09%)
+      SB: 2 (9.09%)
+      AF: 1 (4.55%)
+      Interferência: 1 (4.55%)
+
+    Borderline:
+      False: 19 (86.36%)
+      True: 3 (13.64%)
+
+--------------------------------------------------
+
+Resultado: LBBB
+
+Doentes
+
+    Doenca:
+      Outra: 13 (59.09%)
+      LBBB: 6 (27.27%)
+      Nenhuma: 2 (9.09%)
+      RBBB: 1 (4.55%)
+
+    Borderline:
+      False: 18 (81.82%)
+      True: 4 (18.18%)
+
+--------------------------------------------------
+

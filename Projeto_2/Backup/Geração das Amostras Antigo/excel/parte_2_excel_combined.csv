@@ -1,0 +1,306 @@
+exam_id,doenca,borderline,comentario
+10592,RBBB,False,
+13870,ST,False,Arritmia sinusal associada
+16196,RBBB,False,
+33691,RBBB,True,Presença de onda r em V1 e V2. Associado a supra de ST em V1 a V3 (isquemia de parede antero septal?)
+34833,Outra,False,Sobrecarga VE 
+37414,Nenhuma,False,
+44874,RBBB,False,Extrassistoles ventriculares polimorficas associadas
+46877,Nenhuma,False,
+58190,Outra,False,Sobrecarga VE 
+62013,SB,True,Arritmia sinusal associada
+62281,Outra,False,Sobrecarga VD e AD
+65304,ST,False,
+74211,Outra,False,Sobrecarga VE 
+76774,Outra,False,Hemi bloqueio antero superior 
+87958,Outra,False,Sobrecarga VE
+91895,Outra,False,"Sobrecarga AE, AD e VE"
+93077,SB,False,Sobrecarga de VE associado 
+94185,LBBB,False,
+100699,LBBB,False,Supra de ST em V1 a V4 (isquemia de parede antero septal?)
+102143,AF,False,
+113426,AF,False,Flutter atrial. Extrassistole ventricular isolada monomorfica associada 
+121194,LBBB,False, Supra de ST de V1 a V3 (isquemia de parede antero septal?)
+126837,ST,False,Sobrecarga de AE associado 
+143713,ST,False,
+149662,SB,False,Sobrecarga VE associado 
+155194,SB,False,Sobrecarga VE  associado 
+159985,Outra,False,"Extrassistole supraventricular monomorfica isolada, sobrecarga de VE associados "
+160107,LBBB,False, Supra de ST de V1 a V3 (isquemia de parede antero septal?)
+171266,Outra,False,Sobrecarga de VE associado 
+172422,LBBB,False, Supra de ST de V1 a V3 (isquemia de parede antero septal?)
+187072,1dAVB,False,"BRE, extrassistole supraventricular bloqueada, bradicardia sinusal associados"
+192258,ST,False,
+194805,LBBB,False, Supra de ST de V1 a V3 (isquemia de parede antero septal?)
+218100,SB,True,"Presença de arritmia, interferência nas derivações precordiais "
+222222,Nenhuma,False,
+244340,ST,False,Sobrecarga AD e VD
+254443,SB,False,Sobrecarga de VE 
+260506,Outra,False,Sobrecarga VE 
+265274,Outra,False,Sobrecarga VE
+277124,AF,False,Extrassistole ventricular isolada monomorfica 
+336815,Outra,False,Sobrecarga AE e VE 
+344442,SB,False,Sobrecarga VE 
+346919,Outra,False,"Sobrecarga AE e VE, supra de ST de V1 a V3 (isquemia de parede antero septal?)"
+351176,Nenhuma,False,
+359794,ST,False,Sobrecarga VD 
+361061,Outra,False,Sobrecarga AE e VE
+403607,Outra,False,"Sobrecarga AD, AE e VE"
+405994,Outra,False,Sobrecarga VE e VD. Supra de ST em V1 a V3 (isquemia de parede antero septal?). Onda Q patológica em V1 a V3 e aVR
+407029,LBBB,False,"Sobrecarga de AE, AD, VD e VE.  Supra de ST de V1 a V4 (isquemia de parede antero septal?)"
+440541,Nenhuma,False,
+447717,Outra,False,Sobrecarga VE 
+460729,Outra,False,Sobrecarga VE 
+461775,RBBB,False,Sobrecarga VE
+478886,Outra,False,Taquicardia ventricular 
+497785,SB,False,Sobrecarga VD 
+506217,LBBB,False, Supra de ST de V1 a V3 (isquemia de parede antero septal?)
+507229,Outra,False,Sobrecarga VE e AE 
+514935,SB,False,Sobrecarga VE e AE 
+519401,SB,False,Sobrecarga VE 
+522400,LBBB,False,
+523418,RBBB,False,
+523634,Outra,False,"Sobrecarga VE, VD, AE e AD"
+531565,AF,False,
+532375,Outra,False,Sobrecarga VE
+540188,Outra,False,Sobrecarga VE e VD 
+547915,Outra,False,Sobrecarga VE 
+556346,LBBB,True,Presença de onda S profunda em V5 e V6.  Sobrecarga VD e AE
+561622,LBBB,False,
+565817,SB,False,Sobrecarga VE 
+576753,Nenhuma,False,
+584623,Outra,False,Sobrecarga VD 
+588769,Outra,False,"Sobrecarga AE, VE e VD "
+607110,Outra,False,Sobrecarga VE 
+607639,Nenhuma,False,
+615029,Nenhuma,False,
+629113,Outra,False,"Hemi bloqueio antero superior,  arritmia sinusal, sobrecarga AE "
+629219,Outra,False,Sobrecarga VE 
+630798,Outra,False,Sobrecarga AE e AD
+638365,Outra,False,"Sobrecarga AE,  VE,  AD e VD"
+646336,RBBB,False,
+648328,ST,False,"Arritmia sinusal, sobrecarga de VE e AE"
+653227,LBBB,False,Interferência em V6
+659378,ST,False,
+664817,ST,False,"Sobrecarga AE, AD, VE"
+678545,Outra,False,"Sobrecarga AE,  AD e VD "
+686281,SB,False,
+689131,RBBB,False,
+697646,AF,False,
+698060,Outra,False,Sobrecarga VE 
+719019,Outra,False,Sobrecarga VE e AE
+722475,RBBB,False,Arritmia sinusal 
+724483,Outra,False,Sobrecarga VD 
+732510,AF,False,BRD
+733915,ST,False,"Sobrecarga AE, VE, AD"
+739942,RBBB,False,
+740072,RBBB,False,
+747477,RBBB,False,"FA, interferência "
+748147,RBBB,False,
+749134,Outra,False,Sobrecarga AD e VE
+758278,ST,False,"Sobrecarga VE, VD, AD e AE"
+760610,LBBB,False,"Sobrecarga AD, AE e VE. Supra de ST em V1 e V2"
+761335,SB,False,"BRE, Sobrecarga VE e AE"
+777292,ST,False,Sobrecarga VE e AE 
+779072,Outra,False,Sobrecarga AE e VE 
+785137,RBBB,False,Taquicardia sinusal 
+785538,RBBB,False,
+797150,Outra,False,Sobrecarga VE e AE 
+829724,RBBB,False,Arritmia sinusal 
+830836,SB,False,Arritmia sinusal 
+835739,Outra,False,Sobrecarga VE e AE 
+839251,Outra,False,Sobrecarga VE e AE 
+841128,Interferência,False,Em todas as derivações 
+853084,Outra,False,Sobrecarga VE e AE 
+860079,SB,False,Sobrecarga VE 
+865433,SB,False,Sobrecarga VE
+876025,Outra,False,Sobrecarga VE 
+876373,Nenhuma,False,
+888855,AF,False,
+894318,RBBB,True,V6 com morfologia Rr'
+896159,Outra,False,Sobrecarga VE 
+917620,RBBB,False,
+926133,RBBB,False,
+973463,LBBB,False,Extrassistole ventricular isolada 
+981927,Nenhuma,False,
+988165,AF,False,Flutter atrial 
+994805,RBBB,False,
+1003650,RBBB,False,
+1007187,Outra,False,"Sobrecarga AE, AD, VE e VD "
+1019896,Outra,False,Sobrecarga VE e AE 
+1020497,AF,False,
+1022656,Nenhuma,False,
+1031680,SB,False,"Extrassistole ventricular isolada, sobrecarga VE e AE "
+1069917,Outra,False,Arritmia sinusal 
+1073609,Outra,False,Arritmia sinusal e sobrecarga VE 
+1075284,Nenhuma,False,
+1081705,Outra,False,Sobrecarga VE e AE 
+1082117,SB,False,Sobrecarga VE e AE 
+1086126,RBBB,False,
+1086219,RBBB,False,
+1091801,AF,False,
+1103186,Outra,False,"Sobrecarga AE,  AD,  VE e VD "
+1106768,Outra,False,"Arritmia sinusal, extrassistole ventricular polimorfica"
+1107133,SB,False,Sobrecarga VE e AE 
+1108220,Outra,False,Sobrecarga VE 
+1126218,RBBB,False,
+1134159,Outra,False,Sobrecarga VE 
+1138174,Outra,False,Sobrecarga VE 
+1139824,Outra,False,Arritmia sinusal 
+1143322,LBBB,False, Supra de ST de V1 a V4 (isquemia de parede antero septal?)
+1143981,AF,False,Flutter atrial 
+1170848,ST,False,"Sobrecarga VE e AE, Supra de ST de V1 a V3 (isquemia de parede antero septal?)"
+1171976,AF,False,
+1172334,ST,False,
+1173632,AF,False,
+1174376,LBBB,True,QRS muito próximo de 120 ms. Presença de alteração secundária da repolarização.
+1176197,Outra,False,Sobrecarga ventricular esquerda
+1195600,Outra,False,Sobrecarga ventricular esquerda
+1198960,AF,False,
+1205341,Interferência,False,Não possível avaliar o ECG
+1220890,RBBB,False,Presença de extrassístole ventricular
+1235433,LBBB,False,
+1242867,Outra,False,Sobrecarga ventricular esquerda
+1249921,Nenhuma,False,
+1257152,LBBB,False,Interferência prejudicou a vizualização da onda P
+1258117,AF,False,Possivelmente associado a BAV avançado devido a baixa frequência
+1260699,LBBB,False,
+1279011,AF,False,
+1283405,RBBB,False,
+1289183,Outra,False,Sobrecarga ventricular esquerda
+1290376,Nenhuma,False,
+1291050,ST,False,
+1294422,LBBB,False,
+1310475,AF,True,Limítrofe por interferência em V1
+1321216,Nenhuma,False,
+1326518,Outra,True,Arritmia sinusal com discreta irregularidade
+1332173,Nenhuma,False,
+1332970,AF,False,
+1353764,LBBB,False,
+1357556,RBBB,False,
+1358824,AF,False,
+1361236,ST,True,Interferência borderline
+1362290,Outra,False,Sobrecarga ventricular esquerda
+1373762,ST,False,
+1374890,Interferência,False,Não visualizado D3
+1377351,ST,False,
+1386801,AF,False,
+1407857,LBBB,True,Difícil visualização por interferência. Possível BAV 1° associado.
+1412810,Nenhuma,False,
+1414269,AF,False,
+1415075,SB,False,
+1416360,SB,False,
+1421254,AF,False,
+1436131,Interferência,False,
+1440528,Nenhuma,False,
+1456398,Nenhuma,False,
+1458074,AF,False,Presença de extrassístole supraventricular
+1460409,Outra,False,Arritmia sinusal
+1462182,AF,False,
+1475300,LBBB,False,
+1485414,LBBB,True,Interferência não possibilita visualizar se o ritmo é sinusal
+1490465,ST,False,
+1492957,Nenhuma,False,
+1498685,ST,False,
+1499916,Nenhuma,False,
+1500189,AF,False,
+1502104,LBBB,False,
+1512460,Interferência,True,Possível ritmo ecg com extrassístoles apenas.
+1524478,ST,False,
+1528999,ST,True,"Interferência borderline, prejudicando vizualizar se o ritmo é sinusal"
+1533678,Nenhuma,False,
+1535178,Nenhuma,False,
+1537211,Outra,False,Sobrecarga ventricular esquerda
+1538475,LBBB,False,
+1544852,SB,False,
+1547314,Interferência,False,Não possível avaliar D1
+1549048,Nenhuma,False,
+1557071,SB,False,
+1558501,Nenhuma,True,Bloqueio incompleto de ramo esquerdo
+1561489,ST,False,
+1572880,Outra,False,
+1579453,AF,False,
+1614548,Outra,False,Sobrecarga ventricular esquerda
+1646090,LBBB,False,
+1647311,ST,False,
+1650460,ST,False,
+1655350,Nenhuma,False,
+1664688,SB,False,
+1669887,Nenhuma,False,
+1694826,Nenhuma,False,
+1698444,RBBB,False,
+1720327,Nenhuma,False,
+1730052,Nenhuma,False,
+1740173,AF,False,
+1771845,LBBB,False,
+1776514,Nenhuma,False,
+1787555,Nenhuma,False,
+1792808,ST,False,
+1794872,LBBB,False,Ritmo alterado por possível arrtimia sinusal ou extrassístoles.
+1830145,ST,True,Taquicardia muito próxima de 100 bpm
+1839701,AF,False,
+1846063,ST,True,Taquicardia muito próxima de 100 bpm
+1846363,RBBB,False,
+1856673,Nenhuma,False,
+1866847,Nenhuma,True,Interferência limítrofe para aVF
+1901214,AF,False,
+1959046,LBBB,False,
+1993469,RBBB,False,
+2003597,RBBB,True,QRS muito próximo de 120 ms
+2036802,RBBB,False,
+2505539,SB,False,
+2521679,RBBB,False,
+2536288,LBBB,False,
+2655396,RBBB,True,Borderline devido a presença de interferência prejudicando a análise do QRS em precordiais. Presença de extrassístoles ventriculares polimórficas.
+2657506,ST,,
+2687122,ST,True,Taquicardia muito próxima de 100 bpm. Presença de interferência em precordiais.
+2752941,ST,True,Taquicardia muito próxima de 100 bpm. Presença de sobrecarga ventricular esquerda.
+2754542,RBBB,False,
+2758186,SB,False,
+2771747,RBBB,False,
+2777340,ST,False,
+2823281,SB,False,
+2824070,AF,False,
+2825702,RBBB,True,"Associado a possível arrtimia sinusal, com análise prejudicada por interferência."
+2830745,SB,True,Borderline para BAV 1 ° (iPR = 200 ms )
+2834332,LBBB,False,Associado a arritmia sinusal ou extrassístoles
+2843330,AF,False,
+2849919,ST,True,Taquicardia muito próxima de 100 bpm
+2889682,RBBB,False,
+2916565,AF,False,
+2921860,LBBB,False,Interferência prejudicando a visualização das precordiais.
+2923885,ST,False,
+2941901,AF,False,
+2944723,RBBB,False,
+2945334,SB,False,
+2962837,AF,False,
+2971113,ST,False,
+2986619,SB,False,Presença de extrassístole supraventricular
+2990622,ST,False,
+2995993,AF,False,Interferência impediu a visualização de V1.
+3008552,ST,False,
+3022559,AF,False,
+3055667,Outra,False,Sobrecarga ventricular esquerda.
+3057183,AF,False,
+3081661,LBBB,False,
+3083851,ST,True,Taquicardia muito próxima de 100 bpm. Presença de sobrecarga atrial direita
+3093288,SB,False,
+3115201,ST,True,Interferência prejudicando a avaliação se o ritmo é sinusal.
+3135487,SB,False,
+3136429,RBBB,False,
+3156174,SB,False,
+3161443,RBBB,False,
+3174192,RBBB,False,
+3175454,Nenhuma,True,Borderline para Bloqueio de ramo esquerdo
+3182236,AF,False,
+3190926,AF,False,
+3199039,RBBB,False,
+3215212,AF,False,
+3395258,RBBB,False,
+3794806,AF,False,
+3795160,LBBB,False,
+4199933,SB,False,Associado a sobrecarga ventricular esquerda
+4274868,SB,False,
+4400473,SB,False,Associado a sobrecarga ventricular esquerda
+4404264,LBBB,False,
+4409371,ST,False,Taquicardia muito próxima de 100 bpm

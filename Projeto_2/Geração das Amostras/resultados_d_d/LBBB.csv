@@ -1,0 +1,126 @@
+exam_id,label,normal_ecg,tipo,silhouette_score,doenca,borderline,comentario
+1485414,0,False,D_clusterD,0.3424885,LBBB,True,Interferência não possibilita visualizar se o ritmo é sinusal
+194805,0,False,D_clusterD,0.33635125,LBBB,False, Supra de ST de V1 a V3 (isquemia de parede antero septal?)
+407029,0,False,D_clusterD,0.3356596,LBBB,False,"Sobrecarga de AE, AD, VD e VE.  Supra de ST de V1 a V4 (isquemia de parede antero septal?)"
+1257152,0,False,D_clusterD,0.33029702,LBBB,False,Interferência prejudicou a vizualização da onda P
+1174376,0,False,D_clusterD,0.3268014,LBBB,True,QRS muito próximo de 120 ms. Presença de alteração secundária da repolarização.
+3795160,0,False,D_clusterD,0.32423228,LBBB,False,
+1407857,0,False,D_clusterD,0.3206605,LBBB,True,Difícil visualização por interferência. Possível BAV 1° associado.
+4404264,0,False,D_clusterD,0.3201639,LBBB,False,
+1475300,0,False,D_clusterD,0.3187968,LBBB,False,
+1007187,0,False,D_clusterD,0.31870392,Outra,False,"Sobrecarga AE, AD, VE e VD "
+172422,0,False,D_clusterD,0.31121683,LBBB,False, Supra de ST de V1 a V3 (isquemia de parede antero septal?)
+522400,0,False,D_clusterD,0.31041348,LBBB,False,
+100699,0,False,D_clusterD,0.3097223,LBBB,False,Supra de ST em V1 a V4 (isquemia de parede antero septal?)
+187072,0,False,D_clusterD,0.30061904,1dAVB,False,"BRE, extrassistole supraventricular bloqueada, bradicardia sinusal associados"
+1502104,0,False,D_clusterD,0.29964375,LBBB,False,
+760610,0,False,D_clusterD,0.2955482,LBBB,False,"Sobrecarga AD, AE e VE. Supra de ST em V1 e V2"
+33691,0,False,D_clusterD,0.29199803,RBBB,True,Presença de onda r em V1 e V2. Associado a supra de ST em V1 a V3 (isquemia de parede antero septal?)
+2536288,0,False,D_clusterD,0.28930885,LBBB,False,
+1512460,0,False,D_clusterD,0.2883893,Interferência,True,Possível ritmo ecg com extrassístoles apenas.
+1134159,0,False,D_clusterD,0.28135735,Outra,False,Sobrecarga VE 
+561622,0,False,D_clusterD,0.23023012,LBBB,False,
+1235433,0,False,D_clusterD,0.22818448,LBBB,False,
+1771845,0,False,D_clusterD,0.22313514,LBBB,False,
+3081661,0,False,D_clusterD,0.21386719,LBBB,False,
+1646090,0,False,D_clusterD,0.15863132,LBBB,False,
+1558501,0,False,D_clusterD,0.1434363,Nenhuma,True,Bloqueio incompleto de ramo esquerdo
+653227,0,False,D_clusterD,0.13534586,LBBB,False,Interferência em V6
+1538475,0,False,D_clusterD,0.12928484,LBBB,False,
+1353764,0,False,D_clusterD,0.127105,LBBB,False,
+405994,0,False,D_clusterD,0.12124834,Outra,False,Sobrecarga VE e VD. Supra de ST em V1 a V3 (isquemia de parede antero septal?). Onda Q patológica em V1 a V3 e aVR
+2921860,0,False,D_clusterD,0.116823204,LBBB,False,Interferência prejudicando a visualização das precordiais.
+2834332,0,False,D_clusterD,0.116363555,LBBB,False,Associado a arritmia sinusal ou extrassístoles
+1260699,0,False,D_clusterD,0.114238605,LBBB,False,
+94185,0,False,D_clusterD,0.10844998,LBBB,False,
+160107,0,False,D_clusterD,0.10821138,LBBB,False, Supra de ST de V1 a V3 (isquemia de parede antero septal?)
+556346,0,False,D_clusterD,0.10710829,LBBB,True,Presença de onda S profunda em V5 e V6.  Sobrecarga VD e AE
+3175454,0,False,D_clusterD,0.10493898,Nenhuma,True,Borderline para Bloqueio de ramo esquerdo
+1143322,0,False,D_clusterD,0.10054965,LBBB,False, Supra de ST de V1 a V4 (isquemia de parede antero septal?)
+1294422,0,False,D_clusterD,0.09044129,LBBB,False,
+973463,0,False,D_clusterD,0.08556981,LBBB,False,Extrassistole ventricular isolada 
+506217,0,False,D_clusterD,0.080257654,LBBB,False, Supra de ST de V1 a V3 (isquemia de parede antero septal?)
+1959046,0,False,D_clusterD,0.07781126,LBBB,False,
+1081705,0,False,D_clusterD,0.05330942,Outra,False,Sobrecarga VE e AE 
+121194,0,False,D_clusterD,0.0420387,LBBB,False, Supra de ST de V1 a V3 (isquemia de parede antero septal?)
+1794872,1,False,D_clusterN,-0.19556764,LBBB,False,Ritmo alterado por possível arrtimia sinusal ou extrassístoles.
+678545,1,True,N_clusterN,0.17691085,Outra,False,"Sobrecarga AE,  AD e VD "
+1866847,1,True,N_clusterN,0.17348835,Nenhuma,True,Interferência limítrofe para aVF
+523634,1,True,N_clusterN,0.17269102,Outra,False,"Sobrecarga VE, VD, AE e AD"
+981927,1,True,N_clusterN,0.17265858,Nenhuma,False,
+607639,1,True,N_clusterN,0.17240646,Nenhuma,False,
+87958,1,True,N_clusterN,0.16288228,Outra,False,Sobrecarga VE
+351176,1,True,N_clusterN,0.16176943,Nenhuma,False,
+629113,1,True,N_clusterN,0.15520565,Outra,False,"Hemi bloqueio antero superior,  arritmia sinusal, sobrecarga AE "
+1195600,1,True,N_clusterN,0.15411948,Outra,False,Sobrecarga ventricular esquerda
+440541,1,True,N_clusterN,0.15317534,Nenhuma,False,
+1321216,1,True,N_clusterN,0.15247852,Nenhuma,False,
+1669887,1,True,N_clusterN,0.15147877,Nenhuma,False,
+346919,1,True,N_clusterN,0.15075587,Outra,False,"Sobrecarga AE e VE, supra de ST de V1 a V3 (isquemia de parede antero septal?)"
+1655350,1,True,N_clusterN,0.1467299,Nenhuma,False,
+896159,1,True,N_clusterN,0.14466503,Outra,False,Sobrecarga VE 
+1730052,1,True,N_clusterN,0.12779774,Nenhuma,False,
+1022656,1,True,N_clusterN,0.1264411,Nenhuma,False,
+607110,1,True,N_clusterN,0.12142568,Outra,False,Sobrecarga VE 
+1720327,1,True,N_clusterN,0.12123258,Nenhuma,False,
+779072,1,True,N_clusterN,0.121210106,Outra,False,Sobrecarga AE e VE 
+74211,1,True,N_clusterN,0.110540755,Outra,False,Sobrecarga VE 
+1073609,1,True,N_clusterN,0.108615436,Outra,False,Arritmia sinusal e sobrecarga VE 
+630798,1,True,N_clusterN,0.10679251,Outra,False,Sobrecarga AE e AD
+62281,1,True,N_clusterN,0.106545724,Outra,False,Sobrecarga VD e AD
+1537211,1,True,N_clusterN,0.10634957,Outra,False,Sobrecarga ventricular esquerda
+1492957,1,True,N_clusterN,0.10631058,Nenhuma,False,
+361061,1,True,N_clusterN,0.10592374,Outra,False,Sobrecarga AE e VE
+1176197,1,True,N_clusterN,0.105579495,Outra,False,Sobrecarga ventricular esquerda
+1499916,1,True,N_clusterN,0.10424207,Nenhuma,False,
+797150,1,True,N_clusterN,0.10382967,Outra,False,Sobrecarga VE e AE 
+615029,1,True,N_clusterN,0.103697464,Nenhuma,False,
+1856673,1,True,N_clusterN,0.10291717,Nenhuma,False,
+1535178,1,True,N_clusterN,0.10066309,Nenhuma,False,
+222222,1,True,N_clusterN,0.09556316,Nenhuma,False,
+1290376,1,True,N_clusterN,0.095294446,Nenhuma,False,
+91895,1,True,N_clusterN,0.09468891,Outra,False,"Sobrecarga AE, AD e VE"
+1069917,1,True,N_clusterN,0.08427532,Outra,False,Arritmia sinusal 
+260506,1,True,N_clusterN,0.08037741,Outra,False,Sobrecarga VE 
+638365,1,True,N_clusterN,0.077608116,Outra,False,"Sobrecarga AE,  VE,  AD e VD"
+403607,1,True,N_clusterN,0.07478818,Outra,False,"Sobrecarga AD, AE e VE"
+698060,1,True,N_clusterN,0.070478655,Outra,False,Sobrecarga VE 
+447717,1,True,N_clusterN,0.06854444,Outra,False,Sobrecarga VE 
+1289183,1,True,N_clusterN,0.06772706,Outra,False,Sobrecarga ventricular esquerda
+588769,1,True,N_clusterN,0.06658933,Outra,False,"Sobrecarga AE, VE e VD "
+876025,1,True,N_clusterN,0.0625694,Outra,False,Sobrecarga VE 
+1075284,1,True,N_clusterN,0.06164147,Nenhuma,False,
+1412810,1,True,N_clusterN,0.060436595,Nenhuma,False,
+1108220,1,True,N_clusterN,0.059720602,Outra,False,Sobrecarga VE 
+1362290,1,True,N_clusterN,0.053907014,Outra,False,Sobrecarga ventricular esquerda
+1374890,1,True,N_clusterN,0.053025246,Interferência,False,Não visualizado D3
+540188,1,True,N_clusterN,0.052919567,Outra,False,Sobrecarga VE e VD 
+34833,1,True,N_clusterN,0.052797213,Outra,False,Sobrecarga VE 
+719019,1,True,N_clusterN,0.051625002,Outra,False,Sobrecarga VE e AE
+835739,1,True,N_clusterN,0.0495799,Outra,False,Sobrecarga VE e AE 
+1456398,1,True,N_clusterN,0.04920618,Nenhuma,False,
+1440528,1,True,N_clusterN,0.048624408,Nenhuma,False,
+507229,1,True,N_clusterN,0.04841268,Outra,False,Sobrecarga VE e AE 
+1139824,1,True,N_clusterN,0.048277453,Outra,False,Arritmia sinusal 
+46877,1,True,N_clusterN,0.04732638,Nenhuma,False,
+1787555,1,True,N_clusterN,0.046964895,Nenhuma,False,
+1019896,1,True,N_clusterN,0.04478743,Outra,False,Sobrecarga VE e AE 
+1533678,1,True,N_clusterN,0.041886814,Nenhuma,False,
+1138174,1,True,N_clusterN,0.041645605,Outra,False,Sobrecarga VE 
+1326518,1,True,N_clusterN,0.04133511,Outra,True,Arritmia sinusal com discreta irregularidade
+532375,1,True,N_clusterN,0.041117527,Outra,False,Sobrecarga VE
+159985,1,True,N_clusterN,0.040903565,Outra,False,"Extrassistole supraventricular monomorfica isolada, sobrecarga de VE associados "
+576753,1,True,N_clusterN,0.040255703,Nenhuma,False,
+1572880,1,True,N_clusterN,0.039703704,Outra,False,
+37414,1,True,N_clusterN,0.039495457,Nenhuma,False,
+724483,1,True,N_clusterN,0.038975105,Outra,False,Sobrecarga VD 
+1776514,1,True,N_clusterN,0.03658166,Nenhuma,False,
+171266,1,True,N_clusterN,0.035601676,Outra,False,Sobrecarga de VE associado 
+853084,1,True,N_clusterN,0.03447432,Outra,False,Sobrecarga VE e AE 
+629219,1,True,N_clusterN,0.031766344,Outra,False,Sobrecarga VE 
+1694826,1,True,N_clusterN,0.030300645,Nenhuma,False,
+58190,1,True,N_clusterN,0.029679406,Outra,False,Sobrecarga VE 
+749134,1,True,N_clusterN,0.028997285,Outra,False,Sobrecarga AD e VE
+876373,1,True,N_clusterN,0.028915279,Nenhuma,False,
+1549048,1,True,N_clusterN,0.028726807,Nenhuma,False,
+76774,1,True,N_clusterN,0.028612945,Outra,False,Hemi bloqueio antero superior 
