@@ -34,3 +34,6 @@ venv/
 *.log
 *.hdf5
 *.png
+
+# Ignorar tensores
+*.pt
