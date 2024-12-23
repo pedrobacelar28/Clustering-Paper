@@ -37,3 +37,4 @@ venv/
 
 # Ignorar tensores
 *.pt
+*.pth
