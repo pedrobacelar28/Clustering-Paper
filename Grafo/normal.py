@@ -1,5 +1,4 @@
-# %%
-# IMPORTS
+
 
 import pandas as pd
 import h5py
@@ -21,8 +20,6 @@ import pywt # pip install PyWavelets
 from scipy.signal import medfilt
 import cv2 # pip install opencv-python  
 
-# %%
-# CARREGAR OS DADOS
 
 def carregar_ecgs(normal, umdavb, rbbb, lbbb, sb, st, af, filtrado):
 
@@ -293,12 +290,10 @@ def carregar_ecgs(normal, umdavb, rbbb, lbbb, sb, st, af, filtrado):
     X = np.array(all_tracings)
     return X
 
-# %%
 X = carregar_ecgs(normal=25000,umdavb=0,rbbb=0,lbbb=0,sb=0,st=0,af=0,filtrado=True)
 
 plt.plot(X[0][0])
 
-# %%
 import cupy as cp
 import torch
 import neurokit2 as nk
