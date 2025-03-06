@@ -35,7 +35,7 @@ class_files = {
 }
 
 # Pasta onde os arquivos estão armazenados
-dataset_dir = "../dataset/"  # ajuste o caminho conforme necessário
+dataset_dir = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/"  # ajuste o caminho conforme necessário
 
 # =============================================================================
 # 2. Carregar os grafos de cada arquivo e construir o dataset do PyG
