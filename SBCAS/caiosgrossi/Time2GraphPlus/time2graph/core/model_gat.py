@@ -82,7 +82,7 @@ class Time2GraphGAT(ModelUtils):
         self.batch_size = kwargs.pop('batch_size', 200)
         self.init = kwargs.pop('init', 0)
         self.niter = kwargs.pop('niter', 1000)
-        self.fastmode = kwargs.pop('fastmode', False)
+        self.fastmode = kwargs.pop('fastmode', True)
         self.tol = kwargs.pop('tol', 1e-4)
         self.cuda = self.gpu_enable and torch.cuda.is_available()
         self.kwargs = kwargs
