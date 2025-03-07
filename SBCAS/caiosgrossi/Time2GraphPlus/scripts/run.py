@@ -16,18 +16,18 @@ warnings.filterwarnings(action='ignore', category=FutureWarning)
 if __name__ == '__main__':
     mp.set_start_method('spawn')
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--dataset', type=str, default='ucr-Earthquakes')
-    parser.add_argument('--n_splits', type=int, default=5)
-    parser.add_argument('--nhidden', type=int, default=8)
-    parser.add_argument('--nheads', type=int, default=8)
+    parser.add_argument('--dataset', type=str, default='ecg')
+    parser.add_argument('--n_splits', type=int, default=2)
+    parser.add_argument('--nhidden', type=int, default=4)
+    parser.add_argument('--nheads', type=int, default=4)
     parser.add_argument('--dropout', type=float, default=0.2)
     parser.add_argument('--relu', type=float, default=0.2)
     parser.add_argument('--data_size', type=int, default=1)
     parser.add_argument('--opt_metric', type=str, default='f1')
 
-    parser.add_argument('--niter', type=int, default=5)
-    parser.add_argument('--njobs', type=int, default=10)
-    parser.add_argument('--batch_size', type=int, default=50)
+    parser.add_argument('--niter', type=int, default=1)
+    parser.add_argument('--njobs', type=int, default=30)
+    parser.add_argument('--batch_size', type=int, default=400)
     parser.add_argument('--percentile', type=int, default=80)
 
     parser.add_argument('--diff', action='store_true', default=False)
@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--model_cache', action='store_true', default=False)
     parser.add_argument('--shapelet_cache', action='store_true', default=False)
-    parser.add_argument('--gpu_enable', action='store_true', default=False)
+    parser.add_argument('--gpu_enable', action='store_true', default=True)
     parser.add_argument('--pretrain', action='store_true', default=False)
     parser.add_argument('--finetune', action='store_true', default=False)
 
@@ -62,13 +62,13 @@ if __name__ == '__main__':
     elif args.dataset.startswith('ecg'):
         x_train, y_train, x_test, y_test = load_ecg_dataset_by_name(
             length=4096,          # comprimento fixo dos ECGs
-            unlabel=1000,      # quantidade de amostras normais (ou rótulo 0)
-            umdavb=1000,        # quantidade de amostras com umdavb
-            rbbb=1000,          # quantidade de amostras com rbbb
-            lbbb=1000,        # quantidade de amostras com lbbb
-            sb=1000,            # quantidade de amostras com sb
-            st=1000,               # quantidade de amostras com st
-            af=1000,               # quantidade de amostras com af
+            unlabel=600,      # quantidade de amostras normais (ou rótulo 0)
+            umdavb=0,        # quantidade de amostras com umdavb
+            rbbb=0,          # quantidade de amostras com rbbb
+            lbbb=0,        # quantidade de amostras com lbbb
+            sb=0,            # quantidade de amostras com sb
+            st=100,               # quantidade de amostras com st
+            af=0,               # quantidade de amostras com af
             filtrado=True         
         )
     else:
