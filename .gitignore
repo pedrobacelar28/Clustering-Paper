@@ -38,3 +38,6 @@ venv/
 # Ignorar tensores
 *.pt
 *.pth
+
+#Ignorar cache dos modelos 
+**/cache/
