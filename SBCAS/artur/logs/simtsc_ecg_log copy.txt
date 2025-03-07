@@ -1,0 +1,601 @@
+--> Epoch 0: loss 1.4606; accuracy: 0.4859; best accuracy: 0.4859; test accuracy: 0.4664
+----> F1: 0.4262; Test F1: 0.4065
+--> Epoch 1: loss 1.4010; accuracy: 0.5384; best accuracy: 0.5384; test accuracy: 0.5393
+----> F1: 0.4842; Test F1: 0.4896
+--> Epoch 2: loss 1.3055; accuracy: 0.5637; best accuracy: 0.5637; test accuracy: 0.5479
+----> F1: 0.5213; Test F1: 0.4983
+--> Epoch 3: loss 1.3715; accuracy: 0.5966; best accuracy: 0.5966; test accuracy: 0.5786
+----> F1: 0.5756; Test F1: 0.5596
+--> Epoch 4: loss 1.4261; accuracy: 0.6007; best accuracy: 0.6007; test accuracy: 0.5893
+----> F1: 0.5656; Test F1: 0.5535
+--> Epoch 5: loss 1.2835; accuracy: 0.5932; best accuracy: 0.6007; test accuracy: 0.5829
+----> F1: 0.5551; Test F1: 0.5525
+--> Epoch 6: loss 1.0325; accuracy: 0.6055; best accuracy: 0.6055; test accuracy: 0.5921
+----> F1: 0.5643; Test F1: 0.5532
+--> Epoch 7: loss 1.1880; accuracy: 0.5639; best accuracy: 0.6055; test accuracy: 0.5529
+----> F1: 0.5354; Test F1: 0.5238
+--> Epoch 8: loss 1.0026; accuracy: 0.5818; best accuracy: 0.6055; test accuracy: 0.5714
+----> F1: 0.5471; Test F1: 0.5397
+--> Epoch 9: loss 1.0703; accuracy: 0.6763; best accuracy: 0.6763; test accuracy: 0.6479
+----> F1: 0.6747; Test F1: 0.6496
+--> Epoch 10: loss 0.8479; accuracy: 0.6830; best accuracy: 0.6830; test accuracy: 0.6657
+----> F1: 0.6528; Test F1: 0.6401
+--> Epoch 11: loss 0.8217; accuracy: 0.6861; best accuracy: 0.6861; test accuracy: 0.6729
+----> F1: 0.6612; Test F1: 0.6454
+--> Epoch 12: loss 0.8923; accuracy: 0.6677; best accuracy: 0.6861; test accuracy: 0.6471
+----> F1: 0.6557; Test F1: 0.6285
+--> Epoch 13: loss 0.9762; accuracy: 0.6529; best accuracy: 0.6861; test accuracy: 0.6271
+----> F1: 0.6227; Test F1: 0.6068
+--> Epoch 14: loss 0.9108; accuracy: 0.6836; best accuracy: 0.6861; test accuracy: 0.6393
+----> F1: 0.6688; Test F1: 0.6240
+--> Epoch 15: loss 0.8236; accuracy: 0.6557; best accuracy: 0.6861; test accuracy: 0.6343
+----> F1: 0.6372; Test F1: 0.6162
+--> Epoch 16: loss 0.8677; accuracy: 0.6845; best accuracy: 0.6861; test accuracy: 0.6529
+----> F1: 0.6722; Test F1: 0.6480
+--> Epoch 17: loss 0.7433; accuracy: 0.6727; best accuracy: 0.6861; test accuracy: 0.6400
+----> F1: 0.6441; Test F1: 0.6131
+--> Epoch 18: loss 0.8345; accuracy: 0.6186; best accuracy: 0.6861; test accuracy: 0.6043
+----> F1: 0.6026; Test F1: 0.5932
+--> Epoch 19: loss 0.7453; accuracy: 0.6671; best accuracy: 0.6861; test accuracy: 0.6421
+----> F1: 0.6488; Test F1: 0.6226
+--> Epoch 20: loss 0.9733; accuracy: 0.6441; best accuracy: 0.6861; test accuracy: 0.6079
+----> F1: 0.6211; Test F1: 0.5897
+--> Epoch 21: loss 1.1023; accuracy: 0.7023; best accuracy: 0.7023; test accuracy: 0.6729
+----> F1: 0.6936; Test F1: 0.6648
+--> Epoch 22: loss 0.7597; accuracy: 0.7334; best accuracy: 0.7334; test accuracy: 0.6914
+----> F1: 0.7076; Test F1: 0.6576
+--> Epoch 23: loss 1.0468; accuracy: 0.6950; best accuracy: 0.7334; test accuracy: 0.6714
+----> F1: 0.6861; Test F1: 0.6569
+--> Epoch 24: loss 0.5451; accuracy: 0.6986; best accuracy: 0.7334; test accuracy: 0.6464
+----> F1: 0.6746; Test F1: 0.6234
+--> Epoch 25: loss 0.8650; accuracy: 0.7293; best accuracy: 0.7334; test accuracy: 0.7121
+----> F1: 0.7191; Test F1: 0.6983
+--> Epoch 26: loss 0.6663; accuracy: 0.7393; best accuracy: 0.7393; test accuracy: 0.6957
+----> F1: 0.7270; Test F1: 0.6893
+--> Epoch 27: loss 0.6893; accuracy: 0.7025; best accuracy: 0.7393; test accuracy: 0.6643
+----> F1: 0.6941; Test F1: 0.6593
+--> Epoch 28: loss 0.8540; accuracy: 0.6946; best accuracy: 0.7393; test accuracy: 0.6621
+----> F1: 0.6749; Test F1: 0.6459
+--> Epoch 29: loss 0.6735; accuracy: 0.7014; best accuracy: 0.7393; test accuracy: 0.6750
+----> F1: 0.6833; Test F1: 0.6503
+--> Epoch 30: loss 0.7869; accuracy: 0.6902; best accuracy: 0.7393; test accuracy: 0.6500
+----> F1: 0.6760; Test F1: 0.6392
+--> Epoch 31: loss 0.8228; accuracy: 0.7154; best accuracy: 0.7393; test accuracy: 0.6914
+----> F1: 0.6927; Test F1: 0.6696
+--> Epoch 32: loss 0.6420; accuracy: 0.7461; best accuracy: 0.7461; test accuracy: 0.7257
+----> F1: 0.7461; Test F1: 0.7267
+--> Epoch 33: loss 0.7997; accuracy: 0.7579; best accuracy: 0.7579; test accuracy: 0.7171
+----> F1: 0.7432; Test F1: 0.7013
+--> Epoch 34: loss 0.5421; accuracy: 0.7795; best accuracy: 0.7795; test accuracy: 0.7329
+----> F1: 0.7773; Test F1: 0.7364
+--> Epoch 35: loss 0.5439; accuracy: 0.7611; best accuracy: 0.7795; test accuracy: 0.7171
+----> F1: 0.7501; Test F1: 0.7077
+--> Epoch 36: loss 0.7546; accuracy: 0.7414; best accuracy: 0.7795; test accuracy: 0.7086
+----> F1: 0.7336; Test F1: 0.7073
+--> Epoch 37: loss 1.0156; accuracy: 0.7018; best accuracy: 0.7795; test accuracy: 0.6636
+----> F1: 0.6821; Test F1: 0.6470
+--> Epoch 38: loss 0.6024; accuracy: 0.7757; best accuracy: 0.7795; test accuracy: 0.7464
+----> F1: 0.7745; Test F1: 0.7435
+--> Epoch 39: loss 0.5979; accuracy: 0.7714; best accuracy: 0.7795; test accuracy: 0.7207
+----> F1: 0.7657; Test F1: 0.7252
+--> Epoch 40: loss 0.4897; accuracy: 0.7768; best accuracy: 0.7795; test accuracy: 0.7507
+----> F1: 0.7762; Test F1: 0.7477
+--> Epoch 41: loss 0.4872; accuracy: 0.7432; best accuracy: 0.7795; test accuracy: 0.6807
+----> F1: 0.7421; Test F1: 0.6816
+--> Epoch 42: loss 0.4620; accuracy: 0.7745; best accuracy: 0.7795; test accuracy: 0.7400
+----> F1: 0.7625; Test F1: 0.7327
+--> Epoch 43: loss 0.5632; accuracy: 0.7400; best accuracy: 0.7795; test accuracy: 0.6929
+----> F1: 0.7312; Test F1: 0.6815
+--> Epoch 44: loss 0.5749; accuracy: 0.7943; best accuracy: 0.7943; test accuracy: 0.7571
+----> F1: 0.7811; Test F1: 0.7413
+--> Epoch 45: loss 0.3841; accuracy: 0.8137; best accuracy: 0.8137; test accuracy: 0.7729
+----> F1: 0.8104; Test F1: 0.7631
+--> Epoch 46: loss 0.4736; accuracy: 0.8229; best accuracy: 0.8229; test accuracy: 0.7736
+----> F1: 0.8187; Test F1: 0.7693
+--> Epoch 47: loss 0.4564; accuracy: 0.7557; best accuracy: 0.8229; test accuracy: 0.7114
+----> F1: 0.7501; Test F1: 0.7112
+--> Epoch 48: loss 0.6955; accuracy: 0.7595; best accuracy: 0.8229; test accuracy: 0.7229
+----> F1: 0.7493; Test F1: 0.7131
+--> Epoch 49: loss 0.8930; accuracy: 0.7432; best accuracy: 0.8229; test accuracy: 0.7121
+----> F1: 0.7378; Test F1: 0.7083
+--> Epoch 50: loss 0.4040; accuracy: 0.7261; best accuracy: 0.8229; test accuracy: 0.6836
+----> F1: 0.7212; Test F1: 0.6833
+--> Epoch 51: loss 0.4855; accuracy: 0.7500; best accuracy: 0.8229; test accuracy: 0.7329
+----> F1: 0.7419; Test F1: 0.7277
+--> Epoch 52: loss 0.6167; accuracy: 0.7664; best accuracy: 0.8229; test accuracy: 0.7257
+----> F1: 0.7616; Test F1: 0.7232
+--> Epoch 53: loss 0.6750; accuracy: 0.7614; best accuracy: 0.8229; test accuracy: 0.7171
+----> F1: 0.7531; Test F1: 0.7086
+--> Epoch 54: loss 1.0894; accuracy: 0.7657; best accuracy: 0.8229; test accuracy: 0.7321
+----> F1: 0.7634; Test F1: 0.7323
+--> Epoch 55: loss 0.4432; accuracy: 0.7875; best accuracy: 0.8229; test accuracy: 0.7386
+----> F1: 0.7793; Test F1: 0.7324
+--> Epoch 56: loss 0.5773; accuracy: 0.7929; best accuracy: 0.8229; test accuracy: 0.7536
+----> F1: 0.7932; Test F1: 0.7558
+--> Epoch 57: loss 0.6951; accuracy: 0.7841; best accuracy: 0.8229; test accuracy: 0.7471
+----> F1: 0.7638; Test F1: 0.7246
+--> Epoch 58: loss 0.4859; accuracy: 0.7941; best accuracy: 0.8229; test accuracy: 0.7664
+----> F1: 0.7974; Test F1: 0.7720
+--> Epoch 59: loss 0.6232; accuracy: 0.7825; best accuracy: 0.8229; test accuracy: 0.7436
+----> F1: 0.7620; Test F1: 0.7285
+--> Epoch 60: loss 0.4141; accuracy: 0.8150; best accuracy: 0.8229; test accuracy: 0.7636
+----> F1: 0.8206; Test F1: 0.7653
+--> Epoch 61: loss 0.7912; accuracy: 0.8187; best accuracy: 0.8229; test accuracy: 0.7807
+----> F1: 0.8084; Test F1: 0.7698
+--> Epoch 62: loss 0.5055; accuracy: 0.7845; best accuracy: 0.8229; test accuracy: 0.7321
+----> F1: 0.7831; Test F1: 0.7336
+--> Epoch 63: loss 0.4125; accuracy: 0.7836; best accuracy: 0.8229; test accuracy: 0.7507
+----> F1: 0.7701; Test F1: 0.7347
+--> Epoch 64: loss 0.6310; accuracy: 0.8307; best accuracy: 0.8307; test accuracy: 0.7771
+----> F1: 0.8325; Test F1: 0.7801
+--> Epoch 65: loss 0.5632; accuracy: 0.8116; best accuracy: 0.8307; test accuracy: 0.7693
+----> F1: 0.8046; Test F1: 0.7605
+--> Epoch 66: loss 0.8613; accuracy: 0.7943; best accuracy: 0.8307; test accuracy: 0.7536
+----> F1: 0.7946; Test F1: 0.7567
+--> Epoch 67: loss 0.5751; accuracy: 0.8091; best accuracy: 0.8307; test accuracy: 0.7593
+----> F1: 0.8019; Test F1: 0.7483
+--> Epoch 68: loss 0.5186; accuracy: 0.8096; best accuracy: 0.8307; test accuracy: 0.7671
+----> F1: 0.8062; Test F1: 0.7644
+--> Epoch 69: loss 0.5128; accuracy: 0.8259; best accuracy: 0.8307; test accuracy: 0.7786
+----> F1: 0.8226; Test F1: 0.7767
+--> Epoch 70: loss 0.6225; accuracy: 0.8364; best accuracy: 0.8364; test accuracy: 0.7964
+----> F1: 0.8339; Test F1: 0.7960
+--> Epoch 71: loss 0.3462; accuracy: 0.8207; best accuracy: 0.8364; test accuracy: 0.7757
+----> F1: 0.8131; Test F1: 0.7681
+--> Epoch 72: loss 0.2959; accuracy: 0.8339; best accuracy: 0.8364; test accuracy: 0.7879
+----> F1: 0.8324; Test F1: 0.7882
+--> Epoch 73: loss 0.4392; accuracy: 0.8443; best accuracy: 0.8443; test accuracy: 0.7914
+----> F1: 0.8419; Test F1: 0.7926
+--> Epoch 74: loss 0.3167; accuracy: 0.8404; best accuracy: 0.8443; test accuracy: 0.7979
+----> F1: 0.8332; Test F1: 0.7925
+--> Epoch 75: loss 0.5050; accuracy: 0.8614; best accuracy: 0.8614; test accuracy: 0.8057
+----> F1: 0.8587; Test F1: 0.8002
+--> Epoch 76: loss 0.4287; accuracy: 0.8723; best accuracy: 0.8723; test accuracy: 0.8093
+----> F1: 0.8716; Test F1: 0.8095
+--> Epoch 77: loss 0.3046; accuracy: 0.8716; best accuracy: 0.8723; test accuracy: 0.8164
+----> F1: 0.8689; Test F1: 0.8175
+--> Epoch 78: loss 0.4299; accuracy: 0.8659; best accuracy: 0.8723; test accuracy: 0.7914
+----> F1: 0.8640; Test F1: 0.7931
+--> Epoch 79: loss 0.4063; accuracy: 0.8507; best accuracy: 0.8723; test accuracy: 0.7964
+----> F1: 0.8486; Test F1: 0.8004
+--> Epoch 80: loss 0.4004; accuracy: 0.8350; best accuracy: 0.8723; test accuracy: 0.7843
+----> F1: 0.8299; Test F1: 0.7773
+--> Epoch 81: loss 0.1967; accuracy: 0.8514; best accuracy: 0.8723; test accuracy: 0.8021
+----> F1: 0.8513; Test F1: 0.8026
+--> Epoch 82: loss 0.4833; accuracy: 0.8471; best accuracy: 0.8723; test accuracy: 0.7886
+----> F1: 0.8443; Test F1: 0.7871
+--> Epoch 83: loss 0.2635; accuracy: 0.8695; best accuracy: 0.8723; test accuracy: 0.8079
+----> F1: 0.8693; Test F1: 0.8043
+--> Epoch 84: loss 0.4349; accuracy: 0.8552; best accuracy: 0.8723; test accuracy: 0.7907
+----> F1: 0.8498; Test F1: 0.7921
+--> Epoch 85: loss 0.3297; accuracy: 0.8548; best accuracy: 0.8723; test accuracy: 0.8000
+----> F1: 0.8543; Test F1: 0.7974
+--> Epoch 86: loss 0.2914; accuracy: 0.8650; best accuracy: 0.8723; test accuracy: 0.7929
+----> F1: 0.8616; Test F1: 0.7906
+--> Epoch 87: loss 0.2296; accuracy: 0.8148; best accuracy: 0.8723; test accuracy: 0.7514
+----> F1: 0.8151; Test F1: 0.7503
+--> Epoch 88: loss 0.4173; accuracy: 0.8084; best accuracy: 0.8723; test accuracy: 0.7671
+----> F1: 0.7936; Test F1: 0.7525
+--> Epoch 89: loss 0.5516; accuracy: 0.8166; best accuracy: 0.8723; test accuracy: 0.7686
+----> F1: 0.8198; Test F1: 0.7712
+--> Epoch 90: loss 0.5858; accuracy: 0.8179; best accuracy: 0.8723; test accuracy: 0.7707
+----> F1: 0.8093; Test F1: 0.7593
+--> Epoch 91: loss 0.7356; accuracy: 0.8430; best accuracy: 0.8723; test accuracy: 0.7857
+----> F1: 0.8455; Test F1: 0.7920
+--> Epoch 92: loss 0.1676; accuracy: 0.8543; best accuracy: 0.8723; test accuracy: 0.7921
+----> F1: 0.8501; Test F1: 0.7879
+--> Epoch 93: loss 0.4846; accuracy: 0.8489; best accuracy: 0.8723; test accuracy: 0.7979
+----> F1: 0.8472; Test F1: 0.8014
+--> Epoch 94: loss 0.2944; accuracy: 0.8671; best accuracy: 0.8723; test accuracy: 0.8007
+----> F1: 0.8638; Test F1: 0.7997
+--> Epoch 95: loss 0.2436; accuracy: 0.8686; best accuracy: 0.8723; test accuracy: 0.8114
+----> F1: 0.8670; Test F1: 0.8148
+--> Epoch 96: loss 0.4252; accuracy: 0.8611; best accuracy: 0.8723; test accuracy: 0.8021
+----> F1: 0.8609; Test F1: 0.8004
+--> Epoch 97: loss 0.2509; accuracy: 0.8673; best accuracy: 0.8723; test accuracy: 0.8100
+----> F1: 0.8612; Test F1: 0.8026
+--> Epoch 98: loss 0.6263; accuracy: 0.8612; best accuracy: 0.8723; test accuracy: 0.8014
+----> F1: 0.8616; Test F1: 0.7968
+--> Epoch 99: loss 0.5779; accuracy: 0.8598; best accuracy: 0.8723; test accuracy: 0.7964
+----> F1: 0.8496; Test F1: 0.7900
+--> Epoch 100: loss 0.2094; accuracy: 0.8205; best accuracy: 0.8723; test accuracy: 0.7500
+----> F1: 0.8233; Test F1: 0.7592
+--> Epoch 101: loss 1.1397; accuracy: 0.8305; best accuracy: 0.8723; test accuracy: 0.7786
+----> F1: 0.8208; Test F1: 0.7634
+--> Epoch 102: loss 0.4548; accuracy: 0.7795; best accuracy: 0.8723; test accuracy: 0.7293
+----> F1: 0.7847; Test F1: 0.7306
+--> Epoch 103: loss 0.3206; accuracy: 0.7993; best accuracy: 0.8723; test accuracy: 0.7557
+----> F1: 0.7853; Test F1: 0.7418
+--> Epoch 104: loss 0.5391; accuracy: 0.8345; best accuracy: 0.8723; test accuracy: 0.7864
+----> F1: 0.8350; Test F1: 0.7859
+--> Epoch 105: loss 0.2057; accuracy: 0.8648; best accuracy: 0.8723; test accuracy: 0.8157
+----> F1: 0.8615; Test F1: 0.8170
+--> Epoch 106: loss 0.5470; accuracy: 0.8770; best accuracy: 0.8770; test accuracy: 0.8107
+----> F1: 0.8787; Test F1: 0.8109
+--> Epoch 107: loss 0.5572; accuracy: 0.8591; best accuracy: 0.8770; test accuracy: 0.7950
+----> F1: 0.8567; Test F1: 0.7963
+--> Epoch 108: loss 0.5222; accuracy: 0.8643; best accuracy: 0.8770; test accuracy: 0.8043
+----> F1: 0.8646; Test F1: 0.8081
+--> Epoch 109: loss 0.4823; accuracy: 0.8516; best accuracy: 0.8770; test accuracy: 0.7921
+----> F1: 0.8460; Test F1: 0.7937
+--> Epoch 110: loss 0.4301; accuracy: 0.8438; best accuracy: 0.8770; test accuracy: 0.7986
+----> F1: 0.8390; Test F1: 0.7970
+--> Epoch 111: loss 0.2648; accuracy: 0.8771; best accuracy: 0.8771; test accuracy: 0.8064
+----> F1: 0.8741; Test F1: 0.8026
+--> Epoch 112: loss 0.2513; accuracy: 0.8732; best accuracy: 0.8771; test accuracy: 0.8100
+----> F1: 0.8717; Test F1: 0.8097
+--> Epoch 113: loss 0.2979; accuracy: 0.8757; best accuracy: 0.8771; test accuracy: 0.8086
+----> F1: 0.8713; Test F1: 0.8041
+--> Epoch 114: loss 0.3491; accuracy: 0.8725; best accuracy: 0.8771; test accuracy: 0.8036
+----> F1: 0.8731; Test F1: 0.8023
+--> Epoch 115: loss 0.7182; accuracy: 0.8729; best accuracy: 0.8771; test accuracy: 0.8121
+----> F1: 0.8708; Test F1: 0.8058
+--> Epoch 116: loss 0.3614; accuracy: 0.8746; best accuracy: 0.8771; test accuracy: 0.7921
+----> F1: 0.8742; Test F1: 0.7930
+--> Epoch 117: loss 0.2451; accuracy: 0.8827; best accuracy: 0.8827; test accuracy: 0.8300
+----> F1: 0.8823; Test F1: 0.8275
+--> Epoch 118: loss 0.5555; accuracy: 0.8959; best accuracy: 0.8959; test accuracy: 0.8021
+----> F1: 0.8955; Test F1: 0.8070
+--> Epoch 119: loss 0.3877; accuracy: 0.8904; best accuracy: 0.8959; test accuracy: 0.8250
+----> F1: 0.8856; Test F1: 0.8196
+--> Epoch 120: loss 0.2694; accuracy: 0.8870; best accuracy: 0.8959; test accuracy: 0.8114
+----> F1: 0.8909; Test F1: 0.8179
+--> Epoch 121: loss 0.1988; accuracy: 0.8945; best accuracy: 0.8959; test accuracy: 0.8264
+----> F1: 0.8913; Test F1: 0.8236
+--> Epoch 122: loss 0.4644; accuracy: 0.8905; best accuracy: 0.8959; test accuracy: 0.8057
+----> F1: 0.8888; Test F1: 0.8062
+--> Epoch 123: loss 0.2955; accuracy: 0.8798; best accuracy: 0.8959; test accuracy: 0.8136
+----> F1: 0.8759; Test F1: 0.8110
+--> Epoch 124: loss 0.1989; accuracy: 0.9032; best accuracy: 0.9032; test accuracy: 0.7914
+----> F1: 0.9046; Test F1: 0.7983
+--> Epoch 125: loss 0.4081; accuracy: 0.8586; best accuracy: 0.9032; test accuracy: 0.7943
+----> F1: 0.8520; Test F1: 0.7890
+--> Epoch 126: loss 0.3938; accuracy: 0.8838; best accuracy: 0.9032; test accuracy: 0.7829
+----> F1: 0.8836; Test F1: 0.7874
+--> Epoch 127: loss 0.4812; accuracy: 0.8636; best accuracy: 0.9032; test accuracy: 0.7979
+----> F1: 0.8610; Test F1: 0.7978
+--> Epoch 128: loss 0.3812; accuracy: 0.8396; best accuracy: 0.9032; test accuracy: 0.7593
+----> F1: 0.8401; Test F1: 0.7628
+--> Epoch 129: loss 0.2246; accuracy: 0.8536; best accuracy: 0.9032; test accuracy: 0.7857
+----> F1: 0.8486; Test F1: 0.7844
+--> Epoch 130: loss 0.3399; accuracy: 0.8714; best accuracy: 0.9032; test accuracy: 0.7971
+----> F1: 0.8726; Test F1: 0.7992
+--> Epoch 131: loss 0.3316; accuracy: 0.8798; best accuracy: 0.9032; test accuracy: 0.7886
+----> F1: 0.8752; Test F1: 0.7771
+--> Epoch 132: loss 0.3344; accuracy: 0.8900; best accuracy: 0.9032; test accuracy: 0.7929
+----> F1: 0.8920; Test F1: 0.7961
+--> Epoch 133: loss 0.1648; accuracy: 0.8648; best accuracy: 0.9032; test accuracy: 0.7907
+----> F1: 0.8591; Test F1: 0.7817
+--> Epoch 134: loss 0.5440; accuracy: 0.8770; best accuracy: 0.9032; test accuracy: 0.7929
+----> F1: 0.8795; Test F1: 0.7966
+--> Epoch 135: loss 0.3598; accuracy: 0.8700; best accuracy: 0.9032; test accuracy: 0.7914
+----> F1: 0.8591; Test F1: 0.7795
+--> Epoch 136: loss 0.3728; accuracy: 0.8729; best accuracy: 0.9032; test accuracy: 0.7757
+----> F1: 0.8750; Test F1: 0.7812
+--> Epoch 137: loss 0.4169; accuracy: 0.8877; best accuracy: 0.9032; test accuracy: 0.8029
+----> F1: 0.8810; Test F1: 0.7975
+--> Epoch 138: loss 0.2036; accuracy: 0.9129; best accuracy: 0.9129; test accuracy: 0.8250
+----> F1: 0.9138; Test F1: 0.8253
+--> Epoch 139: loss 0.4499; accuracy: 0.8930; best accuracy: 0.9129; test accuracy: 0.8107
+----> F1: 0.8897; Test F1: 0.8027
+--> Epoch 140: loss 0.2599; accuracy: 0.9012; best accuracy: 0.9129; test accuracy: 0.8164
+----> F1: 0.9010; Test F1: 0.8193
+--> Epoch 141: loss 0.3088; accuracy: 0.9104; best accuracy: 0.9129; test accuracy: 0.8157
+----> F1: 0.9086; Test F1: 0.8106
+--> Epoch 142: loss 0.2184; accuracy: 0.9257; best accuracy: 0.9257; test accuracy: 0.8243
+----> F1: 0.9228; Test F1: 0.8215
+--> Epoch 143: loss 0.2618; accuracy: 0.8964; best accuracy: 0.9257; test accuracy: 0.8143
+----> F1: 0.8951; Test F1: 0.8124
+--> Epoch 144: loss 0.4139; accuracy: 0.8882; best accuracy: 0.9257; test accuracy: 0.7829
+----> F1: 0.8857; Test F1: 0.7855
+--> Epoch 145: loss 0.3758; accuracy: 0.8943; best accuracy: 0.9257; test accuracy: 0.8086
+----> F1: 0.8911; Test F1: 0.8063
+--> Epoch 146: loss 0.1992; accuracy: 0.8673; best accuracy: 0.9257; test accuracy: 0.7757
+----> F1: 0.8632; Test F1: 0.7745
+--> Epoch 147: loss 0.3428; accuracy: 0.9145; best accuracy: 0.9257; test accuracy: 0.8214
+----> F1: 0.9133; Test F1: 0.8213
+--> Epoch 148: loss 0.3473; accuracy: 0.9177; best accuracy: 0.9257; test accuracy: 0.8107
+----> F1: 0.9168; Test F1: 0.8098
+--> Epoch 149: loss 0.2882; accuracy: 0.8905; best accuracy: 0.9257; test accuracy: 0.8043
+----> F1: 0.8884; Test F1: 0.8041
+--> Epoch 150: loss 0.3363; accuracy: 0.8870; best accuracy: 0.9257; test accuracy: 0.7886
+----> F1: 0.8875; Test F1: 0.7911
+--> Epoch 151: loss 0.1696; accuracy: 0.8859; best accuracy: 0.9257; test accuracy: 0.7900
+----> F1: 0.8830; Test F1: 0.7815
+--> Epoch 152: loss 0.5175; accuracy: 0.9000; best accuracy: 0.9257; test accuracy: 0.8121
+----> F1: 0.8999; Test F1: 0.8171
+--> Epoch 153: loss 0.2546; accuracy: 0.8989; best accuracy: 0.9257; test accuracy: 0.7921
+----> F1: 0.8962; Test F1: 0.7881
+--> Epoch 154: loss 0.1420; accuracy: 0.8891; best accuracy: 0.9257; test accuracy: 0.8021
+----> F1: 0.8864; Test F1: 0.8004
+--> Epoch 155: loss 0.3371; accuracy: 0.8721; best accuracy: 0.9257; test accuracy: 0.7614
+----> F1: 0.8743; Test F1: 0.7648
+--> Epoch 156: loss 0.1408; accuracy: 0.8805; best accuracy: 0.9257; test accuracy: 0.8043
+----> F1: 0.8767; Test F1: 0.8024
+--> Epoch 157: loss 0.1253; accuracy: 0.8964; best accuracy: 0.9257; test accuracy: 0.7871
+----> F1: 0.8965; Test F1: 0.7881
+--> Epoch 158: loss 0.4542; accuracy: 0.8870; best accuracy: 0.9257; test accuracy: 0.7964
+----> F1: 0.8871; Test F1: 0.7937
+--> Epoch 159: loss 0.4579; accuracy: 0.9130; best accuracy: 0.9257; test accuracy: 0.7907
+----> F1: 0.9121; Test F1: 0.7949
+--> Epoch 160: loss 0.2790; accuracy: 0.9098; best accuracy: 0.9257; test accuracy: 0.8136
+----> F1: 0.9052; Test F1: 0.8136
+--> Epoch 161: loss 0.1781; accuracy: 0.9157; best accuracy: 0.9257; test accuracy: 0.8036
+----> F1: 0.9172; Test F1: 0.8032
+--> Epoch 162: loss 0.2617; accuracy: 0.9012; best accuracy: 0.9257; test accuracy: 0.8121
+----> F1: 0.8981; Test F1: 0.8108
+--> Epoch 163: loss 0.4693; accuracy: 0.9032; best accuracy: 0.9257; test accuracy: 0.7943
+----> F1: 0.9022; Test F1: 0.7960
+--> Epoch 164: loss 0.3167; accuracy: 0.8816; best accuracy: 0.9257; test accuracy: 0.7993
+----> F1: 0.8814; Test F1: 0.7977
+--> Epoch 165: loss 0.3768; accuracy: 0.9039; best accuracy: 0.9257; test accuracy: 0.7993
+----> F1: 0.9034; Test F1: 0.7989
+--> Epoch 166: loss 0.5218; accuracy: 0.9043; best accuracy: 0.9257; test accuracy: 0.7864
+----> F1: 0.9035; Test F1: 0.7894
+--> Epoch 167: loss 0.1933; accuracy: 0.9045; best accuracy: 0.9257; test accuracy: 0.7921
+----> F1: 0.9032; Test F1: 0.7939
+--> Epoch 168: loss 0.1736; accuracy: 0.9155; best accuracy: 0.9257; test accuracy: 0.7864
+----> F1: 0.9137; Test F1: 0.7888
+--> Epoch 169: loss 0.2390; accuracy: 0.9279; best accuracy: 0.9279; test accuracy: 0.8200
+----> F1: 0.9249; Test F1: 0.8234
+--> Epoch 170: loss 0.0699; accuracy: 0.9370; best accuracy: 0.9370; test accuracy: 0.8086
+----> F1: 0.9349; Test F1: 0.8077
+--> Epoch 171: loss 0.1408; accuracy: 0.9320; best accuracy: 0.9370; test accuracy: 0.8250
+----> F1: 0.9311; Test F1: 0.8285
+--> Epoch 172: loss 0.1482; accuracy: 0.9307; best accuracy: 0.9370; test accuracy: 0.8036
+----> F1: 0.9301; Test F1: 0.8057
+--> Epoch 173: loss 0.1616; accuracy: 0.9234; best accuracy: 0.9370; test accuracy: 0.8150
+----> F1: 0.9243; Test F1: 0.8182
+--> Epoch 174: loss 0.1723; accuracy: 0.9187; best accuracy: 0.9370; test accuracy: 0.8086
+----> F1: 0.9177; Test F1: 0.8064
+--> Epoch 175: loss 0.2449; accuracy: 0.9257; best accuracy: 0.9370; test accuracy: 0.8050
+----> F1: 0.9231; Test F1: 0.8068
+--> Epoch 176: loss 0.4240; accuracy: 0.9182; best accuracy: 0.9370; test accuracy: 0.8100
+----> F1: 0.9160; Test F1: 0.8106
+--> Epoch 177: loss 0.1584; accuracy: 0.9068; best accuracy: 0.9370; test accuracy: 0.8221
+----> F1: 0.9009; Test F1: 0.8177
+--> Epoch 178: loss 0.2661; accuracy: 0.9257; best accuracy: 0.9370; test accuracy: 0.7907
+----> F1: 0.9266; Test F1: 0.7941
+--> Epoch 179: loss 0.0642; accuracy: 0.9027; best accuracy: 0.9370; test accuracy: 0.8021
+----> F1: 0.8984; Test F1: 0.8031
+--> Epoch 180: loss 0.2022; accuracy: 0.8780; best accuracy: 0.9370; test accuracy: 0.7821
+----> F1: 0.8759; Test F1: 0.7852
+--> Epoch 181: loss 0.2499; accuracy: 0.8846; best accuracy: 0.9370; test accuracy: 0.7829
+----> F1: 0.8827; Test F1: 0.7810
+--> Epoch 182: loss 0.2241; accuracy: 0.9096; best accuracy: 0.9370; test accuracy: 0.8086
+----> F1: 0.9087; Test F1: 0.8132
+--> Epoch 183: loss 0.3831; accuracy: 0.9325; best accuracy: 0.9370; test accuracy: 0.8150
+----> F1: 0.9318; Test F1: 0.8167
+--> Epoch 184: loss 0.1450; accuracy: 0.9179; best accuracy: 0.9370; test accuracy: 0.8157
+----> F1: 0.9180; Test F1: 0.8187
+--> Epoch 185: loss 0.2644; accuracy: 0.9221; best accuracy: 0.9370; test accuracy: 0.7986
+----> F1: 0.9222; Test F1: 0.7953
+--> Epoch 186: loss 0.2975; accuracy: 0.9148; best accuracy: 0.9370; test accuracy: 0.8129
+----> F1: 0.9156; Test F1: 0.8104
+--> Epoch 187: loss 0.2606; accuracy: 0.9157; best accuracy: 0.9370; test accuracy: 0.8036
+----> F1: 0.9144; Test F1: 0.8075
+--> Epoch 188: loss 0.2606; accuracy: 0.9146; best accuracy: 0.9370; test accuracy: 0.8129
+----> F1: 0.9137; Test F1: 0.8118
+--> Epoch 189: loss 0.2214; accuracy: 0.9327; best accuracy: 0.9370; test accuracy: 0.8107
+----> F1: 0.9327; Test F1: 0.8126
+--> Epoch 190: loss 0.1120; accuracy: 0.9211; best accuracy: 0.9370; test accuracy: 0.8221
+----> F1: 0.9199; Test F1: 0.8200
+--> Epoch 191: loss 0.1685; accuracy: 0.9355; best accuracy: 0.9370; test accuracy: 0.8043
+----> F1: 0.9342; Test F1: 0.8114
+--> Epoch 192: loss 0.2492; accuracy: 0.9270; best accuracy: 0.9370; test accuracy: 0.8121
+----> F1: 0.9254; Test F1: 0.8081
+--> Epoch 193: loss 0.1274; accuracy: 0.9254; best accuracy: 0.9370; test accuracy: 0.7986
+----> F1: 0.9280; Test F1: 0.8076
+--> Epoch 194: loss 0.3287; accuracy: 0.9225; best accuracy: 0.9370; test accuracy: 0.8157
+----> F1: 0.9200; Test F1: 0.8089
+--> Epoch 195: loss 0.2288; accuracy: 0.9437; best accuracy: 0.9437; test accuracy: 0.8150
+----> F1: 0.9452; Test F1: 0.8138
+--> Epoch 196: loss 0.1259; accuracy: 0.9277; best accuracy: 0.9437; test accuracy: 0.8071
+----> F1: 0.9271; Test F1: 0.8068
+--> Epoch 197: loss 0.4317; accuracy: 0.9104; best accuracy: 0.9437; test accuracy: 0.7836
+----> F1: 0.9122; Test F1: 0.7937
+--> Epoch 198: loss 0.3537; accuracy: 0.9202; best accuracy: 0.9437; test accuracy: 0.8007
+----> F1: 0.9189; Test F1: 0.7978
+--> Epoch 199: loss 0.1936; accuracy: 0.9320; best accuracy: 0.9437; test accuracy: 0.8271
+----> F1: 0.9299; Test F1: 0.8291
+--> Epoch 200: loss 0.3101; accuracy: 0.9363; best accuracy: 0.9437; test accuracy: 0.7986
+----> F1: 0.9337; Test F1: 0.7981
+--> Epoch 201: loss 0.2721; accuracy: 0.9418; best accuracy: 0.9437; test accuracy: 0.8179
+----> F1: 0.9405; Test F1: 0.8200
+--> Epoch 202: loss 0.2680; accuracy: 0.9370; best accuracy: 0.9437; test accuracy: 0.8114
+----> F1: 0.9369; Test F1: 0.8107
+--> Epoch 203: loss 0.1120; accuracy: 0.9432; best accuracy: 0.9437; test accuracy: 0.8193
+----> F1: 0.9450; Test F1: 0.8274
+--> Epoch 204: loss 0.1575; accuracy: 0.9513; best accuracy: 0.9513; test accuracy: 0.8071
+----> F1: 0.9516; Test F1: 0.8111
+--> Epoch 205: loss 0.0900; accuracy: 0.9561; best accuracy: 0.9561; test accuracy: 0.8171
+----> F1: 0.9560; Test F1: 0.8182
+--> Epoch 206: loss 0.1331; accuracy: 0.9577; best accuracy: 0.9577; test accuracy: 0.8171
+----> F1: 0.9569; Test F1: 0.8212
+--> Epoch 207: loss 0.2638; accuracy: 0.9591; best accuracy: 0.9591; test accuracy: 0.8207
+----> F1: 0.9587; Test F1: 0.8187
+--> Epoch 208: loss 0.2455; accuracy: 0.9493; best accuracy: 0.9591; test accuracy: 0.8021
+----> F1: 0.9477; Test F1: 0.8048
+--> Epoch 209: loss 0.1002; accuracy: 0.9518; best accuracy: 0.9591; test accuracy: 0.8207
+----> F1: 0.9508; Test F1: 0.8223
+--> Epoch 210: loss 0.2758; accuracy: 0.9418; best accuracy: 0.9591; test accuracy: 0.8021
+----> F1: 0.9406; Test F1: 0.8038
+--> Epoch 211: loss 0.0731; accuracy: 0.9445; best accuracy: 0.9591; test accuracy: 0.8086
+----> F1: 0.9443; Test F1: 0.8112
+--> Epoch 212: loss 0.1735; accuracy: 0.9205; best accuracy: 0.9591; test accuracy: 0.7864
+----> F1: 0.9207; Test F1: 0.7862
+--> Epoch 213: loss 0.3269; accuracy: 0.9064; best accuracy: 0.9591; test accuracy: 0.7993
+----> F1: 0.9027; Test F1: 0.7979
+--> Epoch 214: loss 0.1612; accuracy: 0.9477; best accuracy: 0.9591; test accuracy: 0.8064
+----> F1: 0.9478; Test F1: 0.8078
+--> Epoch 215: loss 0.1430; accuracy: 0.9495; best accuracy: 0.9591; test accuracy: 0.8107
+----> F1: 0.9493; Test F1: 0.8078
+--> Epoch 216: loss 0.1249; accuracy: 0.9345; best accuracy: 0.9591; test accuracy: 0.7907
+----> F1: 0.9343; Test F1: 0.7964
+--> Epoch 217: loss 0.2622; accuracy: 0.9393; best accuracy: 0.9591; test accuracy: 0.8079
+----> F1: 0.9395; Test F1: 0.8060
+--> Epoch 218: loss 0.1377; accuracy: 0.9343; best accuracy: 0.9591; test accuracy: 0.7929
+----> F1: 0.9350; Test F1: 0.7983
+--> Epoch 219: loss 0.3236; accuracy: 0.9263; best accuracy: 0.9591; test accuracy: 0.8043
+----> F1: 0.9250; Test F1: 0.8010
+--> Epoch 220: loss 0.2623; accuracy: 0.9491; best accuracy: 0.9591; test accuracy: 0.8036
+----> F1: 0.9492; Test F1: 0.8078
+--> Epoch 221: loss 0.3410; accuracy: 0.9434; best accuracy: 0.9591; test accuracy: 0.8186
+----> F1: 0.9426; Test F1: 0.8139
+--> Epoch 222: loss 0.1783; accuracy: 0.9339; best accuracy: 0.9591; test accuracy: 0.7879
+----> F1: 0.9326; Test F1: 0.7960
+--> Epoch 223: loss 0.1138; accuracy: 0.9416; best accuracy: 0.9591; test accuracy: 0.8236
+----> F1: 0.9391; Test F1: 0.8229
+--> Epoch 224: loss 0.2219; accuracy: 0.9470; best accuracy: 0.9591; test accuracy: 0.7971
+----> F1: 0.9477; Test F1: 0.7977
+--> Epoch 225: loss 0.0667; accuracy: 0.9484; best accuracy: 0.9591; test accuracy: 0.8193
+----> F1: 0.9480; Test F1: 0.8146
+--> Epoch 226: loss 0.2397; accuracy: 0.9573; best accuracy: 0.9591; test accuracy: 0.8043
+----> F1: 0.9576; Test F1: 0.8112
+--> Epoch 227: loss 0.2008; accuracy: 0.9523; best accuracy: 0.9591; test accuracy: 0.8229
+----> F1: 0.9519; Test F1: 0.8199
+--> Epoch 228: loss 0.1877; accuracy: 0.9432; best accuracy: 0.9591; test accuracy: 0.7971
+----> F1: 0.9438; Test F1: 0.8031
+--> Epoch 229: loss 0.2050; accuracy: 0.9466; best accuracy: 0.9591; test accuracy: 0.7893
+----> F1: 0.9453; Test F1: 0.7917
+--> Epoch 230: loss 0.2244; accuracy: 0.9529; best accuracy: 0.9591; test accuracy: 0.8014
+----> F1: 0.9531; Test F1: 0.8062
+--> Epoch 231: loss 0.0712; accuracy: 0.9473; best accuracy: 0.9591; test accuracy: 0.8129
+----> F1: 0.9477; Test F1: 0.8112
+--> Epoch 232: loss 0.2953; accuracy: 0.9213; best accuracy: 0.9591; test accuracy: 0.7800
+----> F1: 0.9217; Test F1: 0.7808
+--> Epoch 233: loss 0.2686; accuracy: 0.9241; best accuracy: 0.9591; test accuracy: 0.7907
+----> F1: 0.9227; Test F1: 0.7884
+--> Epoch 234: loss 0.4376; accuracy: 0.9305; best accuracy: 0.9591; test accuracy: 0.7914
+----> F1: 0.9335; Test F1: 0.7951
+--> Epoch 235: loss 0.0765; accuracy: 0.9345; best accuracy: 0.9591; test accuracy: 0.8043
+----> F1: 0.9331; Test F1: 0.8058
+--> Epoch 236: loss 0.1330; accuracy: 0.9346; best accuracy: 0.9591; test accuracy: 0.7886
+----> F1: 0.9348; Test F1: 0.7954
+--> Epoch 237: loss 0.2190; accuracy: 0.9364; best accuracy: 0.9591; test accuracy: 0.8271
+----> F1: 0.9355; Test F1: 0.8196
+--> Epoch 238: loss 0.1437; accuracy: 0.9555; best accuracy: 0.9591; test accuracy: 0.8014
+----> F1: 0.9548; Test F1: 0.8029
+--> Epoch 239: loss 0.0772; accuracy: 0.9487; best accuracy: 0.9591; test accuracy: 0.8257
+----> F1: 0.9459; Test F1: 0.8255
+--> Epoch 240: loss 0.0617; accuracy: 0.9666; best accuracy: 0.9666; test accuracy: 0.8107
+----> F1: 0.9666; Test F1: 0.8174
+--> Epoch 241: loss 0.1918; accuracy: 0.9579; best accuracy: 0.9666; test accuracy: 0.8236
+----> F1: 0.9569; Test F1: 0.8196
+--> Epoch 242: loss 0.1536; accuracy: 0.9516; best accuracy: 0.9666; test accuracy: 0.7993
+----> F1: 0.9527; Test F1: 0.8079
+--> Epoch 243: loss 0.1105; accuracy: 0.9370; best accuracy: 0.9666; test accuracy: 0.8071
+----> F1: 0.9361; Test F1: 0.8023
+--> Epoch 244: loss 0.0763; accuracy: 0.9330; best accuracy: 0.9666; test accuracy: 0.7979
+----> F1: 0.9330; Test F1: 0.7996
+--> Epoch 245: loss 0.3224; accuracy: 0.9216; best accuracy: 0.9666; test accuracy: 0.8064
+----> F1: 0.9201; Test F1: 0.8047
+--> Epoch 246: loss 0.2919; accuracy: 0.9186; best accuracy: 0.9666; test accuracy: 0.7829
+----> F1: 0.9198; Test F1: 0.7873
+--> Epoch 247: loss 0.2085; accuracy: 0.9473; best accuracy: 0.9666; test accuracy: 0.8057
+----> F1: 0.9467; Test F1: 0.8085
+--> Epoch 248: loss 0.2222; accuracy: 0.9539; best accuracy: 0.9666; test accuracy: 0.8050
+----> F1: 0.9541; Test F1: 0.8052
+--> Epoch 249: loss 0.1280; accuracy: 0.9684; best accuracy: 0.9684; test accuracy: 0.8221
+----> F1: 0.9687; Test F1: 0.8206
+--> Epoch 250: loss 0.1030; accuracy: 0.9668; best accuracy: 0.9684; test accuracy: 0.8186
+----> F1: 0.9659; Test F1: 0.8178
+--> Epoch 251: loss 0.3334; accuracy: 0.9557; best accuracy: 0.9684; test accuracy: 0.8107
+----> F1: 0.9544; Test F1: 0.8112
+--> Epoch 252: loss 0.1864; accuracy: 0.9389; best accuracy: 0.9684; test accuracy: 0.7879
+----> F1: 0.9399; Test F1: 0.7901
+--> Epoch 253: loss 0.0730; accuracy: 0.9309; best accuracy: 0.9684; test accuracy: 0.7900
+----> F1: 0.9304; Test F1: 0.7844
+--> Epoch 254: loss 0.1767; accuracy: 0.9102; best accuracy: 0.9684; test accuracy: 0.7593
+----> F1: 0.9110; Test F1: 0.7672
+--> Epoch 255: loss 0.1450; accuracy: 0.9295; best accuracy: 0.9684; test accuracy: 0.8064
+----> F1: 0.9290; Test F1: 0.8064
+--> Epoch 256: loss 0.2445; accuracy: 0.9602; best accuracy: 0.9684; test accuracy: 0.7943
+----> F1: 0.9607; Test F1: 0.7963
+--> Epoch 257: loss 0.1435; accuracy: 0.9548; best accuracy: 0.9684; test accuracy: 0.8321
+----> F1: 0.9533; Test F1: 0.8298
+--> Epoch 258: loss 0.0845; accuracy: 0.9700; best accuracy: 0.9700; test accuracy: 0.7921
+----> F1: 0.9698; Test F1: 0.7989
+--> Epoch 259: loss 0.0905; accuracy: 0.9580; best accuracy: 0.9700; test accuracy: 0.8100
+----> F1: 0.9585; Test F1: 0.8134
+--> Epoch 260: loss 0.1357; accuracy: 0.9650; best accuracy: 0.9700; test accuracy: 0.7929
+----> F1: 0.9653; Test F1: 0.8030
+--> Epoch 261: loss 0.1228; accuracy: 0.9600; best accuracy: 0.9700; test accuracy: 0.8236
+----> F1: 0.9589; Test F1: 0.8214
+--> Epoch 262: loss 0.1159; accuracy: 0.9650; best accuracy: 0.9700; test accuracy: 0.7929
+----> F1: 0.9643; Test F1: 0.7943
+--> Epoch 263: loss 0.1587; accuracy: 0.9704; best accuracy: 0.9704; test accuracy: 0.8179
+----> F1: 0.9710; Test F1: 0.8172
+--> Epoch 264: loss 0.1051; accuracy: 0.9705; best accuracy: 0.9705; test accuracy: 0.8107
+----> F1: 0.9695; Test F1: 0.8065
+--> Epoch 265: loss 0.2165; accuracy: 0.9616; best accuracy: 0.9705; test accuracy: 0.8271
+----> F1: 0.9618; Test F1: 0.8274
+--> Epoch 266: loss 0.0717; accuracy: 0.9671; best accuracy: 0.9705; test accuracy: 0.7986
+----> F1: 0.9660; Test F1: 0.8038
+--> Epoch 267: loss 0.3615; accuracy: 0.9623; best accuracy: 0.9705; test accuracy: 0.8243
+----> F1: 0.9604; Test F1: 0.8284
+--> Epoch 268: loss 0.1660; accuracy: 0.9400; best accuracy: 0.9705; test accuracy: 0.8036
+----> F1: 0.9387; Test F1: 0.8051
+--> Epoch 269: loss 0.0525; accuracy: 0.9618; best accuracy: 0.9705; test accuracy: 0.8071
+----> F1: 0.9599; Test F1: 0.8066
+--> Epoch 270: loss 0.1706; accuracy: 0.9539; best accuracy: 0.9705; test accuracy: 0.8050
+----> F1: 0.9534; Test F1: 0.8050
+--> Epoch 271: loss 0.1414; accuracy: 0.9575; best accuracy: 0.9705; test accuracy: 0.8121
+----> F1: 0.9569; Test F1: 0.8175
+--> Epoch 272: loss 0.3198; accuracy: 0.9523; best accuracy: 0.9705; test accuracy: 0.8000
+----> F1: 0.9521; Test F1: 0.8041
+--> Epoch 273: loss 0.1661; accuracy: 0.9582; best accuracy: 0.9705; test accuracy: 0.8071
+----> F1: 0.9596; Test F1: 0.8108
+--> Epoch 274: loss 0.1341; accuracy: 0.9595; best accuracy: 0.9705; test accuracy: 0.8143
+----> F1: 0.9590; Test F1: 0.8148
+--> Epoch 275: loss 0.2082; accuracy: 0.9602; best accuracy: 0.9705; test accuracy: 0.8271
+----> F1: 0.9606; Test F1: 0.8260
+--> Epoch 276: loss 0.1685; accuracy: 0.9645; best accuracy: 0.9705; test accuracy: 0.7907
+----> F1: 0.9645; Test F1: 0.7954
+--> Epoch 277: loss 0.0712; accuracy: 0.9739; best accuracy: 0.9739; test accuracy: 0.8243
+----> F1: 0.9753; Test F1: 0.8240
+--> Epoch 278: loss 0.0951; accuracy: 0.9761; best accuracy: 0.9761; test accuracy: 0.8036
+----> F1: 0.9776; Test F1: 0.8041
+--> Epoch 279: loss 0.0490; accuracy: 0.9759; best accuracy: 0.9761; test accuracy: 0.8200
+----> F1: 0.9761; Test F1: 0.8228
+--> Epoch 280: loss 0.2468; accuracy: 0.9657; best accuracy: 0.9761; test accuracy: 0.8050
+----> F1: 0.9653; Test F1: 0.8048
+--> Epoch 281: loss 0.1356; accuracy: 0.9209; best accuracy: 0.9761; test accuracy: 0.7850
+----> F1: 0.9209; Test F1: 0.7809
+--> Epoch 282: loss 0.3451; accuracy: 0.8538; best accuracy: 0.9761; test accuracy: 0.7236
+----> F1: 0.8552; Test F1: 0.7214
+--> Epoch 283: loss 0.3749; accuracy: 0.9311; best accuracy: 0.9761; test accuracy: 0.7929
+----> F1: 0.9314; Test F1: 0.7937
+--> Epoch 284: loss 0.0303; accuracy: 0.9366; best accuracy: 0.9761; test accuracy: 0.7871
+----> F1: 0.9363; Test F1: 0.7876
+--> Epoch 285: loss 0.2689; accuracy: 0.9502; best accuracy: 0.9761; test accuracy: 0.8050
+----> F1: 0.9495; Test F1: 0.8025
+--> Epoch 286: loss 0.2193; accuracy: 0.9586; best accuracy: 0.9761; test accuracy: 0.7950
+----> F1: 0.9600; Test F1: 0.7997
+--> Epoch 287: loss 0.1643; accuracy: 0.9629; best accuracy: 0.9761; test accuracy: 0.8271
+----> F1: 0.9611; Test F1: 0.8249
+--> Epoch 288: loss 0.0454; accuracy: 0.9600; best accuracy: 0.9761; test accuracy: 0.7757
+----> F1: 0.9607; Test F1: 0.7825
+--> Epoch 289: loss 0.1539; accuracy: 0.9291; best accuracy: 0.9761; test accuracy: 0.8143
+----> F1: 0.9263; Test F1: 0.8022
+--> Epoch 290: loss 0.0598; accuracy: 0.9607; best accuracy: 0.9761; test accuracy: 0.7850
+----> F1: 0.9622; Test F1: 0.7946
+--> Epoch 291: loss 0.1451; accuracy: 0.9555; best accuracy: 0.9761; test accuracy: 0.8243
+----> F1: 0.9555; Test F1: 0.8214
+--> Epoch 292: loss 0.1583; accuracy: 0.9730; best accuracy: 0.9761; test accuracy: 0.8157
+----> F1: 0.9722; Test F1: 0.8186
+--> Epoch 293: loss 0.0771; accuracy: 0.9805; best accuracy: 0.9805; test accuracy: 0.8114
+----> F1: 0.9804; Test F1: 0.8110
+--> Epoch 294: loss 0.1278; accuracy: 0.9798; best accuracy: 0.9805; test accuracy: 0.8136
+----> F1: 0.9807; Test F1: 0.8220
+--> Epoch 295: loss 0.0821; accuracy: 0.9738; best accuracy: 0.9805; test accuracy: 0.8300
+----> F1: 0.9731; Test F1: 0.8257
+--> Epoch 296: loss 0.0324; accuracy: 0.9482; best accuracy: 0.9805; test accuracy: 0.7914
+----> F1: 0.9490; Test F1: 0.7987
+--> Epoch 297: loss 0.0937; accuracy: 0.9539; best accuracy: 0.9805; test accuracy: 0.8093
+----> F1: 0.9542; Test F1: 0.8048
+--> Epoch 298: loss 0.3915; accuracy: 0.9454; best accuracy: 0.9805; test accuracy: 0.7857
+----> F1: 0.9453; Test F1: 0.7901
+--> Epoch 299: loss 0.2866; accuracy: 0.9609; best accuracy: 0.9805; test accuracy: 0.8193
+----> F1: 0.9605; Test F1: 0.8149
+--> Test Accuracy: 0.8124
