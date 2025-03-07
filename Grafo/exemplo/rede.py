@@ -22,7 +22,7 @@ class_files = {
     "lbbb.pt":   2,
     "sb.pt":     3,
     "st.pt":     4,
-    "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/af.pt":     5,
+    "af.pt":     5,
     "unlabel.pt":6,
 }
 
@@ -48,7 +48,7 @@ class ECGDataset(InMemoryDataset):
     @property
     def processed_file_names(self):
         # Nome do arquivo cacheado com os dados processados
-        return ['data.pt']
+        return ['/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/processed/data.pt']
     
     def download(self):
         # Se os arquivos brutos já estiverem no diretório, nada a fazer
@@ -99,7 +99,7 @@ class ECGDataset(InMemoryDataset):
         torch.save((data, slices), self.processed_paths[0])
 
 # Defina o diretório raiz para o dataset.
-root_dir = "../dataset"
+root_dir = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset"
 
 # Cria o dataset utilizando a classe customizada
 dataset = ECGDataset(root=root_dir, class_files=class_files)
