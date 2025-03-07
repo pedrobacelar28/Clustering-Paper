@@ -1,0 +1,21 @@
+[Epoch 0] Train Loss: 1.8947 | Train Acc: 0.1286 (Best: 0.1286) | Test Acc: 0.1643
+[Epoch 1] Train Loss: 1.7814 | Train Acc: 0.3143 (Best: 0.3143) | Test Acc: 0.3357
+[Epoch 2] Train Loss: 1.6864 | Train Acc: 0.5304 (Best: 0.5304) | Test Acc: 0.4357
+[Epoch 3] Train Loss: 1.5978 | Train Acc: 0.5536 (Best: 0.5536) | Test Acc: 0.4429
+[Epoch 4] Train Loss: 1.5326 | Train Acc: 0.5429 (Best: 0.5536) | Test Acc: 0.4643
+[Epoch 5] Train Loss: 1.4728 | Train Acc: 0.5643 (Best: 0.5643) | Test Acc: 0.4571
+[Epoch 6] Train Loss: 1.4234 | Train Acc: 0.5946 (Best: 0.5946) | Test Acc: 0.4857
+[Epoch 7] Train Loss: 1.3862 | Train Acc: 0.6000 (Best: 0.6000) | Test Acc: 0.4786
+[Epoch 8] Train Loss: 1.3416 | Train Acc: 0.6089 (Best: 0.6089) | Test Acc: 0.4571
+[Epoch 9] Train Loss: 1.3067 | Train Acc: 0.6321 (Best: 0.6321) | Test Acc: 0.5000
+[Epoch 10] Train Loss: 1.2725 | Train Acc: 0.6268 (Best: 0.6321) | Test Acc: 0.5071
+[Epoch 11] Train Loss: 1.2522 | Train Acc: 0.6482 (Best: 0.6482) | Test Acc: 0.5071
+[Epoch 12] Train Loss: 1.2252 | Train Acc: 0.6464 (Best: 0.6482) | Test Acc: 0.5143
+[Epoch 13] Train Loss: 1.2033 | Train Acc: 0.6679 (Best: 0.6679) | Test Acc: 0.4929
+[Epoch 14] Train Loss: 1.1780 | Train Acc: 0.6500 (Best: 0.6679) | Test Acc: 0.5143
+[Epoch 15] Train Loss: 1.1437 | Train Acc: 0.6875 (Best: 0.6875) | Test Acc: 0.5214
+[Epoch 16] Train Loss: 1.1337 | Train Acc: 0.6821 (Best: 0.6875) | Test Acc: 0.5429
+[Epoch 17] Train Loss: 1.1140 | Train Acc: 0.6893 (Best: 0.6893) | Test Acc: 0.5571
+[Epoch 18] Train Loss: 1.0901 | Train Acc: 0.7018 (Best: 0.7018) | Test Acc: 0.5357
+[Epoch 19] Train Loss: 1.0736 | Train Acc: 0.7018 (Best: 0.7018) | Test Acc: 0.5500
+[TEST] Loss: 1.3500 | Acc: 0.5571 | F1(macro): 0.5536 | Prec(macro): 0.6476 | Recall(macro): 0.5727 | AUC(macro): 0.8702
