@@ -16,37 +16,33 @@ from tqdm import tqdm
 # =============================================================================
 # 1. Definir o mapeamento entre os arquivos e os índices dos rótulos
 # =============================================================================
-# Supondo a seguinte correspondência:
-# "umdavb.pt" -> 0 (equivalente a "1dAVb")
-# "rbbb.pt"   -> 1 ("RBBB")
-# "lbbb.pt"   -> 2 ("LBBB")
-# "sb.pt"     -> 3 ("SB")
-# "st.pt"     -> 4 ("ST")
-# "af.pt"     -> 5 ("AF")
-# "unlabel.pt"-> 6 ("normal")
 class_files = {
     "umdavb.pt": 0,
     "rbbb.pt":   1,
     "lbbb.pt":   2,
     "sb.pt":     3,
     "st.pt":     4,
-    "af.pt":     5,
+    "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/af.pt":     5,
     "unlabel.pt":6,
 }
 
 # =============================================================================
-# 2. Implementação do Dataset utilizando InMemoryDataset (alterado)
+# 2. Implementação do Dataset utilizando InMemoryDataset
 # =============================================================================
 class ECGDataset(InMemoryDataset):
     def __init__(self, root, class_files, transform=None, pre_transform=None):
         self.class_files = class_files
         super(ECGDataset, self).__init__(root, transform, pre_transform)
+        # Permitir o carregamento seguro dos globals: DataEdgeAttr, DataTensorAttr e GlobalStorage
+        from torch_geometric.data.data import DataEdgeAttr, DataTensorAttr
+        from torch_geometric.data.storage import GlobalStorage
+        torch.serialization.add_safe_globals([DataEdgeAttr, DataTensorAttr, GlobalStorage])
         # Carrega os dados processados (cache)
         self.data, self.slices = torch.load(self.processed_paths[0])
     
     @property
     def raw_file_names(self):
-        # Os arquivos brutos devem estar na pasta raw (mesmo diretório especificado por 'root/raw')
+        # Os arquivos brutos devem estar na pasta raw (ou ajuste se necessário)
         return list(self.class_files.keys())
     
     @property
@@ -60,8 +56,9 @@ class ECGDataset(InMemoryDataset):
     
     def process(self):
         dataset = []
-        # Os arquivos brutos devem estar em root/raw
         raw_dir = self.root
+        # Caso os arquivos estejam direto em self.root, altere para: raw_dir = self.root
+        
         for file_name, label in self.class_files.items():
             file_path = os.path.join(raw_dir, file_name)
             try:
@@ -102,18 +99,14 @@ class ECGDataset(InMemoryDataset):
         torch.save((data, slices), self.processed_paths[0])
 
 # Defina o diretório raiz para o dataset.
-# Estrutura esperada:
-#   ../dataset/
-#       raw/   -> aqui devem estar os arquivos: "umdavb.pt", "rbbb.pt", etc.
-#       processed/ -> será criado automaticamente
 root_dir = "../dataset"
 
-# Cria o dataset utilizando a classe customizada (alterado)
+# Cria o dataset utilizando a classe customizada
 dataset = ECGDataset(root=root_dir, class_files=class_files)
 print(f"Total de amostras no dataset: {len(dataset)}")
 
 # =============================================================================
-# 3. Dividir o dataset em treino, validação e teste (inalterado)
+# 3. Dividir o dataset em treino, validação e teste
 # =============================================================================
 train_data, temp_data = train_test_split(dataset, test_size=0.30, random_state=42)
 val_data, test_data = train_test_split(temp_data, test_size=0.50, random_state=42)
@@ -128,7 +121,7 @@ val_loader = DataLoader(val_data, batch_size=batch_size, shuffle=False)
 test_loader = DataLoader(test_data, batch_size=batch_size, shuffle=False)
 
 # =============================================================================
-# 4. Definir o modelo – arquitetura baseada em GIN para classificação exclusiva (inalterado)
+# 4. Definir o modelo – arquitetura baseada em GIN para classificação exclusiva
 # =============================================================================
 class GINExclusive(nn.Module):
     def __init__(self, num_features, hidden_channels, num_classes, dropout=0.2):
@@ -193,7 +186,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = GINExclusive(num_features=3, hidden_channels=128, num_classes=num_classes, dropout=0.2).to(device)
 
 # =============================================================================
-# 5. Preparar treinamento e avaliação (inalterado)
+# 5. Preparar treinamento e avaliação
 # =============================================================================
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
@@ -230,18 +223,39 @@ def evaluate(loader):
     return avg_loss, all_logits, all_targets
 
 # =============================================================================
-# 6. Treinar o modelo e plotar as curvas de loss (inalterado)
+# 6. Treinar o modelo, calcular e exibir métricas por época, e plotar as curvas de loss e F1 Macro
 # =============================================================================
-num_epochs = 10
+num_epochs = 100
 train_losses = []
 val_losses = []
+train_f1_macros = []
+val_f1_macros = []
 
 for epoch in tqdm(range(1, num_epochs+1), desc="Treinamento"):
+    # Treinamento
     train_loss = train_epoch(train_loader)
-    val_loss, _, _ = evaluate(val_loader)
+    
+    # Avaliação no conjunto de treino para métricas
+    train_eval_loss, train_logits, train_targets = evaluate(train_loader)
+    train_preds = train_logits.argmax(dim=1)
+    train_f1_macro = f1_score(train_targets.numpy(), train_preds.numpy(), average='macro', zero_division=1)
+    
+    # Avaliação no conjunto de validação para métricas
+    val_loss, val_logits, val_targets = evaluate(val_loader)
+    val_preds = val_logits.argmax(dim=1)
+    val_f1_macro = f1_score(val_targets.numpy(), val_preds.numpy(), average='macro', zero_division=1)
+    
+    # Armazenando as métricas para plotagem
     train_losses.append(train_loss)
     val_losses.append(val_loss)
+    train_f1_macros.append(train_f1_macro)
+    val_f1_macros.append(val_f1_macro)
+    
+    # Exibindo as métricas por época
+    print(f"Epoch {epoch}: Train Loss: {train_loss:.4f}, Train F1 Macro: {train_f1_macro:.4f}, "
+          f"Val Loss: {val_loss:.4f}, Val F1 Macro: {val_f1_macro:.4f}")
 
+# Plot e salvamento da curva de loss
 plt.figure(figsize=(8, 5))
 plt.plot(range(1, num_epochs+1), train_losses, label="Treino")
 plt.plot(range(1, num_epochs+1), val_losses, label="Validação")
@@ -250,10 +264,23 @@ plt.ylabel("Loss")
 plt.title("Curva de Loss de Treino e Validação")
 plt.legend()
 plt.grid(True)
+plt.savefig("loss_curve.png")  # Salva a imagem
+plt.show()
+
+# Plot e salvamento da curva do F1 Macro
+plt.figure(figsize=(8, 5))
+plt.plot(range(1, num_epochs+1), train_f1_macros, label="Train F1 Macro")
+plt.plot(range(1, num_epochs+1), val_f1_macros, label="Val F1 Macro")
+plt.xlabel("Epoch")
+plt.ylabel("F1 Macro")
+plt.title("Curva do F1 Macro por Epoch")
+plt.legend()
+plt.grid(True)
+plt.savefig("f1_macro_curve.png")  # Salva a imagem
 plt.show()
 
 # =============================================================================
-# 7. Avaliação no conjunto de teste e cálculo do F1 Score (inalterado)
+# 7. Avaliação no conjunto de teste e cálculo do F1 Score
 # =============================================================================
 test_loss, test_logits, test_targets = evaluate(test_loader)
 print(f"Loss no teste: {test_loss:.4f}")
