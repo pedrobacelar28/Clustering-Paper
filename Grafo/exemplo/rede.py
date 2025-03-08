@@ -14,9 +14,10 @@ from sklearn.metrics import f1_score, classification_report
 from tqdm import tqdm
 
 # =============================================================================
-# 1. Definir o mapeamento entre os arquivos e os índices dos rótulos
+# 1. Definir os mapeamentos entre os arquivos e os índices dos rótulos
 # =============================================================================
-class_files = {
+# Arquivos para treino e validação
+class_files_train = {
     "umdavb.pt": 0,
     "rbbb.pt":   1,
     "lbbb.pt":   2,
@@ -26,12 +27,24 @@ class_files = {
     "unlabel.pt":6,
 }
 
+# Arquivos para teste
+class_files_test = {
+    "umdavbtest.pt": 0, 
+    "rbbbtest.pt":   1, 
+    "lbbbtest.pt":   2, 
+    "sbtest.pt":     3, 
+    "sttest.pt":     4, 
+    "aftest.pt":     5, 
+    "unlabeltest.pt":6,
+}
+
 # =============================================================================
 # 2. Implementação do Dataset utilizando InMemoryDataset
 # =============================================================================
 class ECGDataset(InMemoryDataset):
-    def __init__(self, root, class_files, transform=None, pre_transform=None):
+    def __init__(self, root, class_files, split="train", transform=None, pre_transform=None):
         self.class_files = class_files
+        self.split = split  # 'train_val' ou 'test'
         super(ECGDataset, self).__init__(root, transform, pre_transform)
         # Permitir o carregamento seguro dos globals: DataEdgeAttr, DataTensorAttr e GlobalStorage
         from torch_geometric.data.data import DataEdgeAttr, DataTensorAttr
@@ -47,8 +60,8 @@ class ECGDataset(InMemoryDataset):
     
     @property
     def processed_file_names(self):
-        # Nome do arquivo cacheado com os dados processados
-        return ['/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/processed/data.pt']
+        # O nome do arquivo cacheado difere conforme o split para evitar conflito
+        return [f'/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/processed/{self.split}_data.pt']
     
     def download(self):
         # Se os arquivos brutos já estiverem no diretório, nada a fazer
@@ -56,14 +69,17 @@ class ECGDataset(InMemoryDataset):
     
     def process(self):
         dataset = []
-        raw_dir = self.root
-        # Caso os arquivos estejam direto em self.root, altere para: raw_dir = self.root
-        
+        raw_dir = self.root  # Se os arquivos estiverem diretamente em self.root
+
+        # Importar os globals necessários
+        from torch_geometric.data.data import DataEdgeAttr, DataTensorAttr
+        from torch_geometric.data.storage import GlobalStorage
+
         for file_name, label in self.class_files.items():
             file_path = os.path.join(raw_dir, file_name)
             try:
-                # Carrega o arquivo .pt
-                dados = torch.load(file_path)
+                # Carrega o arquivo com weights_only=False para obter o checkpoint completo
+                dados = torch.load(file_path, weights_only=False)
             except Exception as e:
                 print(f"Erro ao carregar {file_path}: {e}")
                 continue
@@ -74,15 +90,15 @@ class ECGDataset(InMemoryDataset):
                 for exam_id, graph_info in grafos_dict.items():
                     try:
                         # Seleciona o lead_0
-                        graph = graph_info["lead_0"]
+                        graph = graph_info["lead_1"]
                     except KeyError:
                         print(f"Lead_0 não encontrado para o exam_id {exam_id} em {file_name}. Ignorando.")
                         continue
 
                     data = Data(
-                        x = graph.x,                # features dos nós
-                        edge_index = graph.edge_index,  # conectividade
-                        y = torch.tensor(label, dtype=torch.long)
+                        x=graph.x,                # features dos nós
+                        edge_index=graph.edge_index,  # conectividade
+                        y=torch.tensor(label, dtype=torch.long)
                     )
                     data.exam_id = exam_id  # opcional, para referência
                     dataset.append(data)
@@ -93,27 +109,36 @@ class ECGDataset(InMemoryDataset):
                     dataset.append(data)
             else:
                 print(f"Formato dos dados em {file_name} não reconhecido.")
-        
+
+        # Verifica se algum dado foi carregado
+        if len(dataset) == 0:
+            raise ValueError("Nenhum dado foi carregado. Verifique os arquivos e os erros acima.")
+
         data, slices = self.collate(dataset)
         # Salva o dataset processado no arquivo de cache
         torch.save((data, slices), self.processed_paths[0])
 
-# Defina o diretório raiz para o dataset.
+# =============================================================================
+# 3. Carregar os datasets para treino/validação e teste
+# =============================================================================
+# Diretório raiz do dataset
 root_dir = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset"
 
-# Cria o dataset utilizando a classe customizada
-dataset = ECGDataset(root=root_dir, class_files=class_files)
-print(f"Total de amostras no dataset: {len(dataset)}")
+# Dataset de treino e validação
+dataset_train_val = ECGDataset(root=root_dir, class_files=class_files_train, split="train_val")
+print(f"Total de amostras no dataset de treino/validação: {len(dataset_train_val)}")
 
-# =============================================================================
-# 3. Dividir o dataset em treino, validação e teste
-# =============================================================================
-train_data, temp_data = train_test_split(dataset, test_size=0.30, random_state=42)
-val_data, test_data = train_test_split(temp_data, test_size=0.50, random_state=42)
+# Dataset de teste
+dataset_test = ECGDataset(root=root_dir, class_files=class_files_test, split="test")
+print(f"Total de amostras no dataset de teste: {len(dataset_test)}")
 
+# Dividir dataset_train_val em 95% treino e 5% validação
+train_data, val_data = train_test_split(dataset_train_val, test_size=0.05, random_state=42)
 print(f"Número de amostras de treino: {len(train_data)}")
 print(f"Número de amostras de validação: {len(val_data)}")
-print(f"Número de amostras de teste: {len(test_data)}")
+
+# Todos os dados do dataset_test serão usados para teste
+test_data = dataset_test
 
 batch_size = 64
 train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True)
@@ -180,7 +205,7 @@ class GINExclusive(nn.Module):
         out = self.lin2(x)
         return out
 
-# Número de classes: 7 (conforme o mapeamento definido)
+# Número de classes: 7 (conforme os mapeamentos definidos)
 num_classes = 7
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = GINExclusive(num_features=3, hidden_channels=128, num_classes=num_classes, dropout=0.2).to(device)
@@ -225,7 +250,7 @@ def evaluate(loader):
 # =============================================================================
 # 6. Treinar o modelo, calcular e exibir métricas por época, e plotar as curvas de loss e F1 Macro
 # =============================================================================
-num_epochs = 100
+num_epochs = 60
 train_losses = []
 val_losses = []
 train_f1_macros = []
