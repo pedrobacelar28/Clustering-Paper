@@ -16,7 +16,7 @@ build/
 # Ignorar arquivos de configuração de IDEs
 .idea/
 .vscode/
-
+.npy
 # Ignorar arquivos de sistema
 .DS_Store
 Thumbs.db
