@@ -118,61 +118,88 @@ else:
     # ================================================
     # 6. Definição do modelo GIN com 4 blocos
     # ================================================
-    class GINExclusive(nn.Module):
-        def __init__(self, num_features, hidden_channels, num_classes, dropout=0.2):
-            super(GINExclusive, self).__init__()
-            # Primeira camada GIN
+    class GINMultiLabel(nn.Module):
+        def __init__(self, num_features, hidden_channels, num_outputs, dropout=0.3):
+            super(GINMultiLabel, self).__init__()
+            
+            self.res_conv1 = nn.Linear(num_features, hidden_channels) if num_features != hidden_channels else nn.Identity()
+            # Bloco 1
             self.mlp1 = nn.Sequential(
                 nn.Linear(num_features, hidden_channels),
                 nn.ReLU(),
                 nn.Linear(hidden_channels, hidden_channels)
             )
             self.conv1 = GINConv(self.mlp1)
+            self.bn1 = nn.BatchNorm1d(hidden_channels)
 
-            # Segunda camada GIN
+            # Bloco 2
             self.mlp2 = nn.Sequential(
                 nn.Linear(hidden_channels, hidden_channels),
                 nn.ReLU(),
                 nn.Linear(hidden_channels, hidden_channels)
             )
             self.conv2 = GINConv(self.mlp2)
+            self.bn2 = nn.BatchNorm1d(hidden_channels)
 
-            # Terceira camada GIN
+            # Bloco 3
             self.mlp3 = nn.Sequential(
                 nn.Linear(hidden_channels, hidden_channels),
                 nn.ReLU(),
                 nn.Linear(hidden_channels, hidden_channels)
             )
             self.conv3 = GINConv(self.mlp3)
+            self.bn3 = nn.BatchNorm1d(hidden_channels)
 
-            # Camadas finais para converter o embedding global em logits
+            # Bloco 4
+            self.mlp4 = nn.Sequential(
+                nn.Linear(hidden_channels, hidden_channels),
+                nn.ReLU(),
+                nn.Linear(hidden_channels, hidden_channels)
+            )
+            self.conv4 = GINConv(self.mlp4)
+            self.bn4 = nn.BatchNorm1d(hidden_channels)
+
+            # Jumping Knowledge
+            self.lin_jump = nn.Linear(hidden_channels * 4, hidden_channels)
+
+            # Camadas finais
             self.lin1 = nn.Linear(hidden_channels, hidden_channels * 2)
-            self.bn = nn.BatchNorm1d(hidden_channels * 2)
-            self.lin2 = nn.Linear(hidden_channels * 2, num_classes)
+            self.bn_final = nn.BatchNorm1d(hidden_channels * 2)
+            self.lin2 = nn.Linear(hidden_channels * 2, num_outputs)
+
             self.dropout = dropout
 
         def forward(self, data):
             x, edge_index, batch = data.x, data.edge_index, data.batch
+            x1 = self.conv1(x, edge_index)
+            x1 = F.relu(x1 + self.res_conv1(x))
+            x1 = self.bn1(x1)
+            x1 = F.dropout(x1, p=self.dropout, training=self.training)
 
-            x = self.conv1(x, edge_index)
-            x = F.relu(x)
-            x = F.dropout(x, p=self.dropout, training=self.training)
+            x2 = self.conv2(x1, edge_index)
+            x2 = F.relu(x2 + x1)
+            x2 = self.bn2(x2)
+            x2 = F.dropout(x2, p=self.dropout, training=self.training)
 
-            x = self.conv2(x, edge_index)
-            x = F.relu(x)
-            x = F.dropout(x, p=self.dropout, training=self.training)
+            x3 = self.conv3(x2, edge_index)
+            x3 = F.relu(x3 + x2)
+            x3 = self.bn3(x3)
+            x3 = F.dropout(x3, p=self.dropout, training=self.training)
 
-            x = self.conv3(x, edge_index)
-            x = F.relu(x)
+            x4 = self.conv4(x3, edge_index)
+            x4 = F.relu(x4 + x3)
+            x4 = self.bn4(x4)
 
-            # Agrega os embeddings dos nós de cada grafo em um único vetor
-            x = global_mean_pool(x, batch)
+            x_cat = torch.cat([x1, x2, x3, x4], dim=1)
+            x_cat = F.relu(self.lin_jump(x_cat))
+            x_global = global_mean_pool(x_cat, batch)
 
-            x = self.lin1(x)
-            x = self.bn(x)
-            x = F.relu(x)
-            x = F.dropout(x, p=self.dropout, training=self.training)
-            out = self.lin2(x)
+            x_global = self.lin1(x_global)
+            x_global = self.bn_final(x_global)
+            x_global = F.relu(x_global)
+            x_global = F.dropout(x_global, p=self.dropout, training=self.training)
+
+            out = self.lin2(x_global)
             return out
 
     # ================================================
@@ -180,9 +207,9 @@ else:
     # ================================================
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     num_features = 48  # As features já vêm concatenadas (48 por nó)
-    hidden_dim   = 128
+    hidden_dim   = 64
     num_outputs  = 6   # 6 rótulos
-    model = GINExclusive(num_features, hidden_dim, num_outputs, dropout=0.2).to(device)
+    model = GINMultiLabel(num_features, hidden_dim, num_outputs, dropout=0.2).to(device)
 
     criterion = nn.BCEWithLogitsLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
@@ -238,7 +265,7 @@ else:
     # ================================================
     # 9. Loop de treinamento e ajuste de threshold
     # ================================================
-    num_epochs = 50
+    num_epochs = 30
     train_losses = []
     val_losses   = []
     train_f1s    = []
