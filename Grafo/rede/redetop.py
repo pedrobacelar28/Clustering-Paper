@@ -1,4 +1,5 @@
 import os
+import glob
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -12,12 +13,12 @@ from sklearn.metrics import f1_score
 from tqdm import tqdm
 
 # ================================================
-# 1. Funções de carregamento do dataset
+# 1. Função para carregar um arquivo .pt
 # ================================================
 def load_graphs_from_pt(path_pt):
-    conteudo = torch.load(path_pt, weights_only=False)
+    conteudo = torch.load(path_pt, map_location="cpu", weights_only=False)
     if "grafos" not in conteudo:
-        print("Formato do arquivo inesperado: não encontrei 'grafos'.")
+        print(f"Formato do arquivo inesperado em {path_pt}: não encontrei 'grafos'.")
         return []
 
     exames_dict = conteudo["grafos"]
@@ -28,7 +29,7 @@ def load_graphs_from_pt(path_pt):
             print(f"Exame {exam_id} sem 'grafos' ou 'label'; ignorando.")
             continue
         
-        # Ajuste aqui: cria shape [1, 6] em vez de [6].
+        # Ajuste: cria shape [1, 6] em vez de [6]
         label_tensor = torch.tensor(exam_info["label"], dtype=torch.float).unsqueeze(0)
         
         leads_dict = exam_info["grafos"]
@@ -57,51 +58,98 @@ def load_graphs_from_pt(path_pt):
             
             all_leads_features.append(x_this_lead)
         
-        x_concat = torch.cat(all_leads_features, dim=1)  # [num_nodes, 48]
+        x_concat = torch.cat(all_leads_features, dim=1)  # shape: [num_nodes, 48]
         
         data_obj = Data(
             x=x_concat,
             edge_index=edge_index,
-            y=label_tensor  # agora [1, 6]
+            y=label_tensor  # tensor de rótulo com shape [1, 6]
         )
         data_obj.exam_id = exam_id
         dataset.append(data_obj)
     
     return dataset
 
+# ================================================
+# 2. Função para carregar vários arquivos .pt de um diretório
+# ================================================
+def load_graphs_from_folder(folder_path):
+    dataset = []
+    pt_files = glob.glob(os.path.join(folder_path, "*.pt"))
+    print(f"Foram encontrados {len(pt_files)} arquivos .pt em {folder_path}")
+    for pt_file in pt_files:
+        dataset += load_graphs_from_pt(pt_file)
+    return dataset
 
 # ================================================
-# 2. Carregando e separando em treino/val e test
+# 3. Carregando os datasets de treino/validação e teste
 # ================================================
-train_val_path = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/exames_com_labels.pt"
-test_path      = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/exames_com_labelstest.pt"
+train_val_folder = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset"  # ajuste para o diretório correto
+test_folder      = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/codetest"       # ajuste para o diretório correto
 
-dataset_train_val = load_graphs_from_pt(train_val_path)
-dataset_test = load_graphs_from_pt(test_path)
+dataset_train_val = load_graphs_from_folder(train_val_folder)
+dataset_test = load_graphs_from_folder(test_folder)
 
-print(f"Total de amostras em TREINO/VAL: {len(dataset_train_val)}")
+print(f"\nTotal de amostras em TREINO/VAL: {len(dataset_train_val)}")
 print(f"Total de amostras em TESTE: {len(dataset_test)}")
 
-# Se dataset_train_val estiver vazio, este split falhará. Ajuste test_size conforme necessário.
+# ================================================
+# 4. Função para calcular a distribuição de classes
+# ================================================
+def compute_class_distribution(dataset):
+    labels = [data.y for data in dataset]
+    if len(labels) == 0:
+        return None, None
+    labels_tensor = torch.cat(labels, dim=0)  # shape: [N, num_classes]
+    positive_counts = labels_tensor.sum(dim=0)  # soma dos positivos por classe
+    total_examples = labels_tensor.size(0)
+    return positive_counts, total_examples
+
+# Exibe distribuição de classes para o dataset de treino/validação (antes do split)
+counts, total = compute_class_distribution(dataset_train_val)
+if counts is not None:
+    print(f"\nDistribuição de classes no dataset TREINO/VAL (Total: {total} exemplos):")
+    for i, count in enumerate(counts):
+        print(f"  Classe {i}: {int(count.item())} (proporção: {count.item()/total:.2f})")
+
+# ================================================
+# 5. Separando em treino e validação
+# ================================================
 if len(dataset_train_val) == 0:
-    print("Nenhuma amostra encontrada no dataset de treino/val. Verifique o arquivo e o parsing.")
+    print("Nenhuma amostra encontrada no dataset de treino/val. Verifique os arquivos e o parsing.")
+    train_data = []
+    val_data = []
 else:
     train_data, val_data = train_test_split(dataset_train_val, test_size=0.2, random_state=42)
-    print(f"Exames em TREINO: {len(train_data)}")
+    print(f"\nExames em TREINO: {len(train_data)}")
     print(f"Exames em VAL: {len(val_data)}")
     print(f"Exames em TESTE: {len(dataset_test)}")
 
+    # Exibe a distribuição de classes para cada subconjunto
+    datasets = {"TREINO": train_data, "VALIDAÇÃO": val_data, "TESTE": dataset_test}
+    for name, dataset in datasets.items():
+        counts, total = compute_class_distribution(dataset)
+        if counts is not None:
+            print(f"\n{name} - Total de exemplos: {total}")
+            for i, count in enumerate(counts):
+                print(f"  Classe {i}: {int(count.item())} (proporção: {count.item()/total:.2f})")
+        else:
+            print(f"\n{name}: Nenhum exemplo encontrado.")
+
+    # ================================================
+    # 6. Preparando DataLoaders
+    # ================================================
     batch_size = 16
     train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True)
     val_loader   = DataLoader(val_data,   batch_size=batch_size, shuffle=False)
     test_loader  = DataLoader(dataset_test, batch_size=batch_size, shuffle=False)
 
     # ================================================
-    # 3. Definir o modelo GIN com 4 blocos
+    # 7. Definição do modelo GIN com 4 blocos
     # ================================================
     class GINMultiLabel(nn.Module):
-        def __init__(self, num_features, hidden_channels, num_outputs, dropout=0.3):
-            super(GINMultiLabel, self).__init__()
+        def _init_(self, num_features, hidden_channels, num_outputs, dropout=0.3):
+            super(GINMultiLabel, self)._init_()
             
             self.res_conv1 = nn.Linear(num_features, hidden_channels) if num_features != hidden_channels else nn.Identity()
             # Bloco 1
@@ -184,7 +232,7 @@ else:
             return out
 
     # ================================================
-    # 4. Instanciar modelo, critério e otimizador
+    # 8. Instanciar modelo, critério e otimizador
     # ================================================
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     num_features = 48  # 4 features * 12 leads
@@ -196,7 +244,7 @@ else:
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
     # ================================================
-    # 5. Funções de treinamento e avaliação
+    # 9. Funções de treinamento e avaliação
     # ================================================
     def train_epoch(loader):
         model.train()
@@ -226,8 +274,8 @@ else:
             all_targets.append(data.y.cpu())
         
         avg_loss = total_loss / len(loader.dataset)
-        all_logits = torch.cat(all_logits, dim=0)  # [N, 6]
-        all_targets = torch.cat(all_targets, dim=0)  # [N, 6]
+        all_logits = torch.cat(all_logits, dim=0)  # shape: [N, 6]
+        all_targets = torch.cat(all_targets, dim=0)  # shape: [N, 6]
         return avg_loss, all_logits, all_targets
 
     def compute_f1_macro_multi_label(logits, targets, threshold=0.5):
@@ -239,7 +287,7 @@ else:
         return f1_macro
 
     # ================================================
-    # 6. Loop de treinamento e afinamento do threshold
+    # 10. Loop de treinamento e afinamento do threshold
     # ================================================
     num_epochs = 30
     train_losses = []
@@ -280,7 +328,7 @@ else:
     print(f"\nMelhor threshold na validação: {best_thr:.2f} (F1 Macro = {best_f1:.4f})")
 
     # ================================================
-    # 7. Plot das curvas
+    # 11. Plot das curvas de Loss e F1
     # ================================================
     plt.figure()
     plt.plot(range(1, num_epochs+1), train_losses, label="Treino")
@@ -305,7 +353,7 @@ else:
     plt.show()
 
     # ================================================
-    # 8. Avaliação final no conjunto de teste
+    # 12. Avaliação final no conjunto de teste
     # ================================================
     test_loss, test_logits, test_targets = evaluate(test_loader)
     test_f1 = compute_f1_macro_multi_label(test_logits, test_targets, threshold=best_thr)
@@ -330,7 +378,7 @@ else:
     indices = np.random.choice(len(test_preds_np), size=min(num_examples, len(test_preds_np)), replace=False)
     for i, idx in enumerate(indices, 1):
         print(f"Exemplo {i}:")
-        print("  rótulo real:", test_targets_np[idx])
-        print("  predição   :", test_preds_np[idx])
+        print("  Rótulo real:", test_targets_np[idx])
+        print("  Predição   :", test_preds_np[idx])
         print("  (logits)   :", test_logits[idx].detach().numpy())
         print("  (sigmoid)  :", test_probs[idx].detach().numpy())
