@@ -280,7 +280,7 @@ else:
 
     # Ajuste de threshold na validação
     val_loss, val_logits, val_targets = evaluate(val_loader)
-    thresholds = np.arange(0.0, 1.01, 0.05)
+    thresholds = np.arange(0.0, 1.01, 0.01)
     best_thresholds = np.zeros(num_outputs)
     best_f1s = np.zeros(num_outputs)
 
