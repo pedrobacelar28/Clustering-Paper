@@ -43,8 +43,8 @@ class ECGDataset(torch.utils.data.Dataset):
 # ================================================
 # 2. Carregando os datasets de treino/validação e teste (Arquivo único)
 # ================================================
-train_val_file = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/exames_com_labels.pt"
-test_file      = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/exames_com_labels.pt"
+train_val_file = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/dataset.pt"
+test_file      = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/codetest.pt"
 
 dataset_train_val = ECGDataset(train_val_file)
 dataset_test = ECGDataset(test_file)
@@ -101,9 +101,9 @@ else:
     # 5. Preparando DataLoaders (carregamento rápido e eficiente)
     # ================================================
     batch_size = 32
-    train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
-    val_loader   = DataLoader(val_data,   batch_size=batch_size, shuffle=False, num_workers=4, pin_memory=True)
-    test_loader  = DataLoader(dataset_test, batch_size=batch_size, shuffle=False, num_workers=4, pin_memory=True)
+    train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True, num_workers=16, pin_memory=True)
+    val_loader   = DataLoader(val_data,   batch_size=batch_size, shuffle=False, num_workers=16, pin_memory=True)
+    test_loader  = DataLoader(dataset_test, batch_size=batch_size, shuffle=False, num_workers=16, pin_memory=True)
 
     # ================================================
     # 6. Definição do modelo GIN com 4 blocos
@@ -199,10 +199,10 @@ else:
     num_features = 48  # As features já vêm concatenadas (48 por nó)
     hidden_dim   = 128
     num_outputs  = 6   # 6 rótulos
-    model = GINMultiLabel(num_features, hidden_dim, num_outputs, dropout=0.3).to(device)
+    model = GINMultiLabel(num_features, hidden_dim, num_outputs, dropout=0.2).to(device)
 
     criterion = nn.BCEWithLogitsLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
 
     # ================================================
     # 8. Funções de treinamento e avaliação
@@ -278,6 +278,28 @@ else:
               f"Train Loss: {train_loss:.4f}, Train F1@0.5: {train_f1_05:.4f} | "
               f"Val Loss: {val_loss:.4f}, Val F1@0.5: {val_f1_05:.4f}")
 
+        plt.clf()  # Limpa a figura atual
+        plt.plot(range(1, epoch+1), train_losses, label="Treino", color="blue")
+        plt.plot(range(1, epoch+1), val_losses, label="Validação", color="orange")
+        plt.xlabel("Época")
+        plt.ylabel("Loss")
+        plt.title("Curva de Loss (Treino vs Validação)")
+        plt.legend()
+        
+        # Salva a figura com o mesmo nome, sobrescrevendo a anterior
+        plt.savefig("loss_curve_multilabel.png")
+
+        # Dentro do loop de treinamento, depois de atualizar train_f1s e val_f1s:
+        plt.clf()  # Limpa a figura atual
+        plt.plot(range(1, epoch+1), train_f1s, label="Treino", color="blue")
+        plt.plot(range(1, epoch+1), val_f1s, label="Validação", color="orange")
+        plt.xlabel("Época")
+        plt.ylabel("F1 Macro")
+        plt.title("Curva de F1 Macro (Treino vs Validação)")
+        plt.legend()
+        plt.savefig("f1_curve_multilabel.png")  # Sobrescreve o arquivo a cada epoch
+
+        
     # Ajuste de threshold na validação
     val_loss, val_logits, val_targets = evaluate(val_loader)
     thresholds = np.arange(0.0, 1.01, 0.01)

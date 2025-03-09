@@ -515,7 +515,7 @@ if __name__ == '__main__':
 
     dados_salvos = {"grafos": graphs_by_exam}
 
-    output_filename = ".pt"
+    output_filename = "dataset.pt"
     torch.save(dados_salvos, output_filename)
     print(f"\nGrafos (com labels e 48 features na lead1) salvos em {output_filename}")
     print(f"Quantidade de exames que não possuem 1000 pontos: {count_invalid}")
