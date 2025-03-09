@@ -362,7 +362,7 @@ def carregar_ecgs(unlabel, umdavb, rbbb, lbbb, sb, st, af, multilabel,
 
 # %%
 
-X, ids_ecgs, labels = carregar_ecgs(unlabel=20000,umdavb=0, rbbb=0, lbbb=0, sb=0, st=0, af=0, multilabel=0,unlabel_offset=20000, umdavb_offset=0, rbbb_offset=0,
+X, ids_ecgs, labels = carregar_ecgs(unlabel=10000,umdavb=3651, rbbb=6703, lbbb=4122, sb=4248, st=6038, af=4804, multilabel=3169,unlabel_offset=0, umdavb_offset=0, rbbb_offset=0,
                                     lbbb_offset=0, sb_offset=0, st_offset=0, af_offset=0, multilabel_offset=0,filtrado=True)
 
 
@@ -373,11 +373,10 @@ for i in range(min(1, len(ids_ecgs))):
     print(f"Exam ID: {ids_ecgs[i]}, Label: {labels[i]}")
 
 
-# %%
 import torch
 import numpy as np
 import neurokit2 as nk
-import networkx as nx  # <- Import para calcular PageRank
+import networkx as nx  # Para calcular PageRank
 from ts2vg import NaturalVG
 from torch_geometric.data import Data
 from joblib import Parallel, delayed
@@ -389,7 +388,7 @@ def compute_node_features(time_series, edges):
       - amplitude: valor da amostra;
       - derivada: diferença com o nó anterior (primeiro nó = 0);
       - grau: número de arestas incidentes;
-      - pagerank: valor de pagerank calculado via networkx.
+      - pagerank: valor de pagerank calculado via NetworkX.
     
     Parâmetros:
       time_series: numpy array de forma (n,) com os valores da lead.
@@ -425,7 +424,6 @@ def compute_node_features(time_series, edges):
     features = np.hstack([amplitude, derivative, degree, pagerank_arr])
     return features
 
-
 def get_middle_r_peak(lead_series, sampling_rate=400):
     """
     Detecta os picos R na lead utilizando nk.ecg_findpeaks do NeuroKit e retorna o pico "do meio".
@@ -442,80 +440,94 @@ def get_middle_r_peak(lead_series, sampling_rate=400):
         middle_index = peaks[len(peaks) // 2]
     return middle_index
 
-
-def process_lead(lead_series):
-    """
-    Processa uma única lead:
-      - Detecta o pico R "do meio" (NeuroKit).
-      - Seleciona 1000 pontos centrados no R (500 antes, 500 depois).
-      - Constrói o grafo de visibilidade (ts2vg.NaturalVG).
-      - Calcula as features [amplitude, derivada, grau, pagerank].
-      - Retorna Data(x=node_features, edge_index).
-    """
-    r_peak = get_middle_r_peak(lead_series, sampling_rate=400)
-
-    start_index = max(0, r_peak - 500)
-    end_index = min(len(lead_series), r_peak + 500)
-    lead_segment = lead_series[start_index:end_index]
-
-    vg = NaturalVG()
-    vg.build(lead_segment)
-    edges = vg.edges  # lista de arestas (i, j)
-    
-    node_features = compute_node_features(lead_segment, edges)
-
-    if edges:
-        edge_index = torch.tensor(edges, dtype=torch.int64).t().contiguous()
-    else:
-        edge_index = torch.empty((2, 0), dtype=torch.int64)
-
-    node_features_tensor = torch.tensor(node_features, dtype=torch.float32)
-    return Data(x=node_features_tensor, edge_index=edge_index)
-
-
 def process_exam(ecg, exam_id, label):
     """
     Processa um ECG (12 leads) e retorna:
       - exam_id
-      - dicionário com 12 grafos
+      - grafo da lead1 com features concatenadas de todas as 12 leads (48 features por nó)
       - label associada a esse exame.
+      
+    A segmentação é baseada na lead1. Se o segmento não tiver 1000 pontos,
+    as features serão um array de zeros de forma (1000, 48) e o grafo terá edge_index vazio.
     """
-    exam_graphs = {
-        f"lead_{lead_index}": process_lead(ecg[lead_index])
-        for lead_index in range(12)
-    }
-    return exam_id, exam_graphs, label
+    # Usar a lead1 para determinar o segmento
+    lead1_series = ecg[1]
+    r_peak = get_middle_r_peak(lead1_series, sampling_rate=400)
+    start_index = max(0, r_peak - 500)
+    end_index = min(len(lead1_series), r_peak + 500)
+    segment_length = end_index - start_index
 
+    if segment_length != 1000:
+        # Caso o segmento não possua 1000 pontos: features nulas e grafo vazio.
+        node_features = np.zeros((1000, 48))
+        edge_index = torch.empty((2, 0), dtype=torch.int64)
+        valid = False
+    else:
+        features_list = []
+        # Para cada uma das 12 leads, extrai o segmento com os mesmos índices
+        for lead in range(12):
+            lead_segment = ecg[lead][start_index:end_index]
+            # Para cada lead, calcula as features usando seu próprio grafo de visibilidade.
+            vg = NaturalVG()
+            vg.build(lead_segment)
+            edges = vg.edges
+            feat = compute_node_features(lead_segment, edges)
+            features_list.append(feat)
+            # Para a lead1, usaremos o grafo para definir o edge_index do Data
+            if lead == 1:
+                if edges:
+                    edge_index = torch.tensor(edges, dtype=torch.int64).t().contiguous()
+                else:
+                    edge_index = torch.empty((2, 0), dtype=torch.int64)
+        # Concatena as features de todas as leads (eixo das colunas)
+        node_features = np.hstack(features_list)  # Resultado: (1000, 48)
+        valid = True
+
+    data = Data(x=torch.tensor(node_features, dtype=torch.float32), edge_index=edge_index)
+    return exam_id, data, label, valid
 
 if __name__ == '__main__':
-    # ==========================================================================
     # SUPOSIÇÕES:
     #  - X, ids_ecgs e labels estão definidos e têm mesmo tamanho N.
     #  - X: (N, 12, num_amostras)
     #  - ids_ecgs: lista com N exam_ids
     #  - labels: array/list com as N labels
-    # ==========================================================================
+
     exam_ids_list = ids_ecgs
     labels_list   = labels
 
-    print("Iniciando a criação dos grafos de visibilidade para cada ECG e cada lead...")
+    print("Iniciando a criação dos grafos de visibilidade para cada ECG (armazenando apenas a lead1 com 48 features)...")
 
     results = Parallel(n_jobs=-1, verbose=10)(
         delayed(process_exam)(ecg, exam_ids_list[idx], labels_list[idx])
         for idx, ecg in enumerate(tqdm(X, desc="Processando exames"))
     )
 
-    graphs_by_exam = {
-        exam_id: {
-            "grafos": exam_graphs,  # as 12 leads como Data PyG
+    graphs_by_exam = {}
+    count_invalid = 0
+    for (exam_id, data, lbl, valid) in results:
+        graphs_by_exam[exam_id] = {
+            "grafo": data,  # Apenas a lead1, com features concatenadas de todas as 12 leads
             "label": lbl
         }
-        for (exam_id, exam_graphs, lbl) in results
-    }
+        if not valid:
+            count_invalid += 1
 
     dados_salvos = {"grafos": graphs_by_exam}
 
-    output_filename = "parte4.pt"
+    output_filename = ".pt"
     torch.save(dados_salvos, output_filename)
-    print(f"Grafos (com labels e PageRank) salvos em {output_filename}")
+    print(f"\nGrafos (com labels e 48 features na lead1) salvos em {output_filename}")
+    print(f"Quantidade de exames que não possuem 1000 pontos: {count_invalid}")
 
+    # Carregar o arquivo salvo e exibir 5 exemplos de exames
+    loaded_data = torch.load(output_filename, weights_only=False)
+    exam_keys = list(loaded_data["grafos"].keys())
+    print("\nExemplos de 5 exames:")
+    for key in exam_keys[:5]:
+        exame = loaded_data["grafos"][key]
+        print(f"Exam ID: {key}")
+        print(f"Label: {exame['label']}")
+        print(f"Grafo (lead1) Data:")
+        print(f"  x shape: {exame['grafo'].x.shape}")
+        print(f"  edge_index shape: {exame['grafo'].edge_index.shape}\n")

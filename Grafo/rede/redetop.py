@@ -84,8 +84,8 @@ def load_graphs_from_folder(folder_path):
 # ================================================
 # 3. Carregando os datasets de treino/validação e teste
 # ================================================
-train_val_folder = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset"  # ajuste para o diretório correto
-test_folder      = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/codetest"       # ajuste para o diretório correto
+train_val_folder = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/test/train_val"  # ajuste para o diretório correto
+test_folder      = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/test/teste"       # ajuste para o diretório correto
 
 dataset_train_val = load_graphs_from_folder(train_val_folder)
 dataset_test = load_graphs_from_folder(test_folder)
