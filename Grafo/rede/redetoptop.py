@@ -8,7 +8,7 @@ from torch_geometric.nn import GINConv, global_mean_pool
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score
 from tqdm import tqdm
-from torch.utils.data import Subset
+from torch.utils.data import Subset, ConcatDataset  # Adicionado ConcatDataset
 import torch.nn as nn
 import torch.nn.functional as F
 
@@ -41,12 +41,22 @@ class ECGDataset(torch.utils.data.Dataset):
         return self.data[idx]
 
 # ================================================
-# 2. Carregando os datasets de treino/validação e teste (Arquivo único)
+# 2. Carregando os datasets de treino/validação e teste (Arquivos)
 # ================================================
+# Arquivo original de treino/validação
 train_val_file = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/dataset.pt"
-test_file      = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/codetest.pt"
+# Arquivo adicional de treino/validação
+train_val_file2 = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/dataset2.pt"
+train_val_file3 = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/dataset3.pt"
+# Arquivo de teste
+test_file = "/scratch/guilherme.evangelista/Clustering-Paper/Grafo/dataset/codetest.pt"
 
-dataset_train_val = ECGDataset(train_val_file)
+# Carrega os datasets individualmente
+dataset1 = ECGDataset(train_val_file)
+dataset2 = ECGDataset(train_val_file2)
+dataset3 = ECGDataset(train_val_file3)
+# Concatena os datasets de treino/validação
+dataset_train_val = ConcatDataset([dataset1, dataset2, dataset3])
 dataset_test = ECGDataset(test_file)
 
 print(f"\nTotal de exames em TREINO/VAL: {len(dataset_train_val)}")
@@ -81,7 +91,7 @@ if len(dataset_train_val) == 0:
     val_data = []
 else:
     indices = np.arange(len(dataset_train_val))
-    train_idx, val_idx = train_test_split(indices, test_size=0.2, random_state=42)
+    train_idx, val_idx = train_test_split(indices, test_size=0.1, random_state=42)
     train_data = Subset(dataset_train_val, train_idx)
     val_data = Subset(dataset_train_val, val_idx)
     print(f"\nExames em TREINO: {len(train_data)}")
@@ -108,88 +118,61 @@ else:
     # ================================================
     # 6. Definição do modelo GIN com 4 blocos
     # ================================================
-    class GINMultiLabel(nn.Module):
-        def __init__(self, num_features, hidden_channels, num_outputs, dropout=0.2):
-            super(GINMultiLabel, self).__init__()
-            
-            self.res_conv1 = nn.Linear(num_features, hidden_channels) if num_features != hidden_channels else nn.Identity()
-            # Bloco 1
+    class GINExclusive(nn.Module):
+        def __init__(self, num_features, hidden_channels, num_classes, dropout=0.2):
+            super(GINExclusive, self).__init__()
+            # Primeira camada GIN
             self.mlp1 = nn.Sequential(
                 nn.Linear(num_features, hidden_channels),
                 nn.ReLU(),
                 nn.Linear(hidden_channels, hidden_channels)
             )
             self.conv1 = GINConv(self.mlp1)
-            self.bn1 = nn.BatchNorm1d(hidden_channels)
 
-            # Bloco 2
+            # Segunda camada GIN
             self.mlp2 = nn.Sequential(
                 nn.Linear(hidden_channels, hidden_channels),
                 nn.ReLU(),
                 nn.Linear(hidden_channels, hidden_channels)
             )
             self.conv2 = GINConv(self.mlp2)
-            self.bn2 = nn.BatchNorm1d(hidden_channels)
 
-            # Bloco 3
+            # Terceira camada GIN
             self.mlp3 = nn.Sequential(
                 nn.Linear(hidden_channels, hidden_channels),
                 nn.ReLU(),
                 nn.Linear(hidden_channels, hidden_channels)
             )
             self.conv3 = GINConv(self.mlp3)
-            self.bn3 = nn.BatchNorm1d(hidden_channels)
 
-            # Bloco 4
-            self.mlp4 = nn.Sequential(
-                nn.Linear(hidden_channels, hidden_channels),
-                nn.ReLU(),
-                nn.Linear(hidden_channels, hidden_channels)
-            )
-            self.conv4 = GINConv(self.mlp4)
-            self.bn4 = nn.BatchNorm1d(hidden_channels)
-
-            # Jumping Knowledge
-            self.lin_jump = nn.Linear(hidden_channels * 4, hidden_channels)
-
-            # Camadas finais
+            # Camadas finais para converter o embedding global em logits
             self.lin1 = nn.Linear(hidden_channels, hidden_channels * 2)
-            self.bn_final = nn.BatchNorm1d(hidden_channels * 2)
-            self.lin2 = nn.Linear(hidden_channels * 2, num_outputs)
-
+            self.bn = nn.BatchNorm1d(hidden_channels * 2)
+            self.lin2 = nn.Linear(hidden_channels * 2, num_classes)
             self.dropout = dropout
 
         def forward(self, data):
             x, edge_index, batch = data.x, data.edge_index, data.batch
-            x1 = self.conv1(x, edge_index)
-            x1 = F.relu(x1 + self.res_conv1(x))
-            x1 = self.bn1(x1)
-            x1 = F.dropout(x1, p=self.dropout, training=self.training)
 
-            x2 = self.conv2(x1, edge_index)
-            x2 = F.relu(x2 + x1)
-            x2 = self.bn2(x2)
-            x2 = F.dropout(x2, p=self.dropout, training=self.training)
+            x = self.conv1(x, edge_index)
+            x = F.relu(x)
+            x = F.dropout(x, p=self.dropout, training=self.training)
 
-            x3 = self.conv3(x2, edge_index)
-            x3 = F.relu(x3 + x2)
-            x3 = self.bn3(x3)
-            x3 = F.dropout(x3, p=self.dropout, training=self.training)
+            x = self.conv2(x, edge_index)
+            x = F.relu(x)
+            x = F.dropout(x, p=self.dropout, training=self.training)
 
-            x4 = self.conv4(x3, edge_index)
-            x4 = F.relu(x4 + x3)
-            x4 = self.bn4(x4)
+            x = self.conv3(x, edge_index)
+            x = F.relu(x)
 
-            x_cat = torch.cat([x1, x2, x3, x4], dim=1)
-            x_cat = F.relu(self.lin_jump(x_cat))
-            x_global = global_mean_pool(x_cat, batch)
+            # Agrega os embeddings dos nós de cada grafo em um único vetor
+            x = global_mean_pool(x, batch)
 
-            x_global = self.lin1(x_global)
-            x_global = self.bn_final(x_global)
-            x_global = F.relu(x_global)
-            x_global = F.dropout(x_global, p=self.dropout, training=self.training)
-
-            out = self.lin2(x_global)
+            x = self.lin1(x)
+            x = self.bn(x)
+            x = F.relu(x)
+            x = F.dropout(x, p=self.dropout, training=self.training)
+            out = self.lin2(x)
             return out
 
     # ================================================
@@ -199,10 +182,10 @@ else:
     num_features = 48  # As features já vêm concatenadas (48 por nó)
     hidden_dim   = 128
     num_outputs  = 6   # 6 rótulos
-    model = GINMultiLabel(num_features, hidden_dim, num_outputs, dropout=0.2).to(device)
+    model = GINExclusive(num_features, hidden_dim, num_outputs, dropout=0.2).to(device)
 
     criterion = nn.BCEWithLogitsLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
     # ================================================
     # 8. Funções de treinamento e avaliação
@@ -255,7 +238,7 @@ else:
     # ================================================
     # 9. Loop de treinamento e ajuste de threshold
     # ================================================
-    num_epochs = 30
+    num_epochs = 50
     train_losses = []
     val_losses   = []
     train_f1s    = []
@@ -285,11 +268,8 @@ else:
         plt.ylabel("Loss")
         plt.title("Curva de Loss (Treino vs Validação)")
         plt.legend()
-        
-        # Salva a figura com o mesmo nome, sobrescrevendo a anterior
         plt.savefig("loss_curve_multilabel.png")
 
-        # Dentro do loop de treinamento, depois de atualizar train_f1s e val_f1s:
         plt.clf()  # Limpa a figura atual
         plt.plot(range(1, epoch+1), train_f1s, label="Treino", color="blue")
         plt.plot(range(1, epoch+1), val_f1s, label="Validação", color="orange")
@@ -297,8 +277,7 @@ else:
         plt.ylabel("F1 Macro")
         plt.title("Curva de F1 Macro (Treino vs Validação)")
         plt.legend()
-        plt.savefig("f1_curve_multilabel.png")  # Sobrescreve o arquivo a cada epoch
-
+        plt.savefig("f1_curve_multilabel.png")
         
     # Ajuste de threshold na validação
     val_loss, val_logits, val_targets = evaluate(val_loader)
