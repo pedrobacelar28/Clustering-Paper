@@ -362,9 +362,8 @@ def carregar_ecgs(unlabel, umdavb, rbbb, lbbb, sb, st, af, multilabel,
 
 # %%
 
-X, ids_ecgs, labels = carregar_ecgs(unlabel=10000,umdavb=3651, rbbb=6703, lbbb=4122, sb=4248, st=6038, af=4804, multilabel=3169,unlabel_offset=0, umdavb_offset=0, rbbb_offset=0,
+X, ids_ecgs, labels = carregar_ecgs(unlabel=50000,umdavb=3651, rbbb=6703, lbbb=4122, sb=4248, st=6038, af=4804, multilabel=3169,unlabel_offset=0, umdavb_offset=0, rbbb_offset=0,
                                     lbbb_offset=0, sb_offset=0, st_offset=0, af_offset=0, multilabel_offset=0,filtrado=True)
-
 
 # %%
 
@@ -388,40 +387,65 @@ def compute_node_features(time_series, edges):
       - amplitude: valor da amostra;
       - derivada: diferença com o nó anterior (primeiro nó = 0);
       - grau: número de arestas incidentes;
-      - pagerank: valor de pagerank calculado via NetworkX.
+      - pagerank: valor de pagerank calculado via NetworkX;
+      - segunda derivada: diferença das diferenças do sinal;
+      - derivada absoluta: valor absoluto da derivada;
+      - entropia: entropia de Shannon baseada na normalização da amplitude;
+      - energia local: amplitude ao quadrado.
     
     Parâmetros:
       time_series: numpy array de forma (n,) com os valores da lead.
       edges: lista de tuplas (i, j) definindo as arestas do grafo.
       
     Retorna:
-      features: numpy array de forma (n, 4) com
-                [amplitude, derivada, grau, pagerank] para cada nó.
+      features: numpy array de forma (n, 8) com as features calculadas para cada nó.
     """
     n = len(time_series)
+    
+    # Amplitude
     amplitude = time_series.reshape(-1, 1)
+    
+    # Derivada (primeira diferença; primeiro nó = 0)
     derivative = np.concatenate(([0], np.diff(time_series))).reshape(-1, 1)
     
+    # Segunda Derivada (diferença das diferenças; primeiros 2 nós = 0)
+    second_derivative = np.concatenate(([0, 0], np.diff(time_series, n=2))).reshape(-1, 1)
+    
+    # Derivada Absoluta
+    derivative_abs = np.abs(derivative)
+    
+    # Grau: número de arestas incidentes em cada nó
     if edges:
         edges_array = np.array(edges)
-        # Separa nós de origem e destino
         u, v = edges_array[:, 0], edges_array[:, 1]
         counts = np.bincount(np.concatenate([u, v]), minlength=n)
     else:
         counts = np.zeros(n)
     degree = counts.reshape(-1, 1)
     
-    # Cálculo do PageRank usando NetworkX
+    # PageRank calculado com NetworkX
     if edges:
         G = nx.Graph()
-        G.add_nodes_from(range(n))    # garante que todos os nós estejam no grafo
+        G.add_nodes_from(range(n))  # Garante que todos os nós estejam no grafo
         G.add_edges_from(edges)
-        pr_values = nx.pagerank(G)    # dicionário {nó: pagerank}
+        pr_values = nx.pagerank(G)
         pagerank_arr = np.array([pr_values[i] for i in range(n)]).reshape(-1, 1)
     else:
         pagerank_arr = np.zeros((n, 1))
-
-    features = np.hstack([amplitude, derivative, degree, pagerank_arr])
+    
+    # Entropia: calculada a partir da amplitude normalizada globalmente
+    amin = time_series.min()
+    amax = time_series.max()
+    norm_amplitude = (time_series - amin) / (amax - amin + 1e-8)
+    entropy = - (norm_amplitude * np.log2(norm_amplitude + 1e-8) + 
+                  (1 - norm_amplitude) * np.log2(1 - norm_amplitude + 1e-8)).reshape(-1, 1)
+    
+    # Energia local: amplitude ao quadrado
+    energy = (time_series ** 2).reshape(-1, 1)
+    
+    # Concatena todas as features: ordem [amplitude, derivada, grau, pagerank, segunda derivada, derivada absoluta, entropia, energia]
+    features = np.hstack([amplitude, derivative, degree, pagerank_arr,
+                          second_derivative, derivative_abs, energy])
     return features
 
 def get_middle_r_peak(lead_series, sampling_rate=400):
@@ -444,11 +468,11 @@ def process_exam(ecg, exam_id, label):
     """
     Processa um ECG (12 leads) e retorna:
       - exam_id
-      - grafo da lead1 com features concatenadas de todas as 12 leads (48 features por nó)
+      - grafo da lead1 com 4 features por nó (amplitude, derivada, grau, pagerank)
       - label associada a esse exame.
       
     A segmentação é baseada na lead1. Se o segmento não tiver 1000 pontos,
-    as features serão um array de zeros de forma (1000, 48) e o grafo terá edge_index vazio.
+    as features serão um array de zeros de forma (1000, 4) e o grafo terá edge_index vazio.
     """
     # Usar a lead1 para determinar o segmento
     lead1_series = ecg[1]
@@ -459,44 +483,32 @@ def process_exam(ecg, exam_id, label):
 
     if segment_length != 1000:
         # Caso o segmento não possua 1000 pontos: features nulas e grafo vazio.
-        node_features = np.zeros((1000, 48))
+        node_features = np.zeros((1000, 7))
         edge_index = torch.empty((2, 0), dtype=torch.int64)
         valid = False
     else:
-        features_list = []
-        # Para cada uma das 12 leads, extrai o segmento com os mesmos índices
-        for lead in range(12):
-            lead_segment = ecg[lead][start_index:end_index]
-            # Para cada lead, calcula as features usando seu próprio grafo de visibilidade.
-            vg = NaturalVG()
-            vg.build(lead_segment)
-            edges = vg.edges
-            feat = compute_node_features(lead_segment, edges)
-            features_list.append(feat)
-            # Para a lead1, usaremos o grafo para definir o edge_index do Data
-            if lead == 1:
-                if edges:
-                    edge_index = torch.tensor(edges, dtype=torch.int64).t().contiguous()
-                else:
-                    edge_index = torch.empty((2, 0), dtype=torch.int64)
-        # Concatena as features de todas as leads (eixo das colunas)
-        node_features = np.hstack(features_list)  # Resultado: (1000, 48)
+        # Extrai o segmento apenas da lead1
+        lead_segment = ecg[1][start_index:end_index]
+        vg = NaturalVG()
+        vg.build(lead_segment)
+        edges = vg.edges
+        # Calcula as 4 features da lead1
+        node_features = compute_node_features(lead_segment, edges)
+        if edges:
+            edge_index = torch.tensor(edges, dtype=torch.int64).t().contiguous()
+        else:
+            edge_index = torch.empty((2, 0), dtype=torch.int64)
         valid = True
 
     data = Data(x=torch.tensor(node_features, dtype=torch.float32), edge_index=edge_index)
     return exam_id, data, label, valid
 
+# (No restante do código, basta substituir a função process_exam e atualizar o print final)
 if __name__ == '__main__':
-    # SUPOSIÇÕES:
-    #  - X, ids_ecgs e labels estão definidos e têm mesmo tamanho N.
-    #  - X: (N, 12, num_amostras)
-    #  - ids_ecgs: lista com N exam_ids
-    #  - labels: array/list com as N labels
-
     exam_ids_list = ids_ecgs
     labels_list   = labels
 
-    print("Iniciando a criação dos grafos de visibilidade para cada ECG (armazenando apenas a lead1 com 48 features)...")
+    print("Iniciando a criação dos grafos de visibilidade para cada ECG (armazenando apenas a lead1 com 4 features)...")
 
     results = Parallel(n_jobs=-1, verbose=10)(
         delayed(process_exam)(ecg, exam_ids_list[idx], labels_list[idx])
@@ -507,7 +519,7 @@ if __name__ == '__main__':
     count_invalid = 0
     for (exam_id, data, lbl, valid) in results:
         graphs_by_exam[exam_id] = {
-            "grafo": data,  # Apenas a lead1, com features concatenadas de todas as 12 leads
+            "grafo": data,  # Apenas a lead1 com 4 features
             "label": lbl
         }
         if not valid:
@@ -515,9 +527,9 @@ if __name__ == '__main__':
 
     dados_salvos = {"grafos": graphs_by_exam}
 
-    output_filename = "dataset.pt"
+    output_filename = "lead1.pt"
     torch.save(dados_salvos, output_filename)
-    print(f"\nGrafos (com labels e 48 features na lead1) salvos em {output_filename}")
+    print(f"\nGrafos (com labels e 4 features na lead1) salvos em {output_filename}")
     print(f"Quantidade de exames que não possuem 1000 pontos: {count_invalid}")
 
     # Carregar o arquivo salvo e exibir 5 exemplos de exames
