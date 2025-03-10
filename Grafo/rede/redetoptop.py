@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from torch_geometric.data import Data, DataLoader
-from torch_geometric.nn import GINConv, global_mean_pool
+from torch_geometric.nn import GATConv, GINConv, global_mean_pool
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score
 from tqdm import tqdm
@@ -118,20 +118,21 @@ else:
     # ================================================
     # 6. Definição do modelo GIN com 4 blocos
     # ================================================
-    class GINMultiLabel(nn.Module):
+    class GAT_GINMultiLabel(nn.Module):
         def __init__(self, num_features, hidden_channels, num_outputs, dropout=0.3):
-            super(GINMultiLabel, self).__init__()
+            super(GAT_GINMultiLabel, self).__init__()
+            # Primeira camada: GAT para processar os features iniciais dos nós
+            self.gat_conv = GATConv(num_features, hidden_channels)
             
-            self.res_conv1 = nn.Linear(num_features, hidden_channels) if num_features != hidden_channels else nn.Identity()
-            # Bloco 1
+            # Bloco 1 (usando GIN) - agora a entrada vem da GAT
             self.mlp1 = nn.Sequential(
-                nn.Linear(num_features, hidden_channels),
+                nn.Linear(hidden_channels, hidden_channels),
                 nn.ReLU(),
                 nn.Linear(hidden_channels, hidden_channels)
             )
             self.conv1 = GINConv(self.mlp1)
             self.bn1 = nn.BatchNorm1d(hidden_channels)
-
+            
             # Bloco 2
             self.mlp2 = nn.Sequential(
                 nn.Linear(hidden_channels, hidden_channels),
@@ -140,7 +141,7 @@ else:
             )
             self.conv2 = GINConv(self.mlp2)
             self.bn2 = nn.BatchNorm1d(hidden_channels)
-
+            
             # Bloco 3
             self.mlp3 = nn.Sequential(
                 nn.Linear(hidden_channels, hidden_channels),
@@ -149,7 +150,7 @@ else:
             )
             self.conv3 = GINConv(self.mlp3)
             self.bn3 = nn.BatchNorm1d(hidden_channels)
-
+            
             # Bloco 4
             self.mlp4 = nn.Sequential(
                 nn.Linear(hidden_channels, hidden_channels),
@@ -158,47 +159,57 @@ else:
             )
             self.conv4 = GINConv(self.mlp4)
             self.bn4 = nn.BatchNorm1d(hidden_channels)
-
-            # Jumping Knowledge
+            
+            # Jumping Knowledge: concatenação das saídas dos blocos
             self.lin_jump = nn.Linear(hidden_channels * 4, hidden_channels)
-
-            # Camadas finais
+            
+            # Camadas finais para classificação
             self.lin1 = nn.Linear(hidden_channels, hidden_channels * 2)
             self.bn_final = nn.BatchNorm1d(hidden_channels * 2)
             self.lin2 = nn.Linear(hidden_channels * 2, num_outputs)
-
+            
             self.dropout = dropout
 
         def forward(self, data):
             x, edge_index, batch = data.x, data.edge_index, data.batch
+            
+            # Primeira etapa: camada GAT
+            x = self.gat_conv(x, edge_index)
+            x = F.relu(x)
+            
+            # Bloco 1 com GIN (utiliza x da GAT como entrada)
             x1 = self.conv1(x, edge_index)
-            x1 = F.relu(x1 + self.res_conv1(x))
+            x1 = F.relu(x1 + x)  # conexão residual simples
             x1 = self.bn1(x1)
             x1 = F.dropout(x1, p=self.dropout, training=self.training)
-
+            
+            # Bloco 2
             x2 = self.conv2(x1, edge_index)
             x2 = F.relu(x2 + x1)
             x2 = self.bn2(x2)
             x2 = F.dropout(x2, p=self.dropout, training=self.training)
-
+            
+            # Bloco 3
             x3 = self.conv3(x2, edge_index)
             x3 = F.relu(x3 + x2)
             x3 = self.bn3(x3)
             x3 = F.dropout(x3, p=self.dropout, training=self.training)
-
+            
+            # Bloco 4
             x4 = self.conv4(x3, edge_index)
             x4 = F.relu(x4 + x3)
             x4 = self.bn4(x4)
-
+            
+            # Concatenação dos recursos (Jumping Knowledge)
             x_cat = torch.cat([x1, x2, x3, x4], dim=1)
             x_cat = F.relu(self.lin_jump(x_cat))
             x_global = global_mean_pool(x_cat, batch)
-
+            
+            # Camadas finais
             x_global = self.lin1(x_global)
             x_global = self.bn_final(x_global)
             x_global = F.relu(x_global)
             x_global = F.dropout(x_global, p=self.dropout, training=self.training)
-
             out = self.lin2(x_global)
             return out
 
@@ -207,9 +218,9 @@ else:
     # ================================================
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     num_features = 48  # As features já vêm concatenadas (48 por nó)
-    hidden_dim   = 64
+    hidden_dim   = 256
     num_outputs  = 6   # 6 rótulos
-    model = GINMultiLabel(num_features, hidden_dim, num_outputs, dropout=0.2).to(device)
+    model = GAT_GINMultiLabel(num_features, hidden_dim, num_outputs, dropout=0.2).to(device)
 
     criterion = nn.BCEWithLogitsLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
@@ -328,6 +339,8 @@ else:
     print(f"\nMelhores thresholds por classe: {best_thresholds}")
     print(f"Melhores F1-scores por classe: {best_f1s}")
 
+    torch.save(model.state_dict(), "gat_gin_multilabel_model.pth")
+    print("Modelo salvo com sucesso em 'gat_gin_multilabel_model.pth'")
     # ================================================
     # 10. Plot das curvas de Loss e F1
     # ================================================
