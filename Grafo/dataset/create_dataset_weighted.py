@@ -21,6 +21,14 @@ from ts2vg import NaturalVG
 from torch_geometric.data import Data
 from joblib import Parallel, delayed
 from tqdm import tqdm
+import torch
+import matplotlib.pyplot as plt
+import networkx as nx
+from torch_geometric.utils import to_networkx
+import numpy as np
+import os
+import matplotlib.colors as mcolors
+
 
 # %%
 
@@ -549,3 +557,241 @@ if __name__ == '__main__':
         print(f"  x shape: {exame['grafo'].x.shape}")
         print(f"  edge_index shape: {exame['grafo'].edge_index.shape}")
         print(f"  edge_attr shape: {exame['grafo'].edge_attr.shape}\n")
+
+
+
+
+
+# ================================================
+# TESTANDO
+# ================================================
+
+
+
+
+# ================================================
+# 1) Carregar o dataset salvo
+# ================================================
+dataset_filename = "dataset_with_weights.pt"
+
+try:
+    loaded_data = torch.load(dataset_filename, map_location=torch.device('cpu'), weights_only=False)
+    graphs_by_exam = loaded_data["grafos"]
+    print(f"\nDataset '{dataset_filename}' carregado com sucesso!")
+except Exception as e:
+    print(f"Erro ao carregar o dataset: {e}")
+    exit()
+
+# ================================================
+# 2) Verificar a Estrutura do Dataset
+# ================================================
+exam_keys = list(graphs_by_exam.keys())
+
+print("\n========================= INFORMAÇÕES DO DATASET =========================")
+print(f"Total de exames no dataset: {len(exam_keys)}")
+
+# Pegamos um exemplo para inspecionar
+exam_id = exam_keys[0]
+exam_data = graphs_by_exam[exam_id]
+
+grafo = exam_data["grafo"]
+label = exam_data["label"]
+
+# Verificando as formas dos arrays e atributos do grafo
+print(f"\nExam ID: {exam_id}")
+print(f"Label: {label}")
+print(f"Formato de x (features dos nós): {grafo.x.shape}")
+print(f"Formato de edge_index (arestas): {grafo.edge_index.shape}")
+print(f"Formato de edge_attr (pesos das arestas): {grafo.edge_attr.shape}")
+
+# Contar grafos vazios (sem conexões)
+empty_graphs = sum(1 for g in graphs_by_exam.values() if g["grafo"].edge_index.shape[1] == 0)
+print(f"\nQuantidade de grafos vazios (sem arestas): {empty_graphs}/{len(exam_keys)}")
+
+
+# ================================================
+# 3) Função para Visualizar Exemplos
+# ================================================
+
+output_dir = "figures"
+os.makedirs(output_dir, exist_ok=True)
+import torch
+import matplotlib.pyplot as plt
+import networkx as nx
+from torch_geometric.utils import to_networkx
+import numpy as np
+import os
+import matplotlib.colors as mcolors
+
+# ================================================
+# 1) Carregar o dataset salvo
+# ================================================
+dataset_filename = "dataset_with_weights.pt"
+
+try:
+    loaded_data = torch.load(dataset_filename, map_location=torch.device('cpu'), weights_only=False)
+    graphs_by_exam = loaded_data["grafos"]
+    print(f"\nDataset '{dataset_filename}' carregado com sucesso!")
+except Exception as e:
+    print(f"Erro ao carregar o dataset: {e}")
+    exit()
+
+# ================================================
+# 2) Criar diretório para salvar figuras
+# ================================================
+output_dir = "figures"
+os.makedirs(output_dir, exist_ok=True)
+
+# ================================================
+# 3) Função para Visualizar e Salvar Exemplos com 3 Imagens
+# ================================================
+
+import torch
+import matplotlib.pyplot as plt
+import numpy as np
+import networkx as nx
+import matplotlib.colors as mcolors
+import os
+
+def plot_ecg_and_graph(exam_id):
+    """
+    Plota e salva um exemplo de ECG e a estrutura do grafo correspondente,
+    em uma figura com 3 subplots:
+      1) Sinal de ECG original.
+      2) Sinal de ECG com nós e arestas sobrepostos (coloridos pelos pesos).
+      3) Grafo desenhado em formato de rede, com cores baseadas na 4ª feature dos nós.
+    """
+    if exam_id not in graphs_by_exam:
+        print(f"Exam ID {exam_id} não encontrado.")
+        return
+    
+    exam_data = graphs_by_exam[exam_id]
+    grafo = exam_data["grafo"]
+    
+    # Verificar se tem arestas
+    if grafo.edge_index.shape[1] == 0:
+        print(f"Exam ID {exam_id} tem um grafo vazio. Pulando visualização.")
+        return
+    
+    # Criar o grafo NetworkX para visualização
+    G = to_networkx(grafo, edge_attrs=["edge_attr"])
+
+    # Criar figura com 3 subplots (um em cima do outro)
+    fig, axes = plt.subplots(3, 1, figsize=(12, 18))
+
+    # =======================
+    # 1️⃣ Subplot: Sinal de ECG cru
+    # =======================
+    signal = grafo.x[:, 0].numpy()
+    axes[0].plot(signal, color="black")
+    axes[0].set_xlabel("Amostra")
+    axes[0].set_ylabel("Amplitude (mV)")
+    axes[0].set_title("Sinal de ECG (Original)")
+
+    # =======================
+    # 2️⃣ Subplot: Sinal com nós e arestas
+    # =======================
+    axes[1].plot(signal, color="black", alpha=0.5)  # Sinal de ECG como fundo
+    axes[1].set_title("ECG com Arestas do Grafo")
+
+    # Obter pesos das arestas
+    edge_weights = [d['edge_attr'] for _, _, d in G.edges(data=True)]
+    
+    # Normalizar os pesos para escala de cores
+    if edge_weights:
+        norm_edges = mcolors.Normalize(vmin=min(edge_weights), vmax=max(edge_weights))
+        cmap_edges = plt.cm.Reds  # Branco → Vermelho
+    else:
+        norm_edges = None
+        cmap_edges = "gray"
+
+    # Criar nós espaçados (a cada 10 pontos)
+    step = 10  # Define o espaçamento
+    nodes_x = np.arange(0, len(signal), step)  # Posição dos nós espaçados
+    nodes_y = signal[nodes_x]  # Altura dos nós espaçados
+
+    # Adicionar nós ao gráfico
+    axes[1].scatter(nodes_x, nodes_y, color="blue", s=10, label="Nós (Espaçados)")
+
+    # Adicionar arestas espaçadas
+    for (u, v, data) in G.edges(data=True):
+        if u % step == 0 and v % step == 0:  # Apenas desenha arestas entre nós espaçados
+            weight = data["edge_attr"]
+            color = cmap_edges(norm_edges(weight)) if norm_edges else "gray"
+            axes[1].plot([nodes_x[u // step], nodes_x[v // step]], 
+                         [nodes_y[u // step], nodes_y[v // step]], 
+                         color=color, alpha=0.7, lw=1)
+
+    axes[1].legend()
+    axes[1].set_xlim(0, len(signal))  # Define o eixo X maior que o Y
+
+    # =======================
+    # 3️⃣ Subplot: Grafo desenhado separadamente
+    # =======================
+    axes[2].set_title("Grafo de Visibilidade (Cores pela 4ª Feature)")
+
+    # Garantir que o layout do grafo está bem definido
+    if len(G.nodes) > 0:
+        pos = nx.spring_layout(G, seed=42)  # Layout fixo para consistência
+    else:
+        print(f"⚠️  Warning: Grafo do Exam {exam_id} não possui nós!")
+        return
+
+    # Obter a quarta feature dos nós
+    node_features = grafo.x[:, 3].numpy()  # 4ª feature (índice 3)
+
+    # Normalizar as cores dos nós para a escala de azul
+    if len(node_features) > 0:
+        norm_nodes = mcolors.Normalize(vmin=min(node_features), vmax=max(node_features))
+        cmap_nodes = plt.cm.Blues
+        node_colors = [cmap_nodes(norm_nodes(f)) for f in node_features]
+    else:
+        node_colors = "gray"
+
+    # Obter pesos das arestas novamente para este subplot
+    edge_colors = [cmap_edges(norm_edges(w)) for w in edge_weights] if norm_edges else "gray"
+
+    # Desenhar o grafo
+    nx.draw(
+        G, pos, ax=axes[2],
+        with_labels=False, node_size=100, node_color=node_colors, edge_color=edge_colors, edge_cmap=plt.cm.Reds
+    )
+
+    # Adicionar barra de cores para os nós
+    if len(node_features) > 0:
+        sm_nodes = plt.cm.ScalarMappable(cmap=plt.cm.Blues, norm=norm_nodes)
+        sm_nodes.set_array([])
+        cbar_nodes = plt.colorbar(sm_nodes, ax=axes[2], fraction=0.03, pad=0.02)
+        cbar_nodes.set_label("Valor da 4ª Feature (Nós)")
+
+    # Adicionar barra de cores para as arestas
+    if edge_weights:
+        sm_edges = plt.cm.ScalarMappable(cmap=plt.cm.Reds, norm=norm_edges)
+        sm_edges.set_array([])
+        cbar_edges = plt.colorbar(sm_edges, ax=axes[2], fraction=0.03, pad=0.08)
+        cbar_edges.set_label("Peso das Arestas")
+
+    # =======================
+    # Salvar Figura
+    # =======================
+    output_dir = "figures"
+    os.makedirs(output_dir, exist_ok=True)
+    save_path = os.path.join(output_dir, f"Exam_{exam_id}.png")
+    plt.savefig(save_path, dpi=300, bbox_inches='tight')
+    print(f"Figura salva: {save_path}")
+
+    plt.close()  # Fecha a figura para evitar sobreposição de gráficos
+
+
+# ================================================
+# 4) Visualizar e Salvar Exemplos do Dataset
+# ================================================
+print("\nGerando e salvando exemplos de ECG e seus grafos...")
+for i in range(min(5, len(graphs_by_exam))):  # Exibir até 5 exemplos
+    print(f"Processando Exam {i+1}/{min(5, len(graphs_by_exam))} - ID: {list(graphs_by_exam.keys())[i]}")
+    plot_ecg_and_graph(list(graphs_by_exam.keys())[i])
+
+print("\nFinalizado! As figuras foram salvas na pasta 'figures/'.")
+
+
+
