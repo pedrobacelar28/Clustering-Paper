@@ -362,7 +362,7 @@ def carregar_ecgs(unlabel, umdavb, rbbb, lbbb, sb, st, af, multilabel,
 
 # %%
 
-X, ids_ecgs, labels = carregar_ecgs(unlabel=50000,umdavb=3651, rbbb=6703, lbbb=4122, sb=4248, st=6038, af=4804, multilabel=3169,unlabel_offset=0, umdavb_offset=0, rbbb_offset=0,
+X, ids_ecgs, labels = carregar_ecgs(unlabel=50000,umdavb=0, rbbb=0, lbbb=0, sb=0, st=0, af=0, multilabel=0,unlabel_offset=30000, umdavb_offset=0, rbbb_offset=0,
                                     lbbb_offset=0, sb_offset=0, st_offset=0, af_offset=0, multilabel_offset=0,filtrado=True)
 
 # %%
@@ -510,7 +510,7 @@ if __name__ == '__main__':
 
     print("Iniciando a criação dos grafos de visibilidade para cada ECG (armazenando apenas a lead1 com 4 features)...")
 
-    results = Parallel(n_jobs=-1, verbose=10)(
+    results = Parallel(n_jobs=16, verbose=10)(
         delayed(process_exam)(ecg, exam_ids_list[idx], labels_list[idx])
         for idx, ecg in enumerate(tqdm(X, desc="Processando exames"))
     )
@@ -527,11 +527,11 @@ if __name__ == '__main__':
 
     dados_salvos = {"grafos": graphs_by_exam}
 
-    output_filename = "lead1.pt"
+    output_filename = "unlabel7.pt"
     torch.save(dados_salvos, output_filename)
     print(f"\nGrafos (com labels e 4 features na lead1) salvos em {output_filename}")
     print(f"Quantidade de exames que não possuem 1000 pontos: {count_invalid}")
-
+    '''
     # Carregar o arquivo salvo e exibir 5 exemplos de exames
     loaded_data = torch.load(output_filename, weights_only=False)
     exam_keys = list(loaded_data["grafos"].keys())
@@ -543,3 +543,4 @@ if __name__ == '__main__':
         print(f"Grafo (lead1) Data:")
         print(f"  x shape: {exame['grafo'].x.shape}")
         print(f"  edge_index shape: {exame['grafo'].edge_index.shape}\n")
+'''  
